@@ -1,19 +1,22 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`CURSO` Sistemas para Internet
 
-`DISCIPLINA`
+`DISCIPLINA`Projeto: Aplicações Web
 
-`SEMESTRE`
+`SEMESTRE` Turma 1 - 2021/1
 
 ## Integrantes
 
-- Obi-Wan Kenobi 
-- Anakin Skywalker
+- Juan Marques
+- Erika Marques
+- Carolina Dolacio Bechelli
+- Dayane Soares Reis
+- Nayra Fabrícia Dias Viana Santos
 
 ## Professor
 
-- Mestre Yoda
+- Fabiano Costa Teixeira
 
 # Documentação
 
