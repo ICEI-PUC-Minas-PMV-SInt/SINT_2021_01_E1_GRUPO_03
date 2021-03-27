@@ -1,6 +1,6 @@
 # Introdução
 
-O objetivo deste documento é apresentar uma aplicação que visa a comunicação de moradores de um bairro, tem como ponto inical transmitir informações a cerca dos assuntos segurança, eventos, doações, casas para alugar.
+O objetivo deste documento é apresentar uma aplicação que visa a comunicação e interação de moradores do bairro, tem como ponto inical transmitir informações a cerca dos assuntos segurança, eventos, doações, casas para alugar.
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
