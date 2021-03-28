@@ -4,7 +4,7 @@ O objetivo deste documento é apresentar uma aplicação que visa a comunicaçã
 
 ## Problema
 
-Buscamos resolver o problema de falta de engajamento social dos moradores de um bairro, pois identificamos a dificuldade em obter informações locais tais como noticias gerais,entretenimento,segurança,comercio e mercado imobiliário.
+Buscamos resolver o problema da falta de engajamento social dos moradores de um bairro, pois identificamos a dificuldade em obter informações locais tais como noticias gerais, entretenimento, segurança, comercio e mercado imobiliário.
 
 ## Objetivos
 
