@@ -8,12 +8,18 @@ Buscamos resolver o problema da falta de engajamento social dos moradores de um 
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo deste trabalho é melhorar o engajamento de moradores no seu bairro, criando uma rede social colaborativa onde serão abordados temas como noticiais, segurança…
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Os moradores poderão se comunicar e também avaliar o bairro onde vivem, expressando as suas satisfações e/ou insatisfações.
+Visamos incentivar o comércio local, imobiliário e o entretenimento de cada bairro/região.
+
+**Como objetivos específicos, podemos ressaltar**:
+
+- Fornecer funcionalidade que permite utilizadores de outros bairros visualizarem outra região com o intuito de conhecer mais sobre aquele local.
+
+- Permitir que utilizadores possam avaliar os seus respectivos bairros.
+
+- Fornecer funcionalidades que permitam interagir com as notícias apresentadas por comentários.
 
 ## Justificativa
 
