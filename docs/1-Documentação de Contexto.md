@@ -31,6 +31,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
+Homens e mulheres com mais de 18 anos, que comprovem renda proporcional aos cursto de aluguel de cada bairro e/ou parcelas, universitários ou formados, interessados em compras e vendas de mobília e moradia, alugueis de  quartos ou casas espaços inteiros, em compartilhamento de informações sobre o bairro como desaparecimento de pet's, segurança, alimentação, eventos, caronas e afins.
 
 Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
 hierárquicas, etc.
