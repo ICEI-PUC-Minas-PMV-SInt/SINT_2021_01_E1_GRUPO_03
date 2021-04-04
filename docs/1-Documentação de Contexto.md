@@ -23,9 +23,9 @@ Visamos incentivar o comércio local, imobiliário e o entretenimento de cada ba
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+A comunicação entre usuários de uma localidade é de grande importância na troca de informações, sendo rápido e simples para inteirar-se dos assuntos locais.
+Porém a sociedade contemporânea tem grande dificuldade de relacionar-se até nas interações mais básicas, o que impacta diretamente na difusão e qualidade das notícias.
+Sendo assim, o projeto foi inspirado nessa demanda social, com o intuito de de produzir um aplicativo específico, que traz essas notícias de uma forma mais agradável ao consumidor final.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
