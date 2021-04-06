@@ -31,7 +31,7 @@ Sendo assim, o projeto foi inspirado nessa demanda social, com o intuito de de p
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
-Homens e mulheres com mais de 18 anos, que comprovem renda proporcional aos cursto de aluguel de cada bairro e/ou parcelas, universitários ou formados, interessados em compras e vendas de mobília e moradia, alugueis de  quartos ou casas espaços inteiros, em compartilhamento de informações sobre o bairro como desaparecimento de pet's, segurança, alimentação, eventos, caronas e afins.
+Homens e mulheres com mais de 18 anos, que comprovem renda proporcional aos cursto de aluguel de cada bairro e/ou parcelas, universitários ou formados, interessados em compras e vendas de mobília e moradia, alugueis de  quartos ou casas espaços inteiros.
 
 
 > **Links Úteis**:
