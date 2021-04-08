@@ -33,7 +33,17 @@ Sendo assim, o projeto foi inspirado nessa demanda social, com o intuito de de p
 ## Estado da Arte
 
 ## Público-Alvo
-Homens e mulheres com mais de 18 anos, que comprovem renda proporcional aos cursto de aluguel de cada bairro e/ou parcelas, universitários ou formados, interessados em compras e vendas de mobília e moradia, alugueis de  quartos ou casas espaços inteiros.
+Gênero: todos;
+
+Faixa Etária: Acima de 18 anos;
+
+Escolaridade: Estudantes de graduação, pós, doutorado, mestrado ou sem formação do ensino superior;
+
+Faixa de Renda: Compatível com o bairro de interesse;
+
+Localização:  Capitais ou regiões metropolitanas;
+
+Hábitos de consumo:  Ter interesse em compras e vendas de móveis e  imóveis com qualidade e bom preço, além de informações sobre o local e que priorize a segurança de onde reside ou irá residir.
 
 
 > **Links Úteis**:
