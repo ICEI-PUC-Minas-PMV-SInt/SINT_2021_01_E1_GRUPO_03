@@ -31,6 +31,8 @@ Sendo assim, o projeto foi inspirado nessa demanda social, com o intuito de de p
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 > 
 ## Estado da Arte
+Trata-se de tudo que foi descoberto e pesquisado sobre o assunto, auxilia no desenvolvimento e melhorias posteriores. Neste caso, o estado da arte desta aplicação web que é uma rede social entre moradores, fez-se atravez da criação de uma plataforma web exemplos: facebook, whatsapp, da evolução e interação, e de como são apresentadas as necessidades dos usuários.
+Conforme os prinst abaixo, segue as necessidades e informações por parte dos usuários deste tipo de aplicação. 
 
 ## Público-Alvo
 Gênero: todos;
