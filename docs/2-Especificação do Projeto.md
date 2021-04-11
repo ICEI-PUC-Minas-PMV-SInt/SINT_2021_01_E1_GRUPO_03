@@ -8,30 +8,14 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Ana Carolina Yamamoto tem 18 anos, é estudante e acabou de passar no curso de direito de uma universidade federal,mora com os pais mas irá mudar para outra cidade para fazer seu curso de direito, está pesquisando bairros seguros e pessoas com quem possa dividir apartamentos. 
-
-
-
-Rodrigo Martins tem 25 anos, recem formado em engenharia, solteiro e mora sozinho,adora conhecer gente nova e fazer amizades. Gosta de participar de eventos que reúnam pessoas jovens do seu bairro.
-
-Silvana da Costa tem 35 anos, divorciada com 2 filhas adolescentes, trabalha como professora em uma universidade e dá aulas no periodo noturno. Como ela chega tarde em casa , sempre está preocupada com a segurança do seu bairro e de suas filhas que ficam sozinhas.
-
-Maria Francisca da Silva soares tem 63 anos, é aposentada, tem 3 filhos adultos mas atualmente mora somente com o marido, é extrovertida e super antenada, sempre quer saber de tudo que acontece ao seu redor e por isso adora saber de todas as noticias que acontecem no seu bairro.
-
-José da silva Neves tem 45 anos, casado e tem um pequeno mercado local. Pensa em expandir o seu negocio porem precisa encontrar alguma forma de divulgar o seu estabelecimento. Começou a utilizar grupos do whatsApp apenas possuia alguns vizinhos. Agora ele está buscando uma forma mais efetiva onde ele possa divulgar o seu estabelecimento por todo o bairro.
-
-
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+ Fotos            |  Histórias
+:-------------------------:|:-------------------------:
+![jovem-adulto](https://user-images.githubusercontent.com/4424108/114316957-1aff9a80-9b06-11eb-9d4e-242e23996415.jpeg) |  Rodrigo Martins tem 25 anos, recem formado em engenharia, solteiro e mora sozinho,adora conhecer gente nova e fazer amizades. Gosta de participar de eventos que reúnam pessoas jovens do seu bairro.
+![jovem-estudante](https://user-images.githubusercontent.com/4424108/114316891-daa01c80-9b05-11eb-8fac-e7ca053e653b.jpeg)|Ana Carolina Yamamoto tem 18 anos, é estudante e acabou de passar no curso de direito de uma universidade federal,mora com os pais mas irá mudar para outra cidade para fazer seu curso de direito, está pesquisando bairros seguros e pessoas com quem possa dividir apartamentos.
+![professora](https://user-images.githubusercontent.com/4424108/114316907-ebe92900-9b05-11eb-9fc9-67ef39003a1e.jpeg) | Silvana da Costa tem 35 anos, divorciada com 2 filhas adolescentes, trabalha como professora em uma universidade e dá aulas no periodo noturno. Como ela chega tarde em casa , sempre está preocupada com a segurança do seu bairro e de suas filhas que ficam sozinhas.
+![senhora](https://user-images.githubusercontent.com/4424108/114316919-f99eae80-9b05-11eb-8339-a4962a78fb0a.jpeg)|Maria Francisca da Silva Soares tem 63 anos, é aposentada, tem 3 filhos adultos mas atualmente mora somente com o marido, é extrovertida e super antenada, sempre quer saber de tudo que acontece ao seu redor e por isso adora saber de todas as noticias que acontecem no seu bairro.
+![comerciante](https://user-images.githubusercontent.com/4424108/114316946-0d4a1500-9b06-11eb-9ecd-e8c6f33e09bc.jpeg) | José da Silva Neves tem 45 anos, casado e tem um pequeno mercado local. Pensa em expandir o seu negocio porem precisa encontrar alguma forma de divulgar o seu estabelecimento. Começou a utilizar grupos do whatsApp apenas possuia alguns vizinhos. Agora ele está buscando uma forma mais efetiva onde ele possa divulgar o seu estabelecimento por todo o bairro.
+![introvertido](https://user-images.githubusercontent.com/4424108/114317074-a1b47780-9b06-11eb-91fe-3734067e8541.jpeg) | Henrique Fernandes De Mello tem 40 anos, trabalha como motorista de ônibus, casado, tem 3 filhos. Ele é uma pessoa introvertida, além disso sempre chega em casa tarde e cansado, por isso não socializa com seus vizinhos, mas adoraria ficar por dentro sobre o que está acontecendo em seu bairro.
 
 ## Histórias de Usuários
 
