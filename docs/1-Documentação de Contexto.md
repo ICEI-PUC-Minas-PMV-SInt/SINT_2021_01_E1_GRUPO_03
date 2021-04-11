@@ -65,6 +65,7 @@ Conforme os prints abaixo, segue as necessidades e informações por parte dos u
 - Estabelecimentos:
 [Estabelecimentos 1.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292558/Estabelecimentos.1.pdf)
 [economia 2.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292596/economia.2.pdf)
+![WhatsApp Image 2021-04-11 at 15 08 48 (1)](https://user-images.githubusercontent.com/74074456/114318141-04474c80-9ae2-11eb-8836-6d75beb4f5b6.jpeg)
 
 ![Estabelecimento](https://user-images.githubusercontent.com/4424108/114314674-e555b400-9afb-11eb-9f2f-c7185aa416f8.png'![WhatsApp Image 2021-04-11 at 15 08 48 (1)](https://user-images.githubusercontent.com/74074456/114316234-11ac0900-9ad9-11eb-8d32-f061ba5c775c.jpeg)
 
