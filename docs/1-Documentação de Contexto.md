@@ -1,6 +1,6 @@
 # Introdução
 
-O objetivo deste documento é apresentar uma aplicação web que visa a comunicação e interação de moradores de um bairro, tem como ponto inicial transmitir informações acerca dos assuntos segurança, eventos, doações, casas para alugar, comércios, e noticiais em geral. Proporcionando uma rede colaborativa entre os moradores usando a tecnologia para uni-los novamente como uma comunidade e permitindo que pessoas de outros bairros que desejam se mudar, possam conhecer o bairro do qual tem interresse e por meio das avaliações saber se é seguro, agradável.  
+O objetivo deste documento é apresentar uma aplicação web que visa a comunicação e interação de moradores de um bairro, tem como ponto inicial transmitir informações acerca dos assuntos segurança, eventos, doações, casas para alugar, comércios, e noticiais em geral. Proporcionando uma rede colaborativa entre os moradores usando a tecnologia para uni-los novamente como uma comunidade, reconstruindo a sensação de pertencimento de bairro e permitindo que pessoas de outras localidades que desejam se mudar, possam conhecer o bairro do qual tem interresse e por meio das avaliações saber se é seguro, agradável.  
 
 ## Problema
 
