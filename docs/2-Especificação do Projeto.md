@@ -28,8 +28,13 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Usuário do sistema  | Poder fazer um post                      |Compartilhar , solicitar ou fornecer Informações            |
+|Usuário do sistema  | Avaliar bairro                     | Expressar minha opinião sobre aquele local       |
+|Usuário do sistema  | Comentar Posts                     | Interagir com os outros usuários.               |              |
+|Usuário do sistema  | Pesquisar / Visualizar outros bairros          |Verificar o que as pessoas andam falando em outros bairros.              |
+|Usuário do sistema  | Mudar de bairro                    | Comecar a interagir com os novos vizinhos.             |
+|Usuário do sistema  | Denunciar post                     | Posts que não sao relevantes ou que me desrespeite de alguma forma.              |
+|Usuário do sistema  | Receber notificações                    | Ser notificado sobre os posts que eu desejo acompanhar.             |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
@@ -48,16 +53,22 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-
+|RF-001 |Permitir que o usuário se cadastre | ALTA | 
+|RF-002 |Permitir que o usuário faça login | ALTA |
+|RF-003 |Permitir ao usuário realizar um Post | ALTA | 
+|RF-004 |Permitir que o usuário comente em Posts | ALTA |
+|RF-005 |Permitir que o usuário avalie o bairro | ALTA |
+|RF-006 |Permitir ao usuário visualizar uma lista com todas a notificações | MÉDIA |
+|RF-007 |Permitir ao usuário visualizar outros bairros | ALTA |
+|RF-008 |Permitir ao usuário mudar de bairro | ALTA |
+|RF-009 |Permitir ao usuário denunciar um Post | Baixa |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-002| Depois uma postagem pela interface da web (veja RF-003), ela estará disponível nas listas de postagens de outros usuários. |  ALTA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -82,6 +93,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
+|03| O usuário  deve fornecer um comprovante de residência para se cadastrar    |
+|04| O usuário  deve fornecer um comprovante de residência para mudar de bairro    |
+|05| O usuário  deve pertencer ao bairro para comentar nos Posts.   |
+|06| O usuário  deve pertencer ao bairro para avaliar.   |
 
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
