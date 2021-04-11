@@ -8,7 +8,18 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Ana Carolina Yamamoto tem 18 anos, é estudante e acabou de passar no curso de direito de uma universidade federal,mora com os pais mas irá mudar para outra cidade para fazer seu curso de direito, está pesquisando bairros seguros e pessoas com quem possa dividir apartamentos. 
+
+
+
+Rodrigo Martins tem 25 anos, recem formado em engenharia, solteiro e mora sozinho,adora conhecer gente nova e fazer amizades. Gosta de participar de eventos que reúnam pessoas jovens do seu bairro.
+
+Silvana da Costa tem 35 anos, divorciada com 2 filhas adolescentes, trabalha como professora em uma universidade e dá aulas no periodo noturno. Como ela chega tarde em casa , sempre está preocupada com a segurança do seu bairro e de suas filhas que ficam sozinhas.
+
+Maria Francisca da Silva soares tem 63 anos, é aposentada, tem 3 filhos adultos mas atualmente mora somente com o marido, é extrovertida e super antenada, sempre quer saber de tudo que acontece ao seu redor e por isso adora saber de todas as noticias que acontecem no seu bairro.
+
+José da silva Neves tem 45 anos, casado e tem um pequeno mercado local. Pensa em expandir o seu negocio porem precisa encontrar alguma forma de divulgar o seu estabelecimento. Começou a utilizar grupos do whatsApp apenas possuia alguns vizinhos. Agora ele está buscando uma forma mais efetiva onde ele possa divulgar o seu estabelecimento por todo o bairro.
+
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
