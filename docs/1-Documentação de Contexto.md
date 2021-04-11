@@ -1,3 +1,4 @@
+[Artigo sobre Segurança 2.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292550/Artigo.sobre.Seguranca.2.pdf)
 # Introdução
 
 A vizinhança local desempenha um papel fundamental na vida social, pois muitos de nossos laços sociais são desenvolvidos e nutridos em nossa vizinhança local. Esses laços sociais são importantes  para o senso de pertencimento, comunidade e o apego à vizinhança. Um maior nível de coesão social na vizinhança podem fornecer maior apoio emocional e instrumental dos vizinhos e podem levar a mais interações sociais. Além disso, os residentes se sentem mais seguros em bairros com um nível de coesão social mais alto do que em bairros com níveis mais baixos de coesão social. Quando os residentes se sentem conectados uns aos outros, eles trabalham juntos para resolver os problemas locais.
@@ -42,8 +43,13 @@ Conforme os prints abaixo, segue as necessidades e informações por parte dos u
 
 ![casa](https://user-images.githubusercontent.com/4424108/114314537-6e202000-9afb-11eb-832c-db8ef6bf8f12.jpeg)
 ![procurando-casa](https://user-images.githubusercontent.com/4424108/114314544-7b3d0f00-9afb-11eb-896d-871ea266ee1f.jpeg)
+[Serviços Imobiliarios 1.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292569/Servicos.Imobiliarios.1.pdf)
+[Serviços Imobiliarios 2.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292570/Servicos.Imobiliarios.2.pdf)
+[Serviços Imobiliarios 3.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292583/Servicos.Imobiliarios.3.pdf)
 
 - Segurança:
+[Artigo sobre Segurança 2.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292552/Artigo.sobre.Seguranca.2.pdf)
+[Artigo sobre Segurança.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292553/Artigo.sobre.Seguranca.pdf)
 
 ![seguranca](https://user-images.githubusercontent.com/4424108/114314601-ad4e7100-9afb-11eb-83bb-d242b7e7c58c.jpeg)
 
@@ -57,6 +63,8 @@ Conforme os prints abaixo, segue as necessidades e informações por parte dos u
 ![desaparecido](https://user-images.githubusercontent.com/4424108/114314663-d4a53e00-9afb-11eb-9731-78c29a1c35cf.png)
 
 - Estabelecimentos:
+[Estabelecimentos 1.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292558/Estabelecimentos.1.pdf)
+[economia 2.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6292596/economia.2.pdf)
 
 ![Estabelecimento](https://user-images.githubusercontent.com/4424108/114314674-e555b400-9afb-11eb-9f2f-c7185aa416f8.png'![WhatsApp Image 2021-04-11 at 15 08 48 (1)](https://user-images.githubusercontent.com/74074456/114316234-11ac0900-9ad9-11eb-8d32-f061ba5c775c.jpeg)
 
