@@ -34,36 +34,14 @@ Sendo assim, o projeto foi inspirado nessa demanda social, com o intuito de prod
 Trata-se de tudo que foi descoberto e pesquisado sobre o assunto, auxilia no desenvolvimento e melhorias posteriores. Neste caso, o estado da arte desta aplicação web que é uma rede social entre moradores, fez-se através da criação de uma plataforma web exemplos: facebook, whatsapp, da evolução e interação, e de como são apresentadas as necessidades dos usuários.
 Conforme os prints abaixo, segue as necessidades e informações por parte dos usuários deste tipo de aplicação. 
 
-- Noticias:
-
-![noticias](https://user-images.githubusercontent.com/4424108/114314406-c4409380-9afa-11eb-8cf2-4f9d99bc83fc.png)
-![noticias2](https://user-images.githubusercontent.com/4424108/114314452-f9e57c80-9afa-11eb-861e-2c9fe40efa12.png)
-
-- Serviços Imobiliários:
-
-![casa](https://user-images.githubusercontent.com/4424108/114314537-6e202000-9afb-11eb-832c-db8ef6bf8f12.jpeg)
-![procurando-casa](https://user-images.githubusercontent.com/4424108/114314544-7b3d0f00-9afb-11eb-896d-871ea266ee1f.jpeg)
-
-- Segurança:
-
-![seguranca](https://user-images.githubusercontent.com/4424108/114314601-ad4e7100-9afb-11eb-83bb-d242b7e7c58c.jpeg)
-
-- Doações:
-
-![Doações](https://user-images.githubusercontent.com/4424108/114314655-c9eaa900-9afb-11eb-83fd-373b9d6fd57e.jpeg)
-![Doações2](https://user-images.githubusercontent.com/4424108/114314656-cb1bd600-9afb-11eb-8161-e335f890c4e3.png)
-
-- Desaparecidos:
-
-![desaparecido](https://user-images.githubusercontent.com/4424108/114314663-d4a53e00-9afb-11eb-9731-78c29a1c35cf.png)
-
-- Estabelecimentos:
-
-![WhatsApp Image 2021-04-11 at 15 08 48 (1)](https://user-images.githubusercontent.com/74074456/114318141-04474c80-9ae2-11eb-8836-6d75beb4f5b6.jpeg)
-
-![Estabelecimento](https://user-images.githubusercontent.com/4424108/114314674-e555b400-9afb-11eb-9f2f-c7185aa416f8.png'![WhatsApp Image 2021-04-11 at 15 08 48 (1)](https://user-images.githubusercontent.com/74074456/114316234-11ac0900-9ad9-11eb-8d32-f061ba5c775c.jpeg)
-
-![Estabelecimento2](https://user-images.githubusercontent.com/4424108/114314677-e686e100-9afb-11eb-8e49-fab9315d3210.jpeg)
+|Topico| Imagem | 
+|-----|-----|
+|Noticias|![noticias](https://user-images.githubusercontent.com/4424108/114314406-c4409380-9afa-11eb-8cf2-4f9d99bc83fc.png) ![noticias2](https://user-images.githubusercontent.com/4424108/114314452-f9e57c80-9afa-11eb-861e-2c9fe40efa12.png)|
+|Serviços Imobiliários|![casa](https://user-images.githubusercontent.com/4424108/114314537-6e202000-9afb-11eb-832c-db8ef6bf8f12.jpeg)![procurando-casa](https://user-images.githubusercontent.com/4424108/114314544-7b3d0f00-9afb-11eb-896d-871ea266ee1f.jpeg)|
+|Segurança|![seguranca](https://user-images.githubusercontent.com/4424108/114314601-ad4e7100-9afb-11eb-83bb-d242b7e7c58c.jpeg)|
+|Doações|![Doações](https://user-images.githubusercontent.com/4424108/114314655-c9eaa900-9afb-11eb-83fd-373b9d6fd57e.jpeg)![Doações2](https://user-images.githubusercontent.com/4424108/114314656-cb1bd600-9afb-11eb-8161-e335f890c4e3.png)|
+|Desaparecidos|![desaparecido](https://user-images.githubusercontent.com/4424108/114314663-d4a53e00-9afb-11eb-9731-78c29a1c35cf.png)|
+|Estabelecimentos|![WhatsApp Image 2021-04-11 at 15 08 48 (1)](https://user-images.githubusercontent.com/74074456/114318141-04474c80-9ae2-11eb-8836-6d75beb4f5b6.jpeg)![Estabelecimento2](https://user-images.githubusercontent.com/4424108/114314677-e686e100-9afb-11eb-8e49-fab9315d3210.jpeg)|
 
 
 ## Público-Alvo
