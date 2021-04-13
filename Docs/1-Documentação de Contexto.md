@@ -31,8 +31,9 @@ Sendo assim, o projeto foi inspirado nessa demanda social, com o intuito de prod
 
 ## Estado da Arte
 
-Trata-se de tudo que foi descoberto e pesquisado sobre o assunto, auxilia no desenvolvimento e melhorias posteriores. Neste caso, o estado da arte desta aplicação web que é uma rede social entre moradores, fez-se através da criação de uma plataforma web exemplos: facebook, whatsapp, da evolução e interação, e de como são apresentadas as necessidades dos usuários.
-Conforme os prints abaixo, segue as necessidades e informações por parte dos usuários deste tipo de aplicação. 
+
+O estado da arte desta aplicação web foi estudado por meio de analises de plataformas como facebook, whatsapp.
+As imagens abaixo mostram como é a interação entre os moradores e as necessidades por parte dos usuários.  
 
 |Topico| Imagem | 
 |-----|-----|
