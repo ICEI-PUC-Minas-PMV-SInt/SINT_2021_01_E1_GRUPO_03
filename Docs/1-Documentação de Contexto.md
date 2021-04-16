@@ -47,4 +47,4 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
 
 ## Público-Alvo
 
-O público alvo desse projeto são pessoas na faixa etária de 18 á 65 anos, que desejam obter informações e colaborar com seu respectivo bairro, comerciantes que procuram uma plataforma para divulgação dos seus estabelecimentos, moradores a procura de serviços, pessoas que pretendem mudar de residência e estão a procura de mais informações sobre o bairro do qual tem interesse (segurança,estabelecimentos...).
+O público alvo desse projeto são pessoas na faixa etária acima de 18 anos, que desejam obter informações e colaborar com seu respectivo bairro, comerciantes que procuram uma plataforma para divulgação dos seus estabelecimentos, moradores a procura de serviços, pessoas que pretendem mudar de residência e estão a procura de mais informações sobre o bairro do qual tem interesse (segurança,estabelecimentos...).
