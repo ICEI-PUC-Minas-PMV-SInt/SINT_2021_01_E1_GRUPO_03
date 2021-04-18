@@ -1,11 +1,5 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
-
 ## Personas
 
  Fotos            |  Histórias
@@ -17,6 +11,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 ![comerciante](https://user-images.githubusercontent.com/4424108/114316946-0d4a1500-9b06-11eb-9ecd-e8c6f33e09bc.jpeg) | José da Silva Neves tem 45 anos, casado e tem um pequeno mercado local. Pensa em expandir o seu negocio porem precisa encontrar alguma forma de divulgar o seu estabelecimento. Começou a utilizar grupos do whatsApp mas apenas possuia alguns vizinhos. Agora ele está buscando uma forma mais efetiva onde ele possa divulgar o seu estabelecimento por todo o bairro.
 ![introvertido](https://user-images.githubusercontent.com/4424108/114317074-a1b47780-9b06-11eb-91fe-3734067e8541.jpeg) | Henrique Fernandes De Mello tem 40 anos, trabalha como motorista de ônibus, casado, tem 3 filhos. Ele é uma pessoa introvertida, além disso sempre chega em casa tarde e cansado, por isso não socializa com seus vizinhos, mas adoraria ficar por dentro sobre o que está acontecendo em seu bairro, além disso busca lugares tranquilos para viver.
 ![image](https://user-images.githubusercontent.com/4424108/115145541-57754e00-a052-11eb-8cfb-b23f587c74bc.png)| Renato Santos tem 47 anos, casado e com 2 filhos, trabalha como administrador de empresas. Ele é uma pessoa comunicativa, costuma utilizar as redes socias como o facebook, whatsapp.Sempre atento as noticias do bairro, disposto a ajudar e tomar a frente para resolver problemas existentes no bairro.
+![image](https://user-images.githubusercontent.com/4424108/115147127-c7d39d80-a059-11eb-8aa4-1f61e7897d72.png) |Regina Lima tem 50 anos, dona de uma imobiliária que gerencia imóveis como apartamentos, casas,salas comerciais e quartos. Normalmente utiliza o site da sua imobiliária para divulgação e Após começar a utilizar as redes sociais como plataforma de divulgação notou que sua página não tinha muito alcance, mas quando publicava os imóveis em bairros específicos conseguiu aumentar significativamente seus clientes, porem ela perde muito tempo pesquisando por bairros onde seus imóveis ficam localizados além de ter que publicar um a um. Agora ela esta em busca de uma plataforma onde possa divulgar os imóveis em diversos bairros sem ter que perder muito tempo pesquisando e publicando um a um.
 
 
 ## Histórias de Usuários
