@@ -2,18 +2,239 @@
 
 ## Personas
 
- Fotos            |  Histórias
-:-------------------------:|:-------------------------:
-![jovem-adulto](https://user-images.githubusercontent.com/4424108/114316957-1aff9a80-9b06-11eb-9d4e-242e23996415.jpeg) |  Rodrigo Martins tem 25 anos, recem formado em engenharia, solteiro e mora sozinho,adora conhecer gente nova e fazer amizades. Gosta de participar de eventos que reúnam pessoas jovens do seu bairro.
-![jovem-estudante](https://user-images.githubusercontent.com/4424108/114316891-daa01c80-9b05-11eb-8fac-e7ca053e653b.jpeg)| Ana Carolina Yamamoto tem 18 anos, é estudante e mora com os pais. Esse ano conseguiu uma vaga no curso de direito de uma universidade federal em outro estado, no momento está pesquisando bairros seguros e pessoas com quem possa dividir apartamento.
-![professora](https://user-images.githubusercontent.com/4424108/114316907-ebe92900-9b05-11eb-9fc9-67ef39003a1e.jpeg) | Silvana da Costa tem 35 anos, divorciada, tem 2 filhas adolescentes, trabalha como professora em uma universidade e dá aulas no periodo noturno. Como ela chega tarde em casa , sempre está preocupada com a segurança do seu bairro e de suas filhas que ficam sozinhas.
-![senhora](https://user-images.githubusercontent.com/4424108/114316919-f99eae80-9b05-11eb-8339-a4962a78fb0a.jpeg)|Maria Francisca da Silva Soares tem 63 anos, é aposentada, tem 3 filhos adultos mas atualmente mora somente com o marido, é extrovertida e super antenada, sempre quer saber de tudo que acontece ao seu redor e por isso adora saber de todas as noticias que acontecem no seu bairro.
-![comerciante](https://user-images.githubusercontent.com/4424108/114316946-0d4a1500-9b06-11eb-9ecd-e8c6f33e09bc.jpeg) | José da Silva Neves tem 45 anos, casado e tem um pequeno mercado local. Pensa em expandir o seu negocio porem precisa encontrar alguma forma de divulgar o seu estabelecimento. Começou a utilizar grupos do whatsApp mas apenas possuia alguns vizinhos. Agora ele está buscando uma forma mais efetiva onde ele possa divulgar o seu estabelecimento por todo o bairro.
-![introvertido](https://user-images.githubusercontent.com/4424108/114317074-a1b47780-9b06-11eb-91fe-3734067e8541.jpeg) | Henrique Fernandes De Mello tem 40 anos, trabalha como motorista de ônibus, casado, tem 3 filhos. Ele é uma pessoa introvertida, além disso sempre chega em casa tarde e cansado, por isso não socializa com seus vizinhos, mas adoraria ficar por dentro sobre o que está acontecendo em seu bairro, além disso busca lugares tranquilos para viver.
-![image](https://user-images.githubusercontent.com/4424108/115145541-57754e00-a052-11eb-8cfb-b23f587c74bc.png)| Renato Santos tem 47 anos, casado e com 2 filhos, trabalha como administrador de empresas. Ele é uma pessoa comunicativa, costuma utilizar as redes socias como o facebook, whatsapp.Sempre atento as noticias do bairro, disposto a ajudar e tomar a frente para resolver problemas existentes no bairro.
-![image](https://user-images.githubusercontent.com/4424108/115147127-c7d39d80-a059-11eb-8aa4-1f61e7897d72.png) |Regina Lima tem 50 anos, dona de uma imobiliária que gerencia imóveis como apartamentos, casas,salas comerciais e quartos. Normalmente utiliza o site da sua imobiliária para divulgação e Após começar a utilizar as redes sociais como plataforma de divulgação notou que sua página não tinha muito alcance, mas quando publicava os imóveis em bairros específicos conseguiu aumentar significativamente seus clientes, porem ela perde muito tempo pesquisando por bairros onde seus imóveis ficam localizados além de ter que publicar um a um. Agora ela esta em busca de uma plataforma onde possa divulgar os imóveis em diversos bairros sem ter que perder muito tempo pesquisando e publicando um a um.
-
-
+<table>
+   <tr>
+      <th>Foto</th>
+      <th>História</th>
+      <th>Aplicativos</th>
+      <th>Hábitos</th>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/114316957-1aff9a80-9b06-11eb-9d4e-242e23996415.jpeg"/> </td>
+      <td>Rodrigo Martins tem 25 anos, recem formado em engenharia, solteiro e mora sozinho,adora conhecer gente nova e fazer amizades. Gosta de participar de eventos que reúnam pessoas jovens do seu bairro. </td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Bares
+            </li>
+            <li>
+               Festas
+            </li>
+            <li>
+               Parques
+            </li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/114316891-daa01c80-9b05-11eb-8fac-e7ca053e653b.jpeg"/> </td>
+      <td>Ana Carolina Yamamoto tem 18 anos, é estudante e mora com os pais. Esse ano conseguiu uma vaga no curso de direito de uma universidade federal em outro estado, no momento está pesquisando bairros seguros e pessoas com quem possa dividir apartamento. </td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+            <li>
+               Sites de Imóveis
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Netflix
+            </li>
+            <li>
+               Ler livros
+            </li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/114316907-ebe92900-9b05-11eb-9fc9-67ef39003a1e.jpeg"/> </td>
+      <td>Silvana da Costa tem 35 anos, divorciada, tem 2 filhas adolescentes, trabalha como professora em uma universidade e dá aulas no periodo noturno. Como ela chega tarde em casa , sempre está preocupada com a segurança do seu bairro e de suas filhas que ficam sozinhas. </td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+            <li>
+               Portal de Notícias
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Parques
+            </li>
+            <li>
+               Restaurantes
+            </li>
+            <li>
+               Ler Livros
+            </li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/114316919-f99eae80-9b05-11eb-8339-a4962a78fb0a.jpeg"/> </td>
+      <td>Maria Francisca da Silva Soares tem 63 anos, é aposentada, tem 3 filhos adultos mas atualmente mora somente com o marido, é extrovertida e super antenada, sempre quer saber de tudo que acontece ao seu redor e por isso adora saber de todas as noticias que acontecem no seu bairro. </td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+            <li>
+               Instagram
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Caminhada
+            </li>
+            <li>
+               Cuidar de plantas
+            </li>
+            <li>
+               Bater papo com vizinhos
+            </li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/114316946-0d4a1500-9b06-11eb-9ecd-e8c6f33e09bc.jpeg"/> </td>
+      <td> José da Silva Neves tem 45 anos, casado e tem um pequeno mercado local. Pensa em expandir o seu negocio porem precisa encontrar alguma forma de divulgar o seu estabelecimento. Começou a utilizar grupos do whatsApp mas apenas possuia alguns vizinhos. Agora ele está buscando uma forma mais efetiva onde ele possa divulgar o seu estabelecimento por todo o bairro. </td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Assistir futebol
+            </li>
+            <li>
+               Churrasco em Família
+            </li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/114317074-a1b47780-9b06-11eb-91fe-3734067e8541.jpeg"/> </td>
+      <td> Henrique Fernandes De Mello tem 40 anos, trabalha como motorista de ônibus, casado, tem 3 filhos. Ele é uma pessoa introvertida, além disso sempre chega em casa tarde e cansado, por isso não socializa com seus vizinhos, mas adoraria ficar por dentro sobre o que está acontecendo em seu bairro, além disso busca lugares tranquilos para viver.</td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+            <li>
+               Portal de Notícias 
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Assistir futebol
+            </li>
+            <li>
+               Bares
+            </li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/115145541-57754e00-a052-11eb-8cfb-b23f587c74bc.png"/> </td>
+      <td>Renato Santos tem 47 anos, casado e com 2 filhos, servidor público aposentado. Ele é uma pessoa comunicativa, costuma utilizar as redes socias como o facebook, whatsapp.
+         Sempre atento as noticias do bairro, disposto a ajudar e tomar a frente para resolver problemas existentes no bairro.
+      </td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+            <li>
+               Portal de Notícias
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Cuidar do jardim
+            </li>
+            <li>
+               DYI(Do it yourself)
+            </li>
+         </ul>
+      </td>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/115147127-c7d39d80-a059-11eb-8aa4-1f61e7897d72.png"/> </td>
+      <td>Regina Lima tem 50 anos, dona de uma imobiliária que gerencia imóveis como apartamentos, casas, salas comerciais e quartos. Normalmente utiliza o site da sua imobiliária para divulgação ,decidiu começar a utilizar as redes sociais como plataforma de divulgação mas notou que sua página não tinha muito alcance, mas quando publicava os imóveis em bairros específicos conseguiu aumentar significativamente seus clientes, porem ela perde muito tempo pesquisando por bairros onde seus imóveis ficam localizados além de ter que publicar um a um. Agora ela esta em busca de uma plataforma onde possa divulgar os imóveis em diversos bairros sem ter que perder muito tempo pesquisando e publicando um a um.</td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+            <li>
+               Instagram
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Restaurantes
+            </li>
+            <li>
+               Praticar esportes
+            </li>
+            <li>
+               Viagens
+            </li>
+         </ul>
+      </td>
+   </tr>
+</table>
+ 
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
