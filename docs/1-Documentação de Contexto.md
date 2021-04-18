@@ -34,15 +34,118 @@ Sendo assim, o projeto foi inspirado nessa demanda social, com o intuito de prod
 
 O estado da arte desta aplicação web foi estudado por meio de analises de plataformas como facebook, whatsapp.
 As imagens abaixo mostram como é a interação entre os moradores e as necessidades por parte dos usuários.  
+<table>
+  <tr>
+    <th>Tópico</th>
+    <th>Imagem</th>
+  </tr>
+  <tr>
+    <td>Noticias</td>
+    <td>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/4424108/114609714-639e8b80-9c9f-11eb-80e8-b9a52240d402.jpeg"
+        />
+        <figcaption>
+          Informações sobre mudanças feitas pela prefeitura no bairro
+        </figcaption>
+      </figure>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/4424108/114609718-64cfb880-9c9f-11eb-902b-c73ded9dd1b6.jpeg"
+        />
+        <figcaption>Acidente de trânsito</figcaption>
+      </figure>
+    </td>
+  </tr>
 
-|Topico| Imagem | 
-|-----|-----|
-|Noticias|![noticias2](https://user-images.githubusercontent.com/4424108/114609714-639e8b80-9c9f-11eb-80e8-b9a52240d402.jpeg)![noticias](https://user-images.githubusercontent.com/4424108/114609718-64cfb880-9c9f-11eb-902b-c73ded9dd1b6.jpeg)|
-|Serviços Imobiliários|![casa](https://user-images.githubusercontent.com/4424108/114314537-6e202000-9afb-11eb-832c-db8ef6bf8f12.jpeg)![procurando-casa](https://user-images.githubusercontent.com/4424108/114314544-7b3d0f00-9afb-11eb-896d-871ea266ee1f.jpeg)|
-|Segurança|![seguranca](https://user-images.githubusercontent.com/4424108/114314601-ad4e7100-9afb-11eb-83bb-d242b7e7c58c.jpeg)|
-|Doações|![Doações](https://user-images.githubusercontent.com/4424108/114314655-c9eaa900-9afb-11eb-83fd-373b9d6fd57e.jpeg)![Doações2](https://user-images.githubusercontent.com/4424108/114314656-cb1bd600-9afb-11eb-8161-e335f890c4e3.png)|
-|Desaparecidos|![desaparecida](https://user-images.githubusercontent.com/4424108/114609593-44076300-9c9f-11eb-9fa5-f417f81a6396.jpeg)|
-|Estabelecimentos|![WhatsApp Image 2021-04-11 at 15 08 48 (1)](https://user-images.githubusercontent.com/74074456/114318141-04474c80-9ae2-11eb-8836-6d75beb4f5b6.jpeg)![Estabelecimento2](https://user-images.githubusercontent.com/4424108/114314677-e686e100-9afb-11eb-8e49-fab9315d3210.jpeg)|
+  <tr>
+    <td>Serviços Imobiliários</td>
+    <td>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/4424108/114314537-6e202000-9afb-11eb-832c-db8ef6bf8f12.jpeg"
+        />
+        <figcaption>Divulgação de apartamento para alugar.</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/4424108/114314544-7b3d0f00-9afb-11eb-896d-871ea266ee1f.jpeg"
+        />
+        <figcaption>
+          Usuário procurando apartamento com intenção de compra.
+        </figcaption>
+      </figure>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Segurança</td>
+    <td>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/4424108/114314601-ad4e7100-9afb-11eb-83bb-d242b7e7c58c.jpeg"
+        />
+        <figcaption>Usuário compartilhando flagrante de assalto.</figcaption>
+      </figure>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Doações</td>
+    <td>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/4424108/114314655-c9eaa900-9afb-11eb-83fd-373b9d6fd57e.jpeg"
+        />
+        <figcaption>Divulgação de doações de refeições.</figcaption>
+      </figure>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/4424108/114314656-cb1bd600-9afb-11eb-8161-e335f890c4e3.png"
+        />
+        <figcaption>
+          Moradora precisando de doações após ter a sua residência incendiada.
+        </figcaption>
+      </figure>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Desaparecidos</td>
+    <td>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/4424108/114609593-44076300-9c9f-11eb-9fa5-f417f81a6396.jpeg"
+        />
+        <figcaption>Compartilhamento de moradora desaparecida.</figcaption>
+      </figure>
+      <tr>
+        <td>Estabelecimentos</td>
+        <td>
+          <figure>
+            <img
+              src="https://user-images.githubusercontent.com/74074456/114318141-04474c80-9ae2-11eb-8836-6d75beb4f5b6.jpeg"
+            />
+            <figcaption>
+              Conversas no WhatsApp sobre horarios de funcionamento de serviços
+              publicos, indicações de serviços, informações de descarte de lixo,
+              pedidos de doações...
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://user-images.githubusercontent.com/4424108/114314677-e686e100-9afb-11eb-8e49-fab9315d3210.jpeg"
+            />
+            <figcaption>
+              Divulgacão de estabelecimento que vende almoço.
+            </figcaption>
+          </figure>
+        </td>
+      </tr>
+    </td>
+  </tr>
+</table>
 
 
 ## Público-Alvo
