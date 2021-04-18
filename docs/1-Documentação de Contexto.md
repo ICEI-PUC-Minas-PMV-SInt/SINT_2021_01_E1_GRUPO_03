@@ -47,14 +47,14 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
           src="https://user-images.githubusercontent.com/4424108/114609714-639e8b80-9c9f-11eb-80e8-b9a52240d402.jpeg"
         />
         <figcaption>
-          Informações sobre mudanças feitas pela prefeitura no bairro
+          Informações sobre mudanças feitas pela prefeitura no bairro.
         </figcaption>
       </figure>
       <figure>
         <img
           src="https://user-images.githubusercontent.com/4424108/114609718-64cfb880-9c9f-11eb-902b-c73ded9dd1b6.jpeg"
         />
-        <figcaption>Acidente de trânsito</figcaption>
+        <figcaption>Acidente de trânsito.</figcaption>
       </figure>
     </td>
   </tr>
