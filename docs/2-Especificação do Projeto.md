@@ -198,14 +198,14 @@
                Cuidar do jardim
             </li>
             <li>
-               DYI(Do it yourself)
+               DIY (Do it yourself)
             </li>
          </ul>
       </td>
    </tr>
    <tr>
       <td><img src="https://user-images.githubusercontent.com/4424108/115147127-c7d39d80-a059-11eb-8aa4-1f61e7897d72.png"/> </td>
-      <td>Regina Lima tem 50 anos, dona de uma imobiliária que gerencia imóveis como apartamentos, casas, salas comerciais e quartos. Normalmente utiliza o site da sua imobiliária para divulgação ,decidiu começar a utilizar as redes sociais como plataforma de divulgação mas notou que sua página não tinha muito alcance, mas quando publicava os imóveis em bairros específicos conseguiu aumentar significativamente seus clientes, porem ela perde muito tempo pesquisando por bairros onde seus imóveis ficam localizados além de ter que publicar um a um. Agora ela esta em busca de uma plataforma onde possa divulgar os imóveis em diversos bairros sem ter que perder muito tempo pesquisando e publicando um a um.</td>
+      <td>Regina Lima tem 50 anos, dona de uma imobiliária que gerencia imóveis como apartamentos, casas, salas comerciais e quartos. Normalmente utiliza o site da sua imobiliária para divulgação, decidiu começar a utilizar as redes sociais como plataforma de divulgação mas notou que sua página não tinha muito alcance, mas quando publicava os imóveis em bairros específicos conseguiu aumentar significativamente seus clientes, porem ela perde muito tempo pesquisando por bairros onde seus imóveis ficam localizados além de ter que publicar um a um. Agora ela está em busca de uma plataforma onde possa divulgar os imóveis em diversos bairros sem ter que perder muito tempo pesquisando e publicando um a um.</td>
       <td>
          <ul>
             <li>
