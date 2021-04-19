@@ -233,6 +233,36 @@
          </ul>
       </td>
    </tr>
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/4424108/115282130-1ceedc80-a14a-11eb-893a-1a064a1d80e1.jpeg"/> </td>
+      <td>Anderson Barros tem 42 anos, divorciado, ativista, cirurgião veterinário e gerente imobiliário. Com uma comunicação inspiradora e dedicação a trabalhos voluntários, ficou famoso na internet por criar uma ONG responsável por arrecadar alimentos para população mais vulnerável, além de adoção de cães e gatos. Com isso, tem um grande networking e visibilidade, porém precisa sempre de uma ajuda voluntária para administrar todo trabalho da ONG.</td>
+      <td>
+         <ul>
+            <li>
+               Facebook
+            </li>
+            <li>
+               Whatsapp
+            </li>
+            <li>
+               Instagram
+            </li>
+         </ul>
+      </td>
+      <td>
+         <ul>
+            <li>
+               Ler
+            </li>
+            <li>
+              Conhecer parques
+            </li>
+            <li>
+               Socializar
+            </li>
+         </ul>
+      </td>
+   </tr>
 </table>
  
 ## Histórias de Usuários
