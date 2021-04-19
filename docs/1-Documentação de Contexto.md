@@ -151,7 +151,7 @@ Dados do Social Progress Imperative¹, mostram que o Brasil é o 11º país mais
 Basicamente, o projeto consistia em dividir bairros, e em cada um deles estipular uma “célula”, um grupo exclusivo de determinada região do bairro. Ou seja, cada bairro teria inúmeras “células”. A partir disso, era criado um grupo de whatsapp exclusivo de cada uma delas, para que junto com a polícia responsável pelo local, houvesse compartilhamento de informações sobre atividades suspeitas na região, desastres climáticos ou blackout, por exemplo. A vantagem principal, é o acesso simultâneo aos eventos notificados.
 Desta forma, nosso projeto consiste na adesão de um sistema similar, que unisse além dos grupos para comunicação regional, notícias e avaliações de cada morador sobre seu bairro, podendo assim, contribuir para a segurança pública e também para o conhecimento prévio de interessados nas regiões, de acordo com seu gosto e personalidade.
 
-
+ 
 Referências:
 https://www.socialprogress.org/ ¹
 https://www.fenacor.org/ ² 
