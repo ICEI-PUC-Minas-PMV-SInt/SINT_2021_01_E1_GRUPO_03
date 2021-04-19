@@ -146,8 +146,18 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
     </td>
   </tr>
 </table>
+Dados do Social Progress Imperative¹, mostram que o Brasil é o 11º país mais inseguro do mundo e, de acordo com a Fenacor (Federação Nacional dos Corretores de Seguros Privados), o home office catalisado pela pandemia, fez com que os seguros residenciais crescerem 6,1% no ano de 2020. Outro dado do SindSeg RJ/ES (Sindicato das Seguradoras do Rio de Janeiro e do Espírito Santo), no acumulado do ano de 2020, o seguro residencial cresceu 3,0% no estado do Rio de Janeiro e 10,1% no Espírito Santo. Isso revela que a cobertura de seguros residenciais podem ser um excelente custo benefício para pequenos imprevistos domésticos como curtos circuitos, vazamento ou quebra de uma chave, até situações mais graves incêndios e até roubos. 
+E foi pensando na questão do roubo, que focamos nosso projeto para a segurança residencial, baseado em uma estratégia de vigilância compartilhada. Um estudo³ realizado em Uberlândia, em 2020, acerca da segurança pública a partir da percepção da comunidade no aumento da violência urbana, revela uma estratégia, considerada em nosso projeto, desenvolvida para criar uma rede de solidariedade entre vizinhos que ajudou tanto na sensação de segurança, como de fato reduziu o índice de criminalidade em um bairro da zona sul de Uberlândia/MG.
+Basicamente, o projeto consistia em dividir bairros, e em cada um deles estipular uma “célula”, um grupo exclusivo de determinada região do bairro. Ou seja, cada bairro teria inúmeras “células”. A partir disso, era criado um grupo de whatsapp exclusivo de cada uma delas, para que junto com a polícia responsável pelo local, houvesse compartilhamento de informações sobre atividades suspeitas na região, desastres climáticos ou blackout, por exemplo. A vantagem principal, é o acesso simultâneo aos eventos notificados.
+Desta forma, nosso projeto consiste na adesão de um sistema similar, que unisse além dos grupos para comunicação regional, notícias e avaliações de cada morador sobre seu bairro, podendo assim, contribuir para a segurança pública e também para o conhecimento prévio de interessados nas regiões, de acordo com seu gosto e personalidade.
+
+
+Referências:
+https://www.socialprogress.org/
+https://www.fenacor.org/ ² 
+[Artigo sobre Segurança.pdf](https://github.com/ICEI-PUC-Minas-PMV-SInt/SINT_2021_01_E1_GRUPO_03/files/6332635/Artigo.sobre.Seguranca.pdf)
 
 
 ## Público-Alvo
 
-O público alvo desse projeto são pessoas na faixa etária acima de 18 anos, que desejam obter informações e colaborar com seu respectivo bairro, comerciantes que procuram uma plataforma para divulgação dos seus estabelecimentos, moradores a procura de serviços, pessoas que pretendem mudar de residência e estão a procura de mais informações sobre o bairro do qual tem interesse (segurança,estabelecimentos...).
+O   público alvo desse projeto são pessoas na faixa etária acima de 18 anos, que desejam obter informações e colaborar com seu respectivo bairro, comerciantes que procuram uma plataforma para divulgação dos seus estabelecimentos, moradores a procura de serviços, pessoas que pretendem mudar de residência e estão a procura de mais informações sobre o bairro do qual tem interesse (segurança,estabelecimentos...
