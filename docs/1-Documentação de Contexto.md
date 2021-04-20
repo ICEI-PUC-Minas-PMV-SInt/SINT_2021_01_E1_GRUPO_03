@@ -47,7 +47,7 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
           src="https://user-images.githubusercontent.com/4424108/114609714-639e8b80-9c9f-11eb-80e8-b9a52240d402.jpeg"
         />
         <figcaption>
-          Informações sobre mudanças feitas pela prefeitura no bairro. As vantagens deste local de postagens, são a acessibilidade simultânea. Porém, pode se perder facilmente diante de outras notícia  com tópicos aleatórios que podem distrai ra a atenção  e até não ser visualizado. Pode-se notar as mesmas questões nas imagens abaixo.
+          Informações sobre mudanças feitas pela prefeitura no bairro. Divulgações em grupos de faceboook podem ter uma grande vantagem diante da acessibilidade simultânea. Porém também dificulta  o  a organiação de tópicos entre elas, atrapalhando possíveis buscas  do usuário. 
         </figcaption>
       </figure>
       <figure>
