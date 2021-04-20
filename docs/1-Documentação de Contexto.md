@@ -105,7 +105,7 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
           src="https://user-images.githubusercontent.com/4424108/114314656-cb1bd600-9afb-11eb-8161-e335f890c4e3.png"
         />
         <figcaption>
-          Moradora precisando de doações após ter a sua residência incendiada. Quando uma plataforma pode evidenciar informações por tópicos, acontecimentos como esse  pode filtrar melhor pessoas dispostas e interessadas nas quesões locais. 
+          Moradora precisando de doações após ter a sua residência incendiada. 
         </figcaption>
       </figure>
     </td>
@@ -138,7 +138,7 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
               src="https://user-images.githubusercontent.com/4424108/114314677-e686e100-9afb-11eb-8e49-fab9315d3210.jpeg"
             />
             <figcaption>
-              Divulgacão de estabelecimento que vende almoço.  Aplicativos móveis como whatsapp se tornaram um grande aliado dos empreendedores durante a pandemia, por ser gratuito e garantir uma rápida troca de mensagens tanto particulares como entre grupos montados a gosto e critério de cada usuário. Porém, quanto maior o número de interações, maior a dificuldade de monitoramento das interações e estratégias comerciais.
+              Divulgacão de estabelecimento que vende almoço.  Aplicativos móveis como whatsapp se tornaram um grande aliado dos empreendedores durante a pandemia, por ser gratuito e garantir uma rápida troca de mensagens tanto particulares como entre grupos montados a gosto e critério de cada usuário. Porém, quanto maior o número de interações, maior a dificuldade de monitoramento e de estratégias comerciais.
             </figcaption>
           </figure>
         </td>
