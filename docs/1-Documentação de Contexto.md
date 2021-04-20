@@ -47,7 +47,7 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
           src="https://user-images.githubusercontent.com/4424108/114609714-639e8b80-9c9f-11eb-80e8-b9a52240d402.jpeg"
         />
         <figcaption>
-          Informações sobre mudanças feitas pela prefeitura no bairro.
+          Informações sobre mudanças feitas pela prefeitura no bairro. As vantagens deste local de postagens, são a acessibilidade simultânea. Porém, pode se perder facilmente diante de outras notícia  com tópicos aleatórios que podem distrai ra a atenção  e até não ser visualizado. Pode-se notar as mesmas questões nas imagens abaixo.
         </figcaption>
       </figure>
       <figure>
@@ -73,7 +73,7 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
           src="https://user-images.githubusercontent.com/4424108/114314544-7b3d0f00-9afb-11eb-896d-871ea266ee1f.jpeg"
         />
         <figcaption>
-          Usuário procurando apartamento com intenção de compra.
+          Usuário procurando apartamento com intenção de compra. A desvantagem deste tipo de postagem é a falta de conhecimento prévio e baseado em avaliações não comerciais. 
         </figcaption>
       </figure>
     </td>
@@ -105,7 +105,7 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
           src="https://user-images.githubusercontent.com/4424108/114314656-cb1bd600-9afb-11eb-8161-e335f890c4e3.png"
         />
         <figcaption>
-          Moradora precisando de doações após ter a sua residência incendiada.
+          Moradora precisando de doações após ter a sua residência incendiada. Quando uma plataforma pode evidenciar informações por tópicos, acontecimentos como esse  pode filtrar melhor pessoas dispostas e interessadas nas quesões locais. 
         </figcaption>
       </figure>
     </td>
@@ -138,7 +138,7 @@ As imagens abaixo mostram como é a interação entre os moradores e as necessid
               src="https://user-images.githubusercontent.com/4424108/114314677-e686e100-9afb-11eb-8e49-fab9315d3210.jpeg"
             />
             <figcaption>
-              Divulgacão de estabelecimento que vende almoço.
+              Divulgacão de estabelecimento que vende almoço.  Aplicativos móveis como whatsapp se tornaram um grande aliado dos empreendedores durante a pandemia, por ser gratuito e garantir uma rápida troca de mensagens tanto particulares como entre grupos montados a gosto e critério de cada usuário. Porém, quanto maior o número de interações, maior a dificuldade de monitoramento das interações e estratégias comerciais.
             </figcaption>
           </figure>
         </td>
