@@ -271,14 +271,14 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Rodrigo Martins como morador do bairro quero participar dos eventos para conhecer pesoas jovens e fazer novas amizades.
-|Ana Carolina Yamamoto como provalvel moradora, está pesquisando bairros e pessoas, para alugar e dividir apartamento.
-|Silvana como professora,quer acompanhar as noticias referente a segurança do bairro, pois suas filhas ficam sozinhas em casa no periodo noturno.
-|Maria francisca como moradora, quer acompanhar as noticias do bairro, pois gosta de se manter atualizada.
-|José da Silva Neves como comerciante, quer divulgar seu estabelecimento,porque pensa em expandir o negócio.
-|Henrique Fernandes de Mello como morador, quer estar por dentro das noticias do bairro, porque gosta de lugares tranquilos para morar.
-|Renato Santos como morador, quer saber das necessidades do bairro, pois sempre se prontifca a ajudar.
-|Regina Lima como prestadora de serviços, quer para divulgar seus imóveis, para aumentar seus ganhos e consequentemente sua carteira de clientes.              |
+|Rodrigo Martins como morador do bairro | Quer participar dos eventos | Para conhecer pesoas jovens e fazer novas amizades.
+|Ana Carolina Yamamoto como provalvel moradora | está pesquisando bairros e pessoas | Para alugar e dividir apartamento.
+|Silvana como professora | quer acompanhar as noticias referente a segurança do bairro | Pois suas filhas ficam sozinhas em casa no periodo noturno.
+|Maria francisca como moradora | Quer acompanhar as noticias do bairro | Pois gosta de se manter atualizada.
+|José da Silva Neves como comerciante | Quer divulgar seu estabelecimento | Porque pensa em expandir o negócio.
+|Henrique Fernandes de Mello como morador | Quer estar por dentro das noticias do bairro | Porque gosta de lugares tranquilos para morar.
+|Renato Santos como morador | Quer saber das necessidades do bairro | Pois sempre se prontifca a ajudar.
+|Regina Lima como prestadora de serviços | Quer para divulgar seus imóveis | Para aumentar seus ganhos e consequentemente sua carteira de clientes.              
 |Usuário do sistema  | Receber notificações                    | Ser notificado sobre os posts que eu desejo acompanhar.             |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
