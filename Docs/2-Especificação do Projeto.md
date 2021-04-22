@@ -272,8 +272,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Rodrigo Martins como morador do bairro | Quer participar dos eventos | Para conhecer pesoas jovens e fazer novas amizades.
-|Ana Carolina Yamamoto como provalvel moradora | está pesquisando bairros e pessoas | Para alugar e dividir apartamento.
-|Silvana como professora | quer acompanhar as noticias referente a segurança do bairro | Pois suas filhas ficam sozinhas em casa no periodo noturno.
+|Ana Carolina Yamamoto como provalvel moradora | Quer pesquisar bairros e pessoas | Para alugar e dividir apartamento.
+|Silvana como professora | Quer acompanhar as noticias referente a segurança do bairro | Pois suas filhas ficam sozinhas em casa no periodo noturno.
 |Maria francisca como moradora | Quer acompanhar as noticias do bairro | Pois gosta de se manter atualizada.
 |José da Silva Neves como comerciante | Quer divulgar seu estabelecimento | Porque pensa em expandir o negócio.
 |Henrique Fernandes de Mello como morador | Quer estar por dentro das noticias do bairro | Porque gosta de lugares tranquilos para morar.
