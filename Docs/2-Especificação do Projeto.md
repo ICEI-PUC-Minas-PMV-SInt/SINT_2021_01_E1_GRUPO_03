@@ -271,12 +271,14 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Poder fazer um post                      |Compartilhar , solicitar ou fornecer Informações.            |
-|Usuário do sistema  | Avaliar bairro                     | Expressar minha opinião sobre aquele local.       |
-|Usuário do sistema  | Comentar Posts                     | Interagir com os outros usuários.               |              |
-|Usuário do sistema  | Pesquisar / Visualizar outros bairros          |Verificar o que as pessoas andam falando em outros bairros.              |
-|Usuário do sistema  | Mudar de bairro                    | Começar a interagir com os novos vizinhos.             |
-|Usuário do sistema  | Denunciar post                     | Posts que não sao relevantes ou que me desrespeite de alguma forma.              |
+|Rodrigo Martins como morador do bairro quero participar dos eventos para conhecer pesoas jovens e fazer novas amizades.
+|Ana Carolina Yamamoto como provalvel moradora, está pesquisando bairros e pessoas, para alugar e dividir apartamento.
+|Silvana como professora,quer acompanhar as noticias referente a segurança do bairro, pois suas filhas ficam sozinhas em casa no periodo noturno.
+|Maria francisca como moradora, quer acompanhar as noticias do bairro, pois gosta de se manter atualizada.
+|José da Silva Neves como comerciante, quer divulgar seu estabelecimento,porque pensa em expandir o negócio.
+|Henrique Fernandes de Mello como morador, quer estar por dentro das noticias do bairro, porque gosta de lugares tranquilos para morar.
+|Renato Santos como morador, quer saber das necessidades do bairro, pois sempre se prontifca a ajudar.
+|Regina Lima como prestadora de serviços, quer para divulgar seus imóveis, para aumentar seus ganhos e consequentemente sua carteira de clientes.              |
 |Usuário do sistema  | Receber notificações                    | Ser notificado sobre os posts que eu desejo acompanhar.             |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
