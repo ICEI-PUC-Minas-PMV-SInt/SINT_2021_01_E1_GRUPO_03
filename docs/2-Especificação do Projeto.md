@@ -278,8 +278,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |José da Silva Neves como comerciante | Quer divulgar seu estabelecimento | Porque pensa em expandir o negócio.
 |Henrique Fernandes de Mello como morador | Quer estar por dentro das noticias do bairro | Porque gosta de lugares tranquilos para morar.
 |Renato Santos como morador | Quer saber das necessidades do bairro | Pois sempre se prontifca a ajudar.
-|Regina Lima como prestadora de serviços | Quer divulgar seus imóveis em bairros especificos | Para aumentar seus ganhos e consequentemente sua carteira de clientes.             
-|Andeson Barros como voluntário | Quer ajuda para administrar sua ONG | Para continuar se dedicando as ações voluntárias.             |
+|Regina Lima como prestadora de serviços | Quer divulgar seus imóveis em bairros especificos | Para aumentar seus ganhos e consequentemente sua carteira de clientes.        
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
