@@ -316,7 +316,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RNF-002| Depois de uma postagem pela interface da web (veja RF-003), ela estará disponível nas listas de postagens de outros usuários. |  ALTA | 
 |  RNF-003 |  Tutorial breve sobre a usabilidade do site, para recém cadastrados. | ALTA |
 | RNF-004 |  O sistema não  apresentará aos usuários dados de qualquer cunho privativo. | ALTA |
-| RNF-005 |  O sistema deverá ter resposta de até 3 segundos ao usuário | MÉDI |
+| RNF-005 |  O sistema deverá ter resposta de até 3 segundos ao usuário | MÉDIA |
 | RNF-006 | Usar formulários para  entrada de dados | ALTA |
 
 ## Restrições
@@ -325,11 +325,11 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O sistema não deve permitir o cadastro de usuários menores de 18 anos. |
-|02| O usuário deve fornecer um comprovante de residência para se cadastrar.     |
-|03| O usuário deve fornecer um comprovante de residência para trocar sua localidade.   |
-|04| Comentários devem ser restritos a residentes.  |
+|01| O sistema não deve permitir o cadastro de usuários menores de 18 anos |
+|02| O usuário deve fornecer um comprovante de residência para se cadastrar     |
+|03| O usuário deve fornecer um comprovante de residência para trocar sua localidade   |
+|04| Comentários devem ser restritos a residentes  |
 |05| Avaliação de bairro deve ser restrita a residentes  |
-|06| Chat deve ser restrito a residentes.  |
-|07| A avaliação de usuários deve ser restrita a residentes. |
-|08|Usuários não residentes não poderão visualizar informações privadas.|
+|06| Chat deve ser restrito a residentes  |
+|07| A avaliação de usuários deve ser restrita a residentes |
+|08|Usuários não residentes não poderão visualizar informações privadas |
