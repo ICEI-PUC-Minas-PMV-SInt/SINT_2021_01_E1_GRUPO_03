@@ -305,7 +305,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RF-019 |O sistema deve ter a funcionalidade de logout | ALTA |
 |RF-020 |O sistema deve conter um campo de busca de bairros | ALTA |
 |RF-021 |O sistema deve conter uma tela de perfil | BAIXA |
-|RF-022 |O sistema deve conter um subsistema de agenda de usuários do bairro | BAIXA |
+|RF-022 |O sistema deve conter um subsistema de lista telefônica dos residentes | BAIXA |
 |RF-023 |O sistema deve conter uma seção de configurações | MÉDIA |
 |RF-024 |O sistema deve permitir que o usuário altere suas informações de cadastro | MÉDIA |
 
