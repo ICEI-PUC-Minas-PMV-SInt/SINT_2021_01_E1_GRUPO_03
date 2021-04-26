@@ -280,7 +280,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Renato Santos como morador | Quer saber das necessidades do bairro | Pois sempre se prontifca a ajudar.
 |Regina Lima como prestadora de serviços | Quer divulgar seus imóveis em bairros especificos | Para aumentar seus ganhos e consequentemente sua carteira de clientes.        
 
-### Requisitos Funcionais
+## Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
@@ -308,7 +308,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RF-022 |O sistema deve conter um subsistema de agenda de usuários do bairro | BAIXA |
 |RF-023 |O sistema deve conter uma seção de configurações | MÉDIA |
 
-### Requisitos não Funcionais
+## Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
