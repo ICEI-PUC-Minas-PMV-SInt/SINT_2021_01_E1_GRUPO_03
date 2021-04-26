@@ -278,7 +278,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |José da Silva Neves como comerciante | Quer divulgar seu estabelecimento | Porque pensa em expandir o negócio.
 |Henrique Fernandes de Mello como morador | Quer estar por dentro das noticias do bairro | Porque gosta de lugares tranquilos para morar.
 |Renato Santos como morador | Quer saber das necessidades do bairro | Pois sempre se prontifca a ajudar.
-|Regina Lima como prestadora de serviços | Quer divulgar seus imóveis em bairros especificos | Para aumentar seus ganhos e consequentemente sua carteira de clientes.        
+|Regina Lima como prestadora de serviços | Quer divulgar seus imóveis em bairros especificos | Para aumentar seus ganhos e consequentemente sua carteira de clientes.    
+|Anderson Barros como voluntário | Precisa de ajuda voluntária | Para administrar sua ONG.
 
 ## Requisitos Funcionais
 
