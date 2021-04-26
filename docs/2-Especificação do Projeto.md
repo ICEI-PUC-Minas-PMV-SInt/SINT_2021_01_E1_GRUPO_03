@@ -282,16 +282,6 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
-
-## RequisitosP
-
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
 ### Requisitos Funcionais
 
@@ -353,15 +343,14 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre. |
-|02| Não pode ser desenvolvido um módulo de backend.        |
-|03| O usuário  deve fornecer um comprovante de residência para se cadastrar.    |
-|04| O usuário  deve fornecer um comprovante de residência para mudar de bairro.    |
-|05| O usuário  deve pertencer ao bairro para comentar nos Posts.   |
-|06| O usuário  deve pertencer ao bairro para avaliar.   |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
+|01| O sistema não deve permitir o cadastro de usuários menores de 18 anos. |
+|02| O usuário deve fornecer um comprovante de residência para se cadastrar.     |
+|03| O usuário deve fornecer um comprovante de residência para trocar sua localidade.   |
+|04| Comentários devem ser restritos a residentes.  |
+|05| Avaliação de bairro deve ser restrita a residentes  |
+|06| Chat deve ser restrito a residentes.  |
+|07| A avaliação de usuários deve ser restrita a residentes. |
+|08|Usuários não residentes não poderão visualizar informações privadas.|
 
 > **Links Úteis**:
 > - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
