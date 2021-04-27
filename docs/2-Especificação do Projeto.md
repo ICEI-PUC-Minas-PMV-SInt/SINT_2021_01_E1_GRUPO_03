@@ -235,7 +235,7 @@
    </tr>
     <tr>
       <td><img src="https://user-images.githubusercontent.com/4424108/115282130-1ceedc80-a14a-11eb-893a-1a064a1d80e1.jpeg"/> </td>
-      <td>Anderson Barros tem 42 anos, divorciado, ativista, cirurgião veterinário e gerente imobiliário. Com uma comunicação inspiradora e dedicação a trabalhos voluntários, ficou famoso na internet por criar uma ONG responsável por arrecadar alimentos para população mais vulnerável, além de adoção de cães e gatos. Com isso, tem um grande networking e visibilidade, porém precisa sempre de uma ajuda voluntária para administrar todo trabalho da ONG.</td>
+      <td>Anderson Barros tem 42 anos, divorciado, cirurgião veterinário. Desde criança sempre gostou de animais, e sempre quis ajuda-los, ele costuma pegar animais que estão abandonados na rua e cuidar deles, mas infelizmente ele não tem espaço suficiente para adotar todos os animais que ele resgata, agora ele está procurando uma plataforma onde ele possa divulga-los para adoção em seu bairro.</td>
       <td>
          <ul>
             <li>
@@ -279,7 +279,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Henrique Fernandes de Mello como morador | Quer estar por dentro das noticias do bairro | Porque gosta de lugares tranquilos para morar.
 |Renato Santos como morador | Quer saber das necessidades do bairro | Pois sempre se prontifca a ajudar.
 |Regina Lima como prestadora de serviços | Quer divulgar seus imóveis em bairros especificos | Para aumentar seus ganhos e consequentemente sua carteira de clientes.    
-|Anderson Barros como voluntário | Precisa de ajuda voluntária | Para administrar sua ONG.
+|Anderson Barros como morador | Quer divulgar animais para adoção | Porque em sua casa não tem espaço suficiente para os animais que ele resgata.
 
 ## Requisitos Funcionais
 
