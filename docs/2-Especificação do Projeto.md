@@ -235,7 +235,7 @@
    </tr>
     <tr>
       <td><img src="https://user-images.githubusercontent.com/4424108/115282130-1ceedc80-a14a-11eb-893a-1a064a1d80e1.jpeg"/> </td>
-      <td>Anderson Barros tem 42 anos, divorciado, cirurgião veterinário. Desde criança sempre gostou de animais, e sempre quis ajuda-los, ele costuma pegar animais que estão abandonados na rua e cuidar deles, mas infelizmente ele não tem espaço suficiente para adotar todos os animais que ele resgata, agora ele está procurando uma plataforma onde ele possa divulga-los para adoção em seu bairro.</td>
+      <td>Anderson Barros tem 42 anos, divorciado, cirurgião veterinário.Ele costuma resgatar animais que estão abandonados na rua e cuidar deles, mas infelizmente ele não tem espaço suficiente para mante-los em sua casa. Agora ele está procurando uma plataforma onde ele possa encontrar pessoas ao seu redor que estejam dispostas a adota-los.</td>
       <td>
          <ul>
             <li>
