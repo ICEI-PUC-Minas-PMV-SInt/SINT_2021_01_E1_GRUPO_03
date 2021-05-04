@@ -316,10 +316,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Depois de uma postagem pela interface da web (veja RF-003), ela estará disponível nas listas de postagens de outros usuários. |  ALTA | 
-|  RNF-003 |  Tutorial breve sobre a usabilidade do site, para recém cadastrados. | ALTA |
-| RNF-004 |  O sistema não  apresentará aos usuários dados de qualquer cunho privativo. | ALTA |
-| RNF-005 |  O sistema deverá ter resposta de até 3 segundos ao usuário | MÉDIA |
-| RNF-006 | Usar formulários para  entrada de dados | ALTA |
+|RNF-003| O sistema não  apresentará aos usuários dados de qualquer cunho privativo. | ALTA |
+|RNF-004| O sistema deverá ter resposta de até 3 segundos ao usuário | MÉDIA |
+|RNF-005| Usar formulários para  entrada de dados | ALTA |
 
 ## Restrições
 
