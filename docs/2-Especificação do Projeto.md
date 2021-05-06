@@ -318,9 +318,11 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RNF-002| Depois de uma postagem pela interface da web (veja RF-003), ela estará disponível nas listas de postagens de outros usuários. |  ALTA | 
 |RNF-003| O sistema não  apresentará aos usuários dados de qualquer cunho privativo. | ALTA |
 |RNF-004| O sistema deverá ter resposta de até 3 segundos ao usuário | MÉDIA |
-|RNF-005| Usar formulários para  entrada de dados | ALTA |
-|RNF-006| O sistema deve fornecer facilidades para a realização de cópias de segurança dos dados do sistema pelo administrador. | MEDIA |
+|RNF-005| O sistema deve Usar formulários para  entrada de dados | ALTA |
+|RNF-006| O sistema deve fornecer facilidades para a realização de cópias de segurança dos dados do sistema pelo administrador. | MÉDIA |
 |RNF-007| O sistema deve ter capacidade para recuperar os dados perdidos da última operação que realizou em caso de falha. | ALTA |
+|RNF-008| O sistema notificará via ícones novas atualizações e notificações | MÉDIA |
+|RNF-009| Ao passar o mouse sobre ícones, o sistema abrirá uma breve janela com o nome e(ou) funcionalidade deles. | MÉDIA |
 
 
 ## Restrições
