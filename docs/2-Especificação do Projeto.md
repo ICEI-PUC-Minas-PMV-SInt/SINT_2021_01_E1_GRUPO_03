@@ -319,6 +319,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RNF-003| O sistema não  apresentará aos usuários dados de qualquer cunho privativo. | ALTA |
 |RNF-004| O sistema deverá ter resposta de até 3 segundos ao usuário | MÉDIA |
 |RNF-005| Usar formulários para  entrada de dados | ALTA |
+|RNF-006| O sistema deve fornecer facilidades para a realização de cópias de segurança dos dados do sistema pelo administrador. | MEDIA |
+|RNF-007| O sistema deve ter capacidade para recuperar os dados perdidos da última operação que realizou em caso de falha. | ALTA |
+
 
 ## Restrições
 
@@ -333,4 +336,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |05| Avaliação de bairro deve ser restrita a residentes  |
 |06| Chat deve ser restrito a residentes  |
 |07| A avaliação de usuários deve ser restrita a residentes |
-|08|Usuários não residentes não poderão visualizar informações privadas |
+|08| Usuários não residentes não poderão visualizar informações privadas |
+|09| O sistema deve permitir apenas um cadastro por usuário |
+
