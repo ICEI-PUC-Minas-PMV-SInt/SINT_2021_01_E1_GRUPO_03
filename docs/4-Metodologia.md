@@ -7,26 +7,21 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 ## Controle de Versão
 
-A ferramenta de controle de versão adotada no projeto foi o
-[Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-foi utilizado para hospedagem do repositório.
+o software adotado para controle de versão foi o git sendo utilizado como repositório de armazenamento o github.
+Para o fluxo de controle de versão e nomeclatura das nossas branchs será utilizado o gitflow,segue abaixo o padrão de nomeclatura:
+- feature: novas implementações;
+- bugfixes: correções de bugs;
+- hotfixes: correções de bugs urgentes;
+- realease: novas versões do sistema.
 
-O projeto segue a seguinte convenção para o nome de branchs:
+Versionamento semântico garante controle da versão, mantendo a compatilidade e integridade nas novas atualizações, conforme o exemplo abaixo:
+– 1 (Major) – controle de compatibilidade. Informa que existem funcionalidades/códigos incompatíveis com as versões anteriores.
 
-- `master`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+– 0 (Minor) – controle de funcionalidade. Informa que novas funcionalidades foram adicionadas ao código.
 
-Quanto à gerência de issues, o projeto adota a seguinte convenção para
-etiquetas:
+– 0 (Patch) – controle de correção de bugs. Informa que um ou mais erros foram identificados e corrigidos.
 
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
-
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
+– Pré-release – versão candidata. É uma versão com algumas instabilidades pois pode ter incompatibilidades no pacote.
 
 > **Links Úteis**:
 > - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
