@@ -15,6 +15,7 @@ Para o fluxo de controle de versão e nomeclatura das nossas branchs será utili
 - realease: novas versões do sistema.
 
 Versionamento semântico garante controle da versão, mantendo a compatilidade e integridade nas novas atualizações, conforme o exemplo abaixo:
+
 – 1 (Major) – controle de compatibilidade. Informa que existem funcionalidades/códigos incompatíveis com as versões anteriores.
 
 – 0 (Minor) – controle de funcionalidade. Informa que novas funcionalidades foram adicionadas ao código.
