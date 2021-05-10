@@ -66,7 +66,7 @@ Ide
 - **Jetbrains Webstorm**
 - **VS Code**
 
-Ferramentas:
+Ferramentas
 - **Figma**
 
 Linguagem
@@ -84,7 +84,7 @@ Framework
 Api
 - **https://viacep.com.br/ws/${cep}/json/**
 
-![WhatsApp Image 2021-05-10 at 23 10 48](https://user-images.githubusercontent.com/63205222/117725167-0d146680-b1e5-11eb-93bb-d0168c7c1171.jpeg)
+![Fluxo de login](https://user-images.githubusercontent.com/63205222/117725167-0d146680-b1e5-11eb-93bb-d0168c7c1171.jpeg)
 
 
 ## Hospedagem
