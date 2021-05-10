@@ -60,9 +60,30 @@ para a Tela 2.
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Para desenvolvimento será utilizado as seguintes ferramentas e linguagens:
+Ide
+- **Jetbrains Webstorm**
+- **VS Code**
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+Ferramentas:
+- **Figma**
+
+Linguagem
+- **Javascript ecmascript 6**
+
+Linguagem de marcação
+- **HTML5**
+
+Linguagem de folha de estilo
+- **CSS3**
+
+Framework
+- **Bootstrap 5**
+
+Api
+- **https://viacep.com.br/ws/${cep}/json/**
+
+![WhatsApp Image 2021-05-10 at 23 10 48](https://user-images.githubusercontent.com/63205222/117725167-0d146680-b1e5-11eb-93bb-d0168c7c1171.jpeg)
 
 
 ## Hospedagem
