@@ -64,10 +64,11 @@ Para desenvolvimento será utilizado as seguintes ferramentas e linguagens:
 
 Ide
 - **Jetbrains Webstorm**
-- **VS Code**
+- **Visual studio code**
 
 Ferramentas
 - **Figma**
+- **Whimsical**
 
 Linguagem
 - **Javascript ecmascript 6**
