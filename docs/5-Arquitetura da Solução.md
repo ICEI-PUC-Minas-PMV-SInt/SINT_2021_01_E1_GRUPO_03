@@ -61,6 +61,7 @@ para a Tela 2.
 ## Tecnologias Utilizadas
 
 Para desenvolvimento será utilizado as seguintes ferramentas e linguagens:
+
 Ide
 - **Jetbrains Webstorm**
 - **VS Code**
