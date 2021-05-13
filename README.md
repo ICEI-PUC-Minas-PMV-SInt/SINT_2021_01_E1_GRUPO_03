@@ -1,4 +1,4 @@
-# Dona Maria
+# Fellowship
 
 `CURSO` Sistemas para Internet
 
@@ -10,9 +10,6 @@
 
 - Juan Marques
 - Erika Talita Gouvea Marques
-- Carolina Dolacio Bechelli
-- Dayane Soares Reis
-- Nayra Fabrícia Dias Viana Santos
 
 ## Professor
 
