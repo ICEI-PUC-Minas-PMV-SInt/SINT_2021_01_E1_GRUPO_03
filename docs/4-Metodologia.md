@@ -4,7 +4,7 @@
 ## Controle de Versão
 
 O projeto segue a seguinte convenção para o nome de branchs:
-- `master`: versão estável já testada do software
+- `main`: versão estável já testada do software
 - `staging`: versão em testes do software
 - `development`: versão de desenvolvimento do software
 
