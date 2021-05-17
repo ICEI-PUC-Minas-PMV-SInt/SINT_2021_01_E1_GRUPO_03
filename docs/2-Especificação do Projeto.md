@@ -328,7 +328,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O sistema não deve permitir o cadastro de usuários menores de 18 anos |
-|02| O usuário deve fornecer um comprovante de residência para se cadastrar     |
+|02| O usuário deve fornecer um comprovante de residência apos se cadastrar     |
 |03| O usuário deve fornecer um comprovante de residência para trocar sua localidade   |
 |04| Comentários devem ser restritos a residentes  |
 |05| Avaliação de bairro deve ser restrita a residentes  |
