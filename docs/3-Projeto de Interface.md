@@ -9,21 +9,22 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+![UserFlow](https://user-images.githubusercontent.com/63205222/118548584-c2519c00-b75a-11eb-9f58-23a9c215d1ed.jpeg)
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
 
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
 
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+![Pag- 1-login](https://user-images.githubusercontent.com/63205222/118548973-2d9b6e00-b75b-11eb-8687-a12f4b8f6081.jpg)
+![Pag-cadastro](https://user-images.githubusercontent.com/63205222/118548998-33914f00-b75b-11eb-816e-717837f33905.jpg)
+![Projeto-Bairro-logout](https://user-images.githubusercontent.com/63205222/118549533-e497e980-b75b-11eb-902c-cbc0027a68fc.jpg)
+![Projeto-Bairro-perfil](https://user-images.githubusercontent.com/63205222/118549150-591e5880-b75b-11eb-8adc-9c5b4d5c4a75.jpg)
+![Projeto-Bairro-noticias](https://user-images.githubusercontent.com/63205222/118549013-368c3f80-b75b-11eb-91a1-470e0da75a0b.jpg)
+![Projeto-Bairro-noticias-modal](https://user-images.githubusercontent.com/63205222/118549045-40ae3e00-b75b-11eb-8944-9836f08c1682.jpg)
+![Projeto-casas-modal](https://user-images.githubusercontent.com/63205222/118549433-be724980-b75b-11eb-8755-120ac25021de.jpg)
+![Projeto-doacoes-modal](https://user-images.githubusercontent.com/63205222/118549094-4b68d300-b75b-11eb-9767-e52a8384c595.jpg)
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
 > **Links Úteis**:
 > - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
