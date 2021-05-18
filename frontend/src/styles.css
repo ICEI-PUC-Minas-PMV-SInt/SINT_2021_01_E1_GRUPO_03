@@ -1,1 +1,6 @@
 @import url(normalize.css);
+@import url(./components/login/login.css);
+@import url(./components/header/header.css);
+@import url(./components/menu-nav/menu-nav.css);
+@import url(./components/feed/feed.css);
+@import url(./components/profile/profile.css);
