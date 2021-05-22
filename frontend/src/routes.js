@@ -3,82 +3,81 @@ const login = './components/login/login.html';
 const profile = './components/profile/profile.html';
 const header = './components/header/header.html';
 const menuNav = './components/menu-nav/menu-nav.html';
-const feed = './src/components/feed/feed.html';
+const feed = './components/feed/feed.html';
 
 /**
  * Carrega pagina do Header.
  */
 async function loadHeader() {
-  const headerDiv = document.getElementById('header');
-  headerDiv.innerHTML = await fetchHtmlAsText(header);
+    const headerDiv = document.getElementById('header');
+    headerDiv.innerHTML = await fetchHtmlAsText(header);
 }
 
 /**
  * Carrega pagina do menu nav.
  */
 async function loadMenuNav() {
-  const menuNavDiv = document.getElementById('menu_nav');
-  menuNavDiv.innerHTML = await fetchHtmlAsText(menuNav);
+    const menuNavDiv = document.getElementById('menu_nav');
+    menuNavDiv.innerHTML = await fetchHtmlAsText(menuNav);
 }
 
 /**
  * Carrega pagina de login.
  */
 async function loadLogin() {
-  const contentDiv = document.getElementById('content');
-  contentDiv.innerHTML = await fetchHtmlAsText(login);
+    const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = await fetchHtmlAsText(login);
 }
 
 /**
  * Carrega pagina de perfil.
  */
 async function loadProfile() {
-  const contentDiv = document.getElementById('content');
-  contentDiv.innerHTML = await fetchHtmlAsText(profile);
+    const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = await fetchHtmlAsText(profile);
 }
 
 /**
  * Carrega conteúdo do feed dinâmico com base no menu selecionado
  */
 async function loadFeed(menuSelecionado) {
-  
-  const contentDiv = document.getElementById('content');
 
-  // Se nenhum menu tiver selecionado ignoramos
-  if (menuSelecionado !== undefined) {
+    const contentDiv = document.getElementById('content');
 
-    const activeClassName = 'active_menu_nav';
-    const aparadorMenuNav = 'aparador_menu_nav';
+    // Se nenhum menu tiver selecionado ignoramos
+    if (menuSelecionado !== undefined) {
 
-    menuSelecionado.classList.toggle(activeClassName);
+        const activeClassName = 'active_menu_nav';
+        const aparadorMenuNav = 'aparador_menu_nav';
 
-    const menuNavUl = document.getElementById('menu-nav-ul');
+        menuSelecionado.classList.toggle(activeClassName);
 
-    for (let i = 0; i < menuNavUl.children.length; i++) {
-      const menuNavLi = menuNavUl.children[i];
+        const menuNavUl = document.getElementById('menu-nav-ul');
 
-      for (let i = 0; i < menuNavLi.children.length; i++) {
-        const menuNavLiChild = menuNavLi.children[i];
+        for (let i = 0; i < menuNavUl.children.length; i++) {
+            const menuNavLi = menuNavUl.children[i];
 
-        if (menuSelecionado !== menuNavLiChild && menuNavLiChild.classList.contains(activeClassName)) {
-          menuNavLiChild.classList.remove(activeClassName)
+            for (let i = 0; i < menuNavLi.children.length; i++) {
+                const menuNavLiChild = menuNavLi.children[i];
+
+                if (menuSelecionado !== menuNavLiChild && menuNavLiChild.classList.contains(activeClassName)) {
+                    menuNavLiChild.classList.remove(activeClassName)
+                }
+
+                for (let i = 0; i < menuNavLiChild.children.length; i++) {
+                    const menuNavAChild = menuNavLiChild.children[i];
+
+
+                    if (menuSelecionado.children[0] !== menuNavAChild && menuNavAChild.classList.contains(aparadorMenuNav)) {
+                        menuNavAChild.classList.remove(aparadorMenuNav)
+                    } else if (menuSelecionado.children[0] === menuNavAChild) {
+                        menuNavAChild.classList.add(aparadorMenuNav)
+                    }
+                }
+            }
         }
-
-        for (let i = 0; i < menuNavLiChild.children.length; i++) {
-          const menuNavAChild = menuNavLiChild.children[i];
-
-
-          if (menuSelecionado.children[0] !== menuNavAChild && menuNavAChild.classList.contains(aparadorMenuNav)) {
-            menuNavAChild.classList.remove(aparadorMenuNav)
-          }
-          else if (menuSelecionado.children[0] === menuNavAChild) {
-            menuNavAChild.classList.add(aparadorMenuNav)
-          }
-        }
-      }
     }
-  }
-  contentDiv.innerHTML = await fetchHtmlAsText(feed);
+    contentDiv.innerHTML = await fetchHtmlAsText(feed);
 }
 
 /**
@@ -86,7 +85,7 @@ async function loadFeed(menuSelecionado) {
  * @returns {Promise<string>} Retorna a pagina como string
  */
 async function fetchHtmlAsText(url) {
-  return await (await fetch(url)).text();
+    return await (await fetch(url)).text();
 }
 
 /**
@@ -95,17 +94,17 @@ async function fetchHtmlAsText(url) {
  */
 async function loadMainComponents() {
 
-  await isUserLoggedIn().then(value => {
-    if (value) {
-      console.log('user is loggedIn ' + value)
-      loadHeader();
-      loadMenuNav();
-      loadFeed();
-    } else {
-      console.log('user is NOT loggedIn ' + value)
-      loadLogin();
-    }
-  });
+    await isUserLoggedIn().then(value => {
+        if (value) {
+            console.log('user is loggedIn ' + value)
+            loadHeader();
+            loadMenuNav();
+            loadFeed();
+        } else {
+            console.log('user is NOT loggedIn ' + value)
+            loadLogin();
+        }
+    });
 }
 
 /**
@@ -113,5 +112,5 @@ async function loadMainComponents() {
  * @returns {Promise<boolean>} retorna true se o usuario esta logado senao false.
  */
 async function isUserLoggedIn() {
-  return sessionStorage.getItem('loggedUser') != null
+    return sessionStorage.getItem('loggedUser') != null
 }
