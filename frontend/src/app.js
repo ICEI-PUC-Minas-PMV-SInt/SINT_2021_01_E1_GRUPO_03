@@ -73,7 +73,7 @@ function logout() {
  */
 function registro(form) {
 
-    if (form.email.value === '' || form.email.value === '') {
+    if (form.email.value === '' || form.password.value === '') {
         return;
     }
 
@@ -91,6 +91,7 @@ function registro(form) {
     }
 
     userSession(newUser, novoUsuario);
+    location.reload();
 }
 
 /**
@@ -101,11 +102,11 @@ function registro(form) {
 function userSession(usuario, tipoUsuario) {
 
     if (tipoUsuario === novoUsuario) {
-        sessionStorage.setItem("loggedUser", JSON.stringify(userParam))
+        sessionStorage.setItem("loggedUser", JSON.stringify(usuario))
     } else {
         const users = JSON.parse(localStorage.getItem('users'))
         for (let user of users) {
-            if (user.email === userParam) {
+            if (user.email === usuario) {
                 sessionStorage.setItem("loggedUser", JSON.stringify(user))
             }
         }

@@ -33,14 +33,30 @@ async function loadLogin() {
  * Carrega pagina de perfil.
  */
 async function loadProfile() {
+    await hideMenuNav(true);
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = await fetchHtmlAsText(profile);
+}
+
+/**
+ * Esconde ou exibi menu nav
+ * @param hide se true troca para display block , se false troca para none
+ */
+async function hideMenuNav(hide) {
+    const menuNav = document.getElementById('menu_nav')
+
+    if (hide) {
+        menuNav.style.display = "none";
+    } else {
+        menuNav.style.display = "block";
+    }
 }
 
 /**
  * Carrega conteúdo do feed dinâmico com base no menu selecionado
  */
 async function loadFeed(menuSelecionado) {
+    await hideMenuNav(false);
 
     const contentDiv = document.getElementById('content');
 
