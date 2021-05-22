@@ -295,17 +295,17 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RF-008 |Permitir que o usuário possa visualizar outros bairros | ALTA |
 |RF-009 |Permitir que o usuário possa mudar de bairro | ALTA |
 |RF-010 |Permitir que o usuário possa denunciar um Post | BAIXA |
-|RF-011 |Permitir que o usuário possa seguir um tópico especifico | ALTA |
+|RF-011 |Permitir que o usuário possa seguir um tópico especifico | MÉDIA  |
 |RF-012 |Permitir que o usuário possa publicar fotos | ALTA |
 |RF-013 |O sistema deve fornecer um chat | BAIXA |
-|RF-014 |O sistema deve considerar campos especificos para diferentes tipos de posts | BAIXA |
-|RF-015 |O sistema deve ser capaz de filtrar postagens por interesses | BAIXA |
+|RF-014 |O sistema deve considerar campos especificos para diferentes tipos de posts |ALTA|
+|RF-015 |O sistema deve ser capaz de filtrar postagens por interesses | ALTA |
 |RF-016 |O sistema deve conter um mecanismo de interação com o post | BAIXA |
 |RF-017 |O sistema deve considerar um mecanismo de avaliação de usuários | BAIXA |
 |RF-018 |O sistema deve considerar um destaque para usuários bem avaliados | BAIXA |
 |RF-019 |O sistema deve ter a funcionalidade de logout | ALTA |
 |RF-020 |O sistema deve conter um campo de busca de bairros | ALTA |
-|RF-021 |O sistema deve conter uma tela de perfil | BAIXA |
+|RF-021 |O sistema deve conter uma tela de perfil | MÉDIA |
 |RF-022 |O sistema deve conter um subsistema de lista telefônica dos residentes | BAIXA |
 |RF-023 |O sistema deve conter uma seção de configurações | MÉDIA |
 |RF-024 |O sistema deve permitir que o usuário altere suas informações de cadastro | MÉDIA |
@@ -316,13 +316,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Depois de uma postagem pela interface da web (veja RF-003), ela estará disponível nas listas de postagens de outros usuários. |  ALTA | 
-|RNF-003| O sistema não  apresentará aos usuários dados de qualquer cunho privativo. | ALTA |
-|RNF-004| O sistema deverá ter resposta de até 3 segundos ao usuário | MÉDIA |
-|RNF-005| O sistema deve Usar formulários para  entrada de dados | ALTA |
-|RNF-006| O sistema deve fornecer facilidades para a realização de cópias de segurança dos dados do sistema pelo administrador. | MÉDIA |
-|RNF-007| O sistema deve ter capacidade para recuperar os dados perdidos da última operação que realizou em caso de falha. | ALTA |
-|RNF-008| O sistema notificará via ícones novas atualizações e notificações | MÉDIA |
-|RNF-009| Ao passar o mouse sobre ícones, o sistema abrirá uma breve janela com o nome e(ou) funcionalidade deles. | MÉDIA |
+|RNF-003| O sistema não  apresentará aos usuários dados de qualquer cunho privativo. | BAIXO |
+|RNF-004| O sistema notificará via ícones novas atualizações e notificações | MÉDIA |
+|RNF-005| Ao passar o mouse sobre ícones, o sistema abrirá uma breve janela com o nome e(ou) funcionalidade deles. | MÉDIA |
 
 
 ## Restrições
@@ -332,7 +328,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O sistema não deve permitir o cadastro de usuários menores de 18 anos |
-|02| O usuário deve fornecer um comprovante de residência para se cadastrar     |
+|02| O usuário deve fornecer um comprovante de residência apos se cadastrar     |
 |03| O usuário deve fornecer um comprovante de residência para trocar sua localidade   |
 |04| Comentários devem ser restritos a residentes  |
 |05| Avaliação de bairro deve ser restrita a residentes  |
