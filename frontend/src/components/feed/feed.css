@@ -358,18 +358,20 @@ hr.solid {
 
 .image-upload-casa img {
   cursor: pointer;
+  padding: 10px;
 }
 
 .botoes-modal-casa-input {
   margin-left: 20px;
+  margin-bottom: 5px;
+  padding:1px 8px;
   width: 135px;
-  height: 25px;
+  height: 28px;
   border: 1px solid var(--blue); 
   box-sizing: border-box;
   border-radius: 4px;
   background-color: #fff;
-  color: var(--blue);  
-  padding:1px 8px;
+  color: var(--blue);
 }
 
 .botoes-modal-casa-input::placeholder {
@@ -393,7 +395,7 @@ hr.solid {
   justify-content: center;
   margin-top: -8px;
   height: 81px;
-  margin-inline-end: 12px;
+  margin-bottom: 20px;
 }
 
 .modal-casa-opcao {
