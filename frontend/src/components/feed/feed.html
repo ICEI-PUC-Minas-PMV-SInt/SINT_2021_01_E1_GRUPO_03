@@ -115,30 +115,30 @@
     ></div>
 
     <!--  Espaco onde fica as imagens apos carregadas -->
-    <section id="img-modal-post" class="imagens-carregadas-container">
+    <section id="arquivos-modal-post" class="imagens-carregadas-container">
     </section>
   </div>
     <hr class="aparador aparador-modal-down"/>
     <div class="botoes-modal-generica">
     <div class="image-upload">
-  <label for="share-box-entry-toolbar-secondary">
+  <label for="input-img-modal-generica">
     <img src="public/modal/icon-camera.svg"/>
   </label>
 
-  <input id="share-box-entry-toolbar-secondary" type="file"
+  <input id="input-img-modal-generica" type="file"
       multiple
-      onchange="addImgToPost(this)"
+      onchange="addImgModalGenerica(this)"
    />  
 </div>
 
 <div class="image-upload icone-video-modal">
-  <label for="share-box-entry-toolbar-secondary">
+  <label for="input-video-modal-generica">
     <img src="public/modal/icon-video.svg"/>
   </label>
 
-  <input id="share-box-entry-toolbar-secondary" type="file"
+  <input id="input-video-modal-generica" type="file"
       multiple
-      onchange="addImgToPost(this)"
+      onchange="addVideoModalGenerica(this)"
    />  
 </div>
 

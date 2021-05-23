@@ -271,7 +271,10 @@ p {
 .modal-generica-entrada-de-dados:focus {
   outline: none;
 }
-
+.imagem-post-modal {
+  max-width:450px;
+  height:auto;
+}
 .aparador-modal-down {
   margin-top: 20px;
 }

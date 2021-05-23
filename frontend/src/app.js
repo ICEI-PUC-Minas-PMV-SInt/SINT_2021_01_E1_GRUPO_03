@@ -142,6 +142,46 @@ function fecharModalGenerica() {
     modal.style.display = "none"
     document.body.style.overflow = "auto" // exibir a barra de scroll quando fechamos a modal
 }
+/*add imagem na modal generica*/
+function addImgModalGenerica(element) {    
+    const sessaoCarregamento = document.getElementById("arquivos-modal-post")
+    const arquivos = Array.from(element.files)
+    
+
+    arquivos.forEach(arquivo => { //selecionando cada arquivo e criando elementos e dando estilos
+        
+        const div = document.createElement("div");
+        div.classList.add("imagens-carregadas-container-itens");//add classe css a div
+        const img = document.createElement("img");
+        const imgUrl = URL.createObjectURL(arquivo); // criando a url
+        img.src=imgUrl // passando a url para o src
+        img.classList.add("imagem-post-modal");
+        div.appendChild(img);
+        sessaoCarregamento.appendChild(div);
+    })
+    element.value=null;//limpando o input
+}
+
+/*add video na modal generica*/
+function addVideoModalGenerica(element) {    
+    const sessaoCarregamento = document.getElementById("arquivos-modal-post")
+    const arquivos = Array.from(element.files)
+    
+
+    arquivos.forEach(arquivo => { //selecionando cada arquivo e criando elementos e dando estilos
+        
+        const div = document.createElement("div");
+        div.classList.add("imagens-carregadas-container-itens");//add classe css a div
+        const video = document.createElement("video");
+        const videoUrl = URL.createObjectURL(arquivo); // criando a url
+        video.src=videoUrl // passando a url para o src
+        video.classList.add("imagem-post-modal");
+        video.setAttribute("controls","")//add play,volume...
+        div.appendChild(video);
+        sessaoCarregamento.appendChild(div);
+    })
+    element.value=null;//limpando o input
+}
 
 /* Modal Casa*/
 
