@@ -166,6 +166,11 @@
               class="img_post"
       />
       <h3 class="nome-usuario-modal">Ana Carolina Yamamoto</h3>
+      <p class="modal-casa-opcao">Vendendo</p>
+      <hr class ="separador-de-texto"/>
+      <p class="modal-casa-opcao">Alugando</p>
+      <hr class ="separador-de-texto"/>
+      <p class="modal-casa-opcao">Procurando</p>
     </div>
     <div class="scroll-modal">
       <div
@@ -175,7 +180,7 @@
       ></div>
 
       <!--  Espaco onde fica as imagens apos carregadas -->
-      <section id="img-modal-post" class="imagens-carregadas-container">
+      <section id="img-modal-casa-post" class="imagens-carregadas-container">
       </section>
     </div>
 
@@ -185,28 +190,28 @@
 
       <div class="botoes-modal-casa-itens">
         <div class="image-upload-casa">
-          <label for="share-box-entry-toolbar-secondary">
+          <label for="modal-casa-icon-camera">
             <img src="public/modal/icon-camera.svg"/>
           </label>
 
-          <input id="share-box-entry-toolbar-secondary" type="file"
+          <input id="modal-casa-icon-camera" type="file"
                  multiple
                  onchange="addImgToPost(this)"
           />
         </div>
 
         <div class="image-upload-casa icone-video-modal-casa">
-          <label for="share-box-entry-toolbar-secondary">
+          <label for="modal-casa-icon-video">
             <img src="public/modal/icon-video.svg"/>
           </label>
 
-          <input id="share-box-entry-toolbar-secondary" type="file"
+          <input id="modal-casa-icon-video" type="file"
                  multiple
                  onchange="addImgToPost(this)"/>
         </div>
+      </div>
 
-
-        <div class="botoes-modal-casa-itens">
+        <div class="botoes-modal-casa-itens-input">
           <!--tipo de imovel-->
           <input id="tipoImovel-input" class="botoes-modal-casa-input" list="tipoImovel" placeholder="Tipo"/>
           <datalist id="tipoImovel">
@@ -220,14 +225,8 @@
           <!--Valor do imovel-->
           <input id="valorImovel-input" class="botoes-modal-casa-input" placeholder="Valor" type="text"/>
 
-          <!--Selecione o bairro-->
-          <input id="bairroImovel-input" class="botoes-modal-casa-input" list="bairroImovel-datalist"
-                 placeholder="Bairro"/>
-          <datalist id="bairroImovel-datalist" >
-            <option name="Casa" value="Casa"></option>
-          </datalist>
         </div>
-      </div>
+
     </div>
     <div class="botoes-modal-casa-itens-direita">
       <button onclick="publicarPost()" class="btn">Publicar</button>
@@ -238,7 +237,7 @@
 <!-- modal doacoes -->
 <div id="modal-doacoes" class="container modal-cadastro">
   <div class="modal-generica-conteudo border">
-    <div id="modal-generica-header" class="modal-generica-header">
+    <div id="modal-doacoes-header" class="modal-generica-header">
       <span class="close-modal-generica" onclick="fecharModalDoacoes()"
         >&times;</span>
       <h4>Criar publicação</h4>      
@@ -262,11 +261,11 @@
     <div
       contenteditable="true"
       class="modal-generica-entrada-de-dados"
-      id="modal-generica-entrada-de-dados"      
+      id="modal-doacoes-entrada-de-dados"
     ></div>
 
     <!--  Espaco onde fica as imagens apos carregadas -->
-    <section id="img-modal-post" class="imagens-carregadas-container">
+    <section id="img-modal-doacoes-post" class="imagens-carregadas-container">
     </section>
   </div>
     <hr class="aparador aparador-modal-down"/>

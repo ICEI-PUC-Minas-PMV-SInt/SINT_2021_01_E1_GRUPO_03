@@ -362,7 +362,7 @@ hr.solid {
 
 .botoes-modal-casa-input {
   margin-left: 20px;
-  width: 121px;
+  width: 135px;
   height: 25px;
   border: 1px solid var(--blue); 
   box-sizing: border-box;
@@ -382,8 +382,7 @@ hr.solid {
 
 .botoes-modal-casa-input:focus-visible {
   outline: none;
-  border: 1px solid var(--blue);  
-  background-color:#fff;
+  border: 1px solid var(--blue);
   box-shadow: 0 0 0 2px rgb(66 133 244 / 10%);
   background-color: rgb(66 133 244 / 2%);
   color: #525257;  
@@ -395,6 +394,25 @@ hr.solid {
   margin-top: -8px;
   height: 81px;
   margin-inline-end: 12px;
+}
+
+.modal-casa-opcao {
+  color: #8d8d94;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 10px 50px;
+  cursor: pointer;
+}
+.modal-casa-opcao:hover {
+  color: var(--blue);
+  transition: color 200ms ease;
+}
+
+.botoes-modal-casa-itens-input{
+  display: flex;
+  justify-content: center;
+  margin-inline-start: 4%;
 }
 
 /*Modal doacoes*/
