@@ -248,7 +248,7 @@ function publicarPost() {
 
     // criando a div principal(container)
     const criandoDiv = document.createElement("div") // div principar, div container
-    criandoDiv.className = "post container" // div que criamos no js herdar o estilo css que criamos na div do html
+    criandoDiv.classList.add('post','container','border')// div que criamos no js herdar o estilo css que criamos na div do html
 
     // criando a div que amarra nome do usuario e foto
     const divInformacaoDoUsuario = document.createElement("div")// criando div que amarra foto de perfil e nome do post

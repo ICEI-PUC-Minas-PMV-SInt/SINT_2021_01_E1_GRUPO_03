@@ -109,7 +109,7 @@ p {
   margin-left: 21px;
   line-height: 160%;
   letter-spacing: 0.04em;
-  word-break: normal;
+  word-break: break-word;
 }
 
 .publicacao {
