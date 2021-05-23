@@ -338,7 +338,7 @@ hr.solid {
 
 .botoes-modal-casa-itens {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .image-upload-casa > input {
@@ -413,8 +413,9 @@ hr.solid {
 
 .botoes-modal-casa-itens-input{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   margin-inline-start: 4%;
+  align-items: center;
 }
 
 /*Modal doacoes*/
