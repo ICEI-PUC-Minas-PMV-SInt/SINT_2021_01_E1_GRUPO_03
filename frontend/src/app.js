@@ -416,3 +416,29 @@ function uuid() {
 function reloadPage() {
     location.reload();
 }
+
+/*Perfil*/
+
+function editarPerfil(element) {
+    element.classList.add("btn-edit-ativo")
+
+    let editarTrabalho = document.getElementById("perfil-trabalho");
+    editarTrabalho.setAttribute("contenteditable","true");
+    editarTrabalho.focus();
+
+    let editarCidade = document.getElementById("perfil-local");
+    editarCidade.setAttribute("contenteditable","");
+
+    let editarRelacionamento = document.getElementById("perfil-relacionamento");
+    editarRelacionamento.setAttribute("contenteditable","true");
+
+    let editarDataNasc = document.getElementById("perfil-dataNasc");
+    editarDataNasc.setAttribute("contenteditable","true");
+
+    let editarHobbies = document.getElementById("perfil-hobbies");
+    editarHobbies.setAttribute("contenteditable","true");
+
+    let editarTelefone = document.getElementById("perfil-mobile");
+    editarTelefone.setAttribute("contenteditable","true");
+
+}

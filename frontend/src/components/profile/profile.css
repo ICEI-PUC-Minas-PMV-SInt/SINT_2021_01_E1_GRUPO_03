@@ -22,23 +22,31 @@
 }
 
 .btn-edit {
-    width: 40%;
-    height: 35px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #53525d;
-    border:none;
-    margin-inline-start: 12.2rem;
-    background-color: #fff;
-    border-radius: 4px;
-    letter-spacing: 0.03rem;
+    width: 35%;
+  height: 30px;
+  margin-inline-start: 12.2rem;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.03rem;
+  border-radius: 4px;
+  background:#eeeeee;
+  color: #666572;
+  border: 1px solid #e9e9e9;
+  cursor: pointer;
+    
 }
 
 .btn-edit:hover {
-    color: #53525d;
-    transition:  200ms ease;
-    border: 1px solid #cececf;
+    padding: 8px 4px ;
+    transition: 200ms ease;
+    box-shadow: 0 10px 70px rgb(0 0 0 / 8%);
+}
+
+.btn-edit-ativo {
+  border: 1px solid rgb(66 133 244 / 82%);
+  transition: color 100ms ease;
+  background: rgb(66 133 244 / 2%);
+  color: #4285f4;
 }
 
 .header-profile-bottom ul {
@@ -47,6 +55,13 @@
     border-collapse: separate;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.header-profile-bottom span:focus{
+  background-color:  rgb(66 133 244 / 2%);
+  outline: none;
+  border: 1px solid var(--blue);
+  box-shadow: 0 0 0 4px rgb(66 133 244 / 8%);
 }
 
 .header-profile-bottom ul li {
@@ -61,6 +76,8 @@
     font-size: 16px;
     line-height: 24px;
     color: #3a3a3a;
+     padding: 4px;
+  border: 1px solid #fff;
 }
 
 .header-profile-bottom ul li img {

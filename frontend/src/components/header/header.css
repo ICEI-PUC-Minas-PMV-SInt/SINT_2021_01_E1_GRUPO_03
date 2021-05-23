@@ -69,40 +69,40 @@
 
 .header_nav_items li {
   cursor: pointer;
-  margin-right: 1rem;
+  margin-right: 1.1rem;
 }
 
 /* icone home*/
 .icone-home {
-  height:24px;
-  width:24px;
+  height:28px;
+  width:28px;
 }
 .icone-home path { 
   fill:none;
-  stroke:#202025;
-  stroke-width:0.9;  
+  stroke:#666572;
+  stroke-width:1.2;
 }
 
 .icone-home:hover path {  
   transition: 200ms ease;
-  stroke:#4285f4; 
+   stroke:#202025;
 }
 
 /* icone-notification*/
 .icone-notificacao {
-  height:24px;
+  height:28px;
   width:24px;
 }
 
 .icone-notificacao path { 
   fill:none;
-  stroke:#202025;
-  stroke-width:0.9;  
+ stroke:#666572;
+  stroke-width:1.2; 
 }
 
 .icone-notificacao:hover path {  
   transition: 200ms ease;
-  stroke:#4285f4;  
+  stroke:#202025;
 }
 
 
