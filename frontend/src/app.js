@@ -53,7 +53,7 @@ function verificaLogin(form) {
 
         if (form.email.value === email && form.password.value === password) {
             userSession(form.email.value, usuarioCadastrado);
-            location.reload();
+            reloadPage()
         } else {
             alert('Usuário ou Senha incorreto')
         }
@@ -64,7 +64,7 @@ function verificaLogin(form) {
 
 function logout() {
     sessionStorage.clear();
-    location.reload();
+    reloadPage()
 }
 
 /**
@@ -91,8 +91,9 @@ function registro(form) {
     }
 
     userSession(newUser, novoUsuario);
-    location.reload();
+    reloadPage()
 }
+
 
 /**
  * Cria a sessão do usuario
@@ -274,4 +275,8 @@ function uuid() {
         const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
     });
+}
+
+function reloadPage() {
+    location.reload();
 }
