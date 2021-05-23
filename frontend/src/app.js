@@ -243,7 +243,7 @@ function exibirModal() {
 function publicarPost() {
     const elementoPost = document.getElementById("modal-generica-entrada-de-dados") //estou colocando a div "entrada-de-dados" do html dentro da const elemento Post
     const conteudoPost = elementoPost.innerText // acessando o texto da div do modal post
-    let imgPostModal = document.getElementById("img-modal-post")
+    let imgPostModal = document.getElementById("arquivos-modal-post")
     const recuperarSessao = document.getElementById("sessao-de-post") // estou colocando a sessao de post do html dentro da const recuperarSessao
 
     // criando a div principal(container)
@@ -273,43 +273,66 @@ function publicarPost() {
     //criando a img do post
     let fotosDoPost = [];
     for (let i = 0; i < imgPostModal.children.length; i++) {
-        let imgPost = imgPostModal.children[i]
-        let fotoDoPost = document.createElement("img") // criando img
-        fotoDoPost.className = "publicacao" // estilo da img
-        fotoDoPost.src = imgPost.src
-        fotosDoPost.push(fotoDoPost)
+        let arquivoDaModal = imgPostModal.children[i].children[0]
+        let arquivoDoPost
+        if(arquivoDaModal.nodeName.toLowerCase() === "img"){
+         arquivoDoPost = document.createElement("img") // criando img
+        }
+        else if(arquivoDaModal.nodeName.toLowerCase() === "video"){
+            arquivoDoPost = document.createElement("video") // criando video
+            arquivoDoPost.setAttribute("controls","")//add play,volume...
+        }
+        arquivoDoPost.className = "publicacao" // estilo da img
+        arquivoDoPost.src = arquivoDaModal.src
+        fotosDoPost.push(arquivoDoPost)
     }
 
     // Removendo elementos img da modal
     imgPostModal.textContent = null;
 
     // criando area de comentarios
+
+    //aparador
+    const aparador = document.createElement("hr");
+    aparador.className = "aparador-post"; //estilo
+
     //div
     const divComentarios = document.createElement("div");
     divComentarios.className = "area_comentarios"; // estilo
 
+    //div da img
+    const divComentariosFlex = document.createElement("div");
+    divComentariosFlex.classList.add("area_comentarios_flex","comentario-perfil") 
+
     //img
-    const UsuarioComentarioImg = document.createElement("img");
-    UsuarioComentarioImg.className = "img_comentario";
-    UsuarioComentarioImg.src = "assets/images/usuarios/jovem-estudante.png";
+    const usuarioComentarioImg = document.createElement("img");
+    usuarioComentarioImg.className = "img_comentario";
+    usuarioComentarioImg.src = "assets/images/usuarios/jovem-estudante.png";
+
+    //div do input
+    const divComentariosFlexInput = document.createElement("div");
+    divComentariosFlexInput.classList.add("area_comentarios_flex","comentario-perfil") 
 
     //input
     const comentarioUsuario = document.createElement("input");
     comentarioUsuario.type = "text";
     comentarioUsuario.placeholder = "Escreva um comentário";
-
+    
     //associando pais e filhos
     divInformacaoDoUsuario.appendChild(fotoDoUsuario);
     divInformacaoDoUsuario.appendChild(nomeUsuario);
-    divComentarios.appendChild(UsuarioComentarioImg);
-    divComentarios.appendChild(comentarioUsuario);
+    divComentariosFlex.appendChild(usuarioComentarioImg);
+    divComentarios.appendChild(divComentariosFlex);
+    divComentariosFlexInput.appendChild(comentarioUsuario)
+    divComentarios.appendChild(divComentariosFlexInput);
     criandoDiv.prepend(divInformacaoDoUsuario); // prepend para ele ser sempre o que veem em primeiro no post
     criandoDiv.append(paragrafo);
     fotosDoPost.forEach(imgTags => criandoDiv.append(imgTags));
+    criandoDiv.append(aparador);
     criandoDiv.append(divComentarios);
 
     recuperarSessao.prepend(criandoDiv) // jogando a div que criamos dentro da sessao, para isso associamos a div como filho da sessao
-    fecharModal()
+    fecharModalGenerica()
 }
 
 /*Header*/
