@@ -212,15 +212,16 @@
       </div>
 
         <div class="botoes-modal-casa-itens-input">
+
           <!--tipo de imovel-->
-          <input id="tipoImovel-input" class="botoes-modal-casa-input" list="tipoImovel" placeholder="Tipo"/>
-          <datalist id="tipoImovel">
-            <option name="Casa" value="Casa"></option>
-            <option name="Apartamento" value="Apartamento"></option>
-            <option name="Loft" value="Loft"></option>
-            <option name="Quarto" value="Quarto"></option>
-            <option name="Terreno" value="Terreno"></option>
-          </datalist>
+          <select id="tipoImovel-input"  class="botoes-modal-casa-input" required>
+            <option disabled selected value>Tipo</option>
+            <option name="Casa" value="Casa">Casa</option>
+            <option name="Apartamento" value="Apartamento">Apartamento</option>
+            <option name="Loft" value="Loft">Loft</option>
+            <option name="Quarto" value="Quarto">Quarto</option>
+            <option name="Terreno" value="Terreno">Terreno</option>
+          </select>
 
           <!--Valor do imovel-->
           <input id="valorImovel-input" class="botoes-modal-casa-input" placeholder="Valor" type="text"/>
