@@ -421,16 +421,15 @@ function salvarFeeds(tipoFeed, post) {
     }
 
     // Caso o bairro do usuario nao exista no local storage , criamos um novo registro
-/*    else if(!feeds.bairros.includes(bairro)) {
-
+    if (feeds.bairros.some(bairros => bairros.bairro === bairro)) {
+        console.log('bairro ja existe no localstorage')
+    } else {
         feeds.bairros.push(modeloFeedCriacaoBairro(bairro).bairros)
-        localStorage.setItem('feeds', JSON.stringify(feeds))
+        localStorage.setItem('feeds', JSON.stringify(feeds));
         feeds = JSON.parse(localStorage.getItem('feeds'));
+    }
 
-        feedBairro.feeds.push(modeloFeedLight(tipoFeed, post))
-        localStorage.setItem('feeds', JSON.stringify(feeds))
-    }*/
-
+    // Adiciona o post no bairro especifico
     for (let i = 0; i < feeds.bairros.length; i++) {
         const feedBairro = feeds.bairros[i];
         // Comparamos o bairro do usuario logado com o do localstorage

@@ -11,6 +11,7 @@ const feed = './components/feed/feed.html';
 async function loadHeader() {
     const headerDiv = document.getElementById('header');
     headerDiv.innerHTML = await fetchHtmlAsText(header);
+    verificaBairro();
 }
 
 /**
@@ -156,6 +157,16 @@ async function loadMainComponents() {
             loadLogin();
         }
     });
+}
+
+function verificaBairro(){
+    const usuario = recuperaUsuarioLogado();
+    const bairro = document.getElementById('bairro');
+    bairro.textContent = usuario.neighborhood;;
+}
+
+function recuperaUsuarioLogado(){
+    return JSON.parse(sessionStorage.getItem('loggedUser'));
 }
 
 /**
