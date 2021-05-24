@@ -184,45 +184,46 @@ function fecharModalGenerica() {
     modal.style.display = "none"
     document.body.style.overflow = "auto" // exibir a barra de scroll quando fechamos a modal
 }
+
 /*add imagem na modal generica*/
-function addImgModalGenerica(element) {    
+function addImgModalGenerica(element) {
     const sessaoCarregamento = document.getElementById("arquivos-modal-post")
     const arquivos = Array.from(element.files)
-    
+
 
     arquivos.forEach(arquivo => { //selecionando cada arquivo e criando elementos e dando estilos
-        
+
         const div = document.createElement("div");
         div.classList.add("imagens-carregadas-container-itens");//add classe css a div
         const img = document.createElement("img");
         const imgUrl = URL.createObjectURL(arquivo); // criando a url
-        img.src=imgUrl // passando a url para o src
+        img.src = imgUrl // passando a url para o src
         img.classList.add("imagem-post-modal");
         div.appendChild(img);
         sessaoCarregamento.appendChild(div);
     })
-    element.value=null;//limpando o input
+    element.value = null;//limpando o input
 }
 
 /*add video na modal generica*/
-function addVideoModalGenerica(element) {    
+function addVideoModalGenerica(element) {
     const sessaoCarregamento = document.getElementById("arquivos-modal-post")
     const arquivos = Array.from(element.files)
-    
+
 
     arquivos.forEach(arquivo => { //selecionando cada arquivo e criando elementos e dando estilos
-        
+
         const div = document.createElement("div");
         div.classList.add("imagens-carregadas-container-itens");//add classe css a div
         const video = document.createElement("video");
         const videoUrl = URL.createObjectURL(arquivo); // criando a url
-        video.src=videoUrl // passando a url para o src
+        video.src = videoUrl // passando a url para o src
         video.classList.add("imagem-post-modal");
-        video.setAttribute("controls","")//add play,volume...
+        video.setAttribute("controls", "")//add play,volume...
         div.appendChild(video);
         sessaoCarregamento.appendChild(div);
     })
-    element.value=null;//limpando o input
+    element.value = null;//limpando o input
 }
 
 /* Modal Casa*/
@@ -349,7 +350,7 @@ function publicarPost(tipoModal) {
 
     // criando a div principal(container)
     const criandoDiv = document.createElement("div") // div principar, div container
-    criandoDiv.classList.add('post','container','border')// div que criamos no js herdar o estilo css que criamos na div do html
+    criandoDiv.classList.add('post', 'container', 'border')// div que criamos no js herdar o estilo css que criamos na div do html
 
     // criando a div que amarra nome do usuario e foto
     const divInformacaoDoUsuario = document.createElement("div")// criando div que amarra foto de perfil e nome do post
@@ -376,12 +377,11 @@ function publicarPost(tipoModal) {
     for (let i = 0; i < imgPostModal.children.length; i++) {
         let arquivoDaModal = imgPostModal.children[i].children[0]
         let arquivoDoPost
-        if(arquivoDaModal.nodeName.toLowerCase() === "img"){
-         arquivoDoPost = document.createElement("img") // criando img
-        }
-        else if(arquivoDaModal.nodeName.toLowerCase() === "video"){
+        if (arquivoDaModal.nodeName.toLowerCase() === "img") {
+            arquivoDoPost = document.createElement("img") // criando img
+        } else if (arquivoDaModal.nodeName.toLowerCase() === "video") {
             arquivoDoPost = document.createElement("video") // criando video
-            arquivoDoPost.setAttribute("controls","")//add play,volume...
+            arquivoDoPost.setAttribute("controls", "")//add play,volume...
         }
         arquivoDoPost.className = "publicacao" // estilo da img
         arquivoDoPost.src = arquivoDaModal.src
@@ -403,7 +403,7 @@ function publicarPost(tipoModal) {
 
     //div da img
     const divComentariosFlex = document.createElement("div");
-    divComentariosFlex.classList.add("area_comentarios_flex","comentario-perfil") 
+    divComentariosFlex.classList.add("area_comentarios_flex", "comentario-perfil")
 
     //img
     const usuarioComentarioImg = document.createElement("img");
@@ -412,13 +412,13 @@ function publicarPost(tipoModal) {
 
     //div do input
     const divComentariosFlexInput = document.createElement("div");
-    divComentariosFlexInput.classList.add("area_comentarios_flex","comentario-perfil") 
+    divComentariosFlexInput.classList.add("area_comentarios_flex", "comentario-perfil")
 
     //input
     const comentarioUsuario = document.createElement("input");
     comentarioUsuario.type = "text";
     comentarioUsuario.placeholder = "Escreva um comentário";
-    
+
     //associando pais e filhos
     divInformacaoDoUsuario.appendChild(fotoDoUsuario);
     divInformacaoDoUsuario.appendChild(nomeUsuario);
@@ -435,7 +435,7 @@ function publicarPost(tipoModal) {
     recuperarSessao.prepend(criandoDiv) // jogando a div que criamos dentro da sessao, para isso associamos a div como filho da sessao
     fecharModalGenerica()
 
-    salvarFeeds(tipoModal.dataset.tipo,criandoDiv.innerHTML)
+    salvarFeeds(tipoModal.dataset.tipo, criandoDiv.innerHTML)
 }
 
 /**
@@ -547,10 +547,9 @@ function procurarMenuNavAtivo(retorno) {
 
         for (let i = 0; i < menuNavLi.children.length; i++) {
             if (menuNavLi.children[i].classList.contains(activeClassName)) {
-                if(retorno === 'tipo'){
+                if (retorno === 'tipo') {
                     return menuNavLi.children[i].dataset.tipo;
-                }
-                else{
+                } else {
                     return menuNavLi.children[i];
                 }
 
