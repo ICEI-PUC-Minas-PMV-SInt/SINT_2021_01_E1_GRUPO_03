@@ -455,11 +455,13 @@ function adicionaPermaHoverClass(elemento) {
             elemento.classList.toggle("permahover-notifications");
             document.getElementById("profile-icon").classList.remove("permahover-profile");
             hideOnClickOutside(elemento)
+            document.getElementById("profile-icon").children[0].classList.remove("perfil-focus-ativo");
             break;
         case 'profile':
             elemento.classList.toggle("permahover-profile");
             document.getElementById("notifications-icon").classList.remove("permahover-notifications")
             hideOnClickOutside(elemento)
+            elemento.children[0].classList.toggle("perfil-focus-ativo")
             break;
     }
 }
@@ -474,6 +476,7 @@ function hideOnClickOutside(elemento) {
 
             if (elemento.dataset.tipo === 'profile') {
                 elemento.classList.remove("permahover-profile");
+                elemento.children[0].classList.remove("perfil-focus-ativo");
             } else if (elemento.dataset.tipo === 'notifications') {
                 elemento.classList.remove("permahover-notifications");
             }
@@ -556,3 +559,8 @@ function editarPerfil(element) {
     editarTelefone.setAttribute("contenteditable","true");
 
 }
+/*active icone perfil*/
+
+/*function adicionaFocusPerfil(element){
+
+}*/

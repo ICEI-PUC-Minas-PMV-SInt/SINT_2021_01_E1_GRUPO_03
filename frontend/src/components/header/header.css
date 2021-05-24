@@ -1,6 +1,6 @@
 /*Flexbox container*/
 .header_nav {
- position: fixed;
+ /*position: fixed;*/
   top: 0;
   z-index: 1;
   display: flex;
@@ -16,9 +16,9 @@
 }
 
 /*Logo*/
-.header_nav_items img {
-  width: 100%;
+.header_logo {
   margin-top: 5px;
+  width:90%;
 }
 
 /*Nome do bairro*/
@@ -64,40 +64,62 @@
 .header_nav_items ul {
   display: flex;
   margin-right: 312px;
-  align-self: flex-end;
+  align-items:center;
 }
 
 .header_nav_items li {
   cursor: pointer;
   margin-right: 1.1rem;
 }
+/*Icone Perfil */
+.icone-profile {
+  width:24px;
+  height:25px;
+}
+.icone-profile path{
+  fill:#fff;
+  stroke-width: 1.2;
+  stroke:#6e6d7a;
+}
 
+.icone-profile:hover path {
+  transition: 200ms ease;
+  stroke:#b5b5b5;
+}
+.perfil-focus-ativo path{
+  fill: #4285f4;
+  stroke: #4285f4;
+}
 /* icone home*/
 .icone-home {
   height:28px;
   width:28px;
+  margin-right: 10px;
+  border: 1px solid white;
 }
 .icone-home path { 
   fill:none;
-  stroke:#666572;
+  stroke:#6e6d7a;
   stroke-width:1.2;
 }
 
 .icone-home:hover path {  
   transition: 200ms ease;
-   stroke:#202025;
+  stroke:#202025;
 }
 
-/* icone-notification*/
+/* icone-notificao*/
 .icone-notificacao {
-  height:28px;
+  height:30px;
   width:24px;
+  margin-right: 10px;
+  border: 1px solid white;
 }
 
 .icone-notificacao path { 
   fill:none;
- stroke:#666572;
-  stroke-width:1.2; 
+  stroke:#6e6d7a;
+  stroke-width:1.2;
 }
 
 .icone-notificacao:hover path {  
@@ -177,14 +199,14 @@ ul.primary li:hover > p {
 ul.primary li.permahover-notifications ul {
   display: block;
   background: #ffffff;
-  margin-inline-start: -3.4rem;
+  margin-inline-start: -3rem;
   margin-top: 10px;
 }
 /*conteiner*/
 ul.primary li.permahover-profile ul {
   display: block;
   background: #ffffff;
-  margin-inline-start: -5.5rem;
+  margin-inline-start: -3rem;
   margin-top: 10px;
 }
 

@@ -9,8 +9,9 @@
 
 .menu_nav ul {
     display: flex;
-    padding-inline-start: 2.8%;
+    padding-inline-start: 2%;
     margin-top:19px;
+    margin-right: 5px;
 }
 
 .menu_nav ul li {
