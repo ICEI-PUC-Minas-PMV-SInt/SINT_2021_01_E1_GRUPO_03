@@ -94,6 +94,43 @@ function registro(form) {
     reloadPage()
 }
 
+/**
+ * Busca cep e preenche campo de bairro no formulario de cadastro.
+ * @param valorPreenchido o cep preenchido no formulario de cadastro.
+ */
+function preencherCepFormCadastro(valorPreenchido) {
+
+    //Nova variável "cep" somente com dígitos.
+    let cep = valorPreenchido.replace(/\D/g, '');
+
+    //Expressão regular para validar o CEP.
+    let validacep = /^[0-9]{8}$/;
+
+    //Valida o formato do CEP.
+    if (validacep.test(cep)) {
+        document.getElementById('bairroCadastroInput').value = "...";
+
+        fetch(`https://viacep.com.br/ws/${cep}/json`)
+            .then(response => response.json())
+            .then(res => {
+
+                if (!("erro" in res)) {
+                    document.getElementById('bairroCadastroInput').value = (res.bairro);
+                } else {
+                    alert("CEP não encontrado.");
+                    document.getElementById('bairroCadastroInput').value = null;
+                }
+
+            })
+            .catch(onerror => {
+                alert(`Erro ao carregar cep ${onerror}`)
+            })
+
+    } else {
+        alert("Formato de CEP inválido.");
+    }
+}
+
 
 /**
  * Cria a sessão do usuario
@@ -539,27 +576,22 @@ function editarPerfil(element) {
     element.classList.add("btn-edit-ativo")
 
     let editarTrabalho = document.getElementById("perfil-trabalho");
-    editarTrabalho.setAttribute("contenteditable","true");
+    editarTrabalho.setAttribute("contenteditable", "true");
     editarTrabalho.focus();
 
     let editarCidade = document.getElementById("perfil-local");
-    editarCidade.setAttribute("contenteditable","");
+    editarCidade.setAttribute("contenteditable", "");
 
     let editarRelacionamento = document.getElementById("perfil-relacionamento");
-    editarRelacionamento.setAttribute("contenteditable","true");
+    editarRelacionamento.setAttribute("contenteditable", "true");
 
     let editarDataNasc = document.getElementById("perfil-dataNasc");
-    editarDataNasc.setAttribute("contenteditable","true");
+    editarDataNasc.setAttribute("contenteditable", "true");
 
     let editarHobbies = document.getElementById("perfil-hobbies");
-    editarHobbies.setAttribute("contenteditable","true");
+    editarHobbies.setAttribute("contenteditable", "true");
 
     let editarTelefone = document.getElementById("perfil-mobile");
-    editarTelefone.setAttribute("contenteditable","true");
+    editarTelefone.setAttribute("contenteditable", "true");
 
 }
-/*active icone perfil*/
-
-/*function adicionaFocusPerfil(element){
-
-}*/

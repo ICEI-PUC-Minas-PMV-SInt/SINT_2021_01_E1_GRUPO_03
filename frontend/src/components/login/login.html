@@ -59,7 +59,7 @@
               type="text"
               id="nomeInput"
               placeholder="Nome Completo"
-              name="name"
+              name="name" required
             />
           </div>
           <div>
@@ -68,7 +68,7 @@
               type="email"
               id="emailInput"
               placeholder="Email"
-              name="email"
+              name="email" required
             />
           </div>
           <div>
@@ -77,7 +77,7 @@
               type="password"
               id="passwordInput"
               placeholder="Senha"
-              name="password"
+              name="password" required
             />
           </div>
           <div>
@@ -95,16 +95,15 @@
               type="text"
               id="cepInput"
               placeholder="Cep"
-              name="postalCode"
-            />
+              name="postalCode" required  size="10" maxlength="9" onblur="preencherCepFormCadastro(this.value)"   />
           </div>
           <div>
             <input
               class="border"
               type="text"
-              id="bairroInput"
+              id="bairroCadastroInput"
               placeholder="Bairro"
-              name="neighborhood"
+              name="neighborhood" disabled
             />
           </div>
           <button type="submit" class="btn-cadastro">Cadastre-se</button>
