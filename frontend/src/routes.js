@@ -56,6 +56,7 @@ async function hideMenuNav(hide) {
  * Carrega conteúdo do feed dinâmico com base no menu selecionado
  */
 async function loadFeed(menuSelecionado) {
+
     await hideMenuNav(false);
 
     const contentDiv = document.getElementById('content');
@@ -94,6 +95,40 @@ async function loadFeed(menuSelecionado) {
         }
     }
     contentDiv.innerHTML = await fetchHtmlAsText(feed);
+
+    let nomeMenu;
+    if (menuSelecionado === undefined) {
+        nomeMenu = 'noticias';
+    } else {
+        nomeMenu = menuSelecionado.dataset.name;
+    }
+
+    const feedsGuardados = JSON.parse(localStorage.getItem('feeds'));
+
+    // Busca o bairro do usuario
+    const bairro = document.getElementById('bairro').textContent;
+
+    if (feedsGuardados !== null) {
+
+        const recuperarSessao = document.getElementById("sessao-de-post");
+
+        for (let i = 0; i < feedsGuardados.bairros.length; i++) {
+            const feedBairro = feedsGuardados.bairros[i];
+            // Comparamos o bairro do usuario logado com o do localstorage
+            if (bairro === feedBairro.bairro) {
+                for (let i = 0; i < feedBairro.feeds.length; i++) {
+                    const feed = feedBairro.feeds[i];
+                    if (nomeMenu === feed.tipoFeed && feed.html !== undefined) {
+                        let criandoDiv = document.createElement('div');
+                        criandoDiv.classList.add('post', 'container', 'border')
+                        criandoDiv.insertAdjacentHTML('beforeend', feed.html);
+                        recuperarSessao.prepend(criandoDiv)
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 /**

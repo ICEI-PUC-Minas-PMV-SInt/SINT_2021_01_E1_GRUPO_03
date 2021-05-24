@@ -135,7 +135,12 @@ function modalGenerica() {
     document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
     const entradaDeDados = document.getElementById("modal-generica-entrada-de-dados")
     entradaDeDados.focus()
+
+    // Identifica qual a modal ativa
+    let botaoPublicacao = modal.children[0].children[5].children[2].children[0];
+    identificaTipoDeModal(botaoPublicacao)
 }
+
 
 function fecharModalGenerica() {
     let modal = document.getElementById("modal-generica")
@@ -191,6 +196,10 @@ function modalCasa() {
     document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
     const entradaDeDados = document.getElementById("modal-casa-entrada-de-dados")
     entradaDeDados.focus()
+
+    // Identifica qual a modal ativa
+    let botaoPublicacao = modal.children[0].children[6].children[0];
+    identificaTipoDeModal(botaoPublicacao)
 }
 
 function fecharModalCasa() {
@@ -207,6 +216,10 @@ function modalDoacoes() {
     document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
     const entradaDeDados = document.getElementById("modal-doacoes-entrada-de-dados")
     entradaDeDados.focus()
+
+    // Identifica qual a modal ativa
+    let botaoPublicacao = modal.children[0].children[5].children[2].children[0];
+    identificaTipoDeModal(botaoPublicacao)
 }
 
 function fecharModalDoacoes() {
@@ -215,12 +228,17 @@ function fecharModalDoacoes() {
     document.body.style.overflow = "auto" // exibir a barra de scroll quando fechamos a modal
 }
 
+function identificaTipoDeModal(elemento) {
+    const menuAtivo = procurarMenuNavAtivo().dataset.name
+    elemento.setAttribute('data-tipo', menuAtivo)
+}
+
 /**
  * Exibi modal de cada menu
  */
 function exibirModal() {
 
-    const tipoDeMenuNavAtivo = procurarMenuNavAtivo();
+    const tipoDeMenuNavAtivo = procurarMenuNavAtivo('tipo');
 
     if (tipoDeMenuNavAtivo !== undefined) {
         switch (tipoDeMenuNavAtivo) {
@@ -239,8 +257,54 @@ function exibirModal() {
     }
 }
 
+const feedNoticias = 'noticias';
+const feedEstabelecimentos = 'estabelecimentos'
+const feedSeguranca = 'seguranca';
+const feedImoveis = 'imoveis';
+const feedEventos = 'eventos';
+const feedDoacoes = 'doacoes';
+const feedDesaparecidos = 'desaparecidos';
+
+
+function modeloFeed(bairro, tipoFeed, html) {
+    return {
+        "bairros": [{
+            "bairro": bairro,
+            "feeds": [{
+                "tipoFeed": [{
+                    "tipo": tipoFeed,
+                    "html": html
+                }]
+            }]
+        }]
+    };
+}
+
+function modeloFeedCriacaoBairro(bairro, tipoFeed, html) {
+    return {
+        "bairros": {
+            "bairro": bairro,
+            "feeds": [{
+                "tipoFeed": [{
+                    "tipo": tipoFeed,
+                    "html": html
+                }]
+            }]
+        }
+    };
+}
+
+function modeloFeedLight(tipoFeed, html) {
+    return {
+        "tipoFeed": tipoFeed,
+        "html": html
+    }
+}
+
+
 /*Feed*/
-function publicarPost() {
+function publicarPost(tipoModal) {
+
     const elementoPost = document.getElementById("modal-generica-entrada-de-dados") //estou colocando a div "entrada-de-dados" do html dentro da const elemento Post
     const conteudoPost = elementoPost.innerText // acessando o texto da div do modal post
     let imgPostModal = document.getElementById("arquivos-modal-post")
@@ -333,6 +397,50 @@ function publicarPost() {
 
     recuperarSessao.prepend(criandoDiv) // jogando a div que criamos dentro da sessao, para isso associamos a div como filho da sessao
     fecharModalGenerica()
+
+    salvarFeeds(tipoModal.dataset.tipo,criandoDiv.innerHTML)
+}
+
+/**
+ * Salva feed na localstorage
+ * @param tipoFeed exemplo 'feedNoticias'...
+ * @param {InnerHTML} post Post que deve ser salvo
+ */
+function salvarFeeds(tipoFeed, post) {
+
+    // Recupera os feeds salvos
+    let feeds = JSON.parse(localStorage.getItem('feeds'));
+
+    // Busca o bairro do usuario
+    const bairro = document.getElementById('bairro').textContent;
+
+    // Se ainda nao existir feed criamos um novo registro no localstorage
+    if (feeds === null) {
+        localStorage.setItem('feeds', JSON.stringify(modeloFeed(bairro)))
+        feeds = JSON.parse(localStorage.getItem('feeds'));
+    }
+
+    // Caso o bairro do usuario nao exista no local storage , criamos um novo registro
+/*    else if(!feeds.bairros.includes(bairro)) {
+
+        feeds.bairros.push(modeloFeedCriacaoBairro(bairro).bairros)
+        localStorage.setItem('feeds', JSON.stringify(feeds))
+        feeds = JSON.parse(localStorage.getItem('feeds'));
+
+        feedBairro.feeds.push(modeloFeedLight(tipoFeed, post))
+        localStorage.setItem('feeds', JSON.stringify(feeds))
+    }*/
+
+    for (let i = 0; i < feeds.bairros.length; i++) {
+        const feedBairro = feeds.bairros[i];
+        // Comparamos o bairro do usuario logado com o do localstorage
+        if (bairro === feedBairro.bairro) {
+            // Adicionamos o novo post ao array de feeds e salvamos na localstorage
+            feedBairro.feeds.push(modeloFeedLight(tipoFeed, post))
+            localStorage.setItem('feeds', JSON.stringify(feeds))
+            break;
+        }
+    }
 }
 
 /*Header*/
@@ -389,7 +497,7 @@ const isVisible = elem => !!elem && !!(elem.offsetWidth || elem.offsetHeight || 
  * Procura qual menu nav esta ativo
  * @returns retorna o tipo do nav que esta ativo (exemplo generico,casa,doacoes)
  */
-function procurarMenuNavAtivo() {
+function procurarMenuNavAtivo(retorno) {
 
     const activeClassName = 'active_menu_nav';
 
@@ -400,7 +508,13 @@ function procurarMenuNavAtivo() {
 
         for (let i = 0; i < menuNavLi.children.length; i++) {
             if (menuNavLi.children[i].classList.contains(activeClassName)) {
-                return menuNavLi.children[i].dataset.tipo;
+                if(retorno === 'tipo'){
+                    return menuNavLi.children[i].dataset.tipo;
+                }
+                else{
+                    return menuNavLi.children[i];
+                }
+
             }
         }
     }
