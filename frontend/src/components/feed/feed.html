@@ -22,8 +22,12 @@
       />
       <h3>Maria Francisca Da Silva Soares</h3>
       <!--<div class="tags">
-        <div class="donation-tag"> <p class="tag-child">Doando</p></div>
-        <div class="help-tag"> <p class="tag-child">Help</p></div>
+            <div class="donation-tag">
+              <p class="tag-child">Doando</p>
+            </div>
+          <div class="help-tag">
+            <p class="tag-child">Help</p>
+          </div>
       </div>-->
     </div>
       <p class="texto_publicacao">
@@ -146,7 +150,7 @@
 
 
   <div class="btn-modal" id="div-botao-modal-publicacao">
-      <button onclick="publicarPost(this)" class="btn">Publicar</button>
+      <button onclick="publicarPost(this)" class="btn" data-name="generica">Publicar</button>
     </div>
   </div>
   </div>
@@ -198,7 +202,7 @@
 
           <input id="modal-casa-icon-camera" type="file"
                  multiple
-                 onchange="addImgToPost(this)"
+                 onchange="addImgModalGenerica(this)"
           />
         </div>
 
@@ -209,7 +213,7 @@
 
           <input id="modal-casa-icon-video" type="file"
                  multiple
-                 onchange="addImgToPost(this)"/>
+                 onchange="addVideoModalGenerica(this)"/>
         </div>
       </div>
 
@@ -232,7 +236,7 @@
 
     </div>
     <div class="botoes-modal-casa-itens-direita">
-      <button onclick="publicarPost()" class="btn" name="botao-modal-publicacao">Publicar</button>
+      <button onclick="publicarPost()" class="btn" name="botao-modal-publicacao" data-name="imovel">Publicar</button>
     </div>
   </div>
 </div>
@@ -280,7 +284,7 @@
 
   <input id="share-box-entry-toolbar-secondary" type="file"
       multiple
-      onchange="addImgToPost(this)"
+      onchange="addImgModalGenerica(this)"
    />  
 </div>
 
@@ -291,13 +295,13 @@
 
   <input id="share-box-entry-toolbar-secondary" type="file"
       multiple
-      onchange="addImgToPost(this)"
+      onchange="addVideoModalGenerica(this)"
    />  
 </div>
 
 
   <div class="btn-modal">
-      <button onclick="publicarPost(this)" class="btn" name="botao-modal-publicacao">Publicar</button>
+      <button onclick="publicarPost(this)" class="btn" name="botao-modal-publicacao" data-name="doacoes">Publicar</button>
     </div>
   </div>
   </div>

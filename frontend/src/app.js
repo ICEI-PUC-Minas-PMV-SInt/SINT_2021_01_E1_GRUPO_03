@@ -247,7 +247,7 @@ function fecharModalCasa() {
 }
 
 /*seleciona a opcao de tag*/
-function selecionandoTagImoveis(element){
+function selecionandoTagImoveis(element) {
     element.classList.toggle("modal-casa-opcao-ativo")
 
     switch (element.dataset.tipo) {
@@ -266,6 +266,7 @@ function selecionandoTagImoveis(element){
             break;
     }
 }
+
 /* Modal doacoes*/
 
 function modalDoacoes() {
@@ -292,7 +293,7 @@ function identificaTipoDeModal(elemento) {
 }
 
 /*selecionando a opcao de tag*/
-function selecionandoTagDoacoes(element){
+function selecionandoTagDoacoes(element) {
     element.classList.toggle("modal-doacoes-opcao-ativo")
 
     switch (element.dataset.tipo) {
@@ -305,6 +306,7 @@ function selecionandoTagDoacoes(element){
     }
 
 }
+
 /**
  * Exibe modal de cada menu
  */
@@ -377,10 +379,22 @@ function modeloFeedLight(tipoFeed, html) {
 /*Feed*/
 function publicarPost(tipoModal) {
 
-    const elementoPost = document.getElementById("modal-generica-entrada-de-dados") //colocando a div "entrada-de-dados" do html dentro da const elemento Post
+    let elementoPost  //colocando a div "entrada-de-dados" do html dentro da const elemento Post
+    switch (tipoModal.dataset.name) {
+
+        case 'generica':
+            elementoPost = document.getElementById("modal-generica-entrada-de-dados")
+            break;
+        case 'doacoes':
+            elementoPost = document.getElementById("modal-doacoes-entrada-de-dados")
+            break;
+        case 'imovel':
+            elementoPost = document.getElementById("modal-imovel-entrada-de-dados")
+            break;
+    }
     const conteudoPost = elementoPost.innerText // acessando o texto da div do modal post
-    let imgPostModal = document.getElementById("arquivos-modal-post")
-    const recuperarSessao = document.getElementById("sessao-de-post") // colocando a sessao de post do html dentro da const recuperarSessao
+    let imgPostModal = document.getElementById("arquivos-modal-post");
+    const recuperarSessao = document.getElementById("sessao-de-post"); // colocando a sessao de post do html dentro da const recuperarSessao
 
     // criando a div principal(container)
     const criandoDiv = document.createElement("div") // div principar, div container
@@ -399,6 +413,40 @@ function publicarPost(tipoModal) {
     // criando nome do usuario
     const nomeUsuario = document.createElement("h3")
     nomeUsuario.innerText = "Erika Marques"
+
+    //recuperando a opcao da modal doacoes e criando as tags do post
+    let opcaoModalDoacoes
+    let divTagConstruida
+    if (tipoModal.dataset.name !== 'generica') {
+
+
+        if (tipoModal.dataset.name === "doacoes") {
+            document.querySelectorAll("p").forEach(opcao => {
+                if (opcao.classList.value === "modal-doacoes-tipo modal-doacoes-opcao-ativo") {
+                    opcaoModalDoacoes = opcao
+                }
+            })
+
+        }
+
+        const divTag = document.createElement('div');
+        divTag.classList.add('tags');
+        const tipoTag = document.createElement('div');
+        if (opcaoModalDoacoes.dataset.tipo === 'doando') { //p
+            tipoTag.classList.add('donation-tag')
+
+        } else if (opcaoModalDoacoes.dataset.tipo === 'help') {
+            tipoTag.classList.add('help-tag')
+        }
+        const conteudoTag = document.createElement('p');
+        conteudoTag.classList.add('tag-child');
+        conteudoTag.textContent = opcaoModalDoacoes.textContent;
+
+        tipoTag.appendChild(conteudoTag);
+        divTag.append(tipoTag);
+        divTagConstruida = divTag
+
+    }
 
     // criando paragrafo do post
     const paragrafo = document.createElement("p")
@@ -456,6 +504,9 @@ function publicarPost(tipoModal) {
     //associando pais e filhos
     divInformacaoDoUsuario.appendChild(fotoDoUsuario);
     divInformacaoDoUsuario.appendChild(nomeUsuario);
+    if (divTagConstruida !== undefined) {
+        divInformacaoDoUsuario.appendChild(divTagConstruida);
+    }
     divComentariosFlex.appendChild(usuarioComentarioImg);
     divComentarios.appendChild(divComentariosFlex);
     divComentariosFlexInput.appendChild(comentarioUsuario)
@@ -466,9 +517,10 @@ function publicarPost(tipoModal) {
     criandoDiv.append(aparador);
     criandoDiv.append(divComentarios);
 
-    recuperarSessao.prepend(criandoDiv) // jogando a div que criamos dentro da sessao, para isso associamos a div como filho da sessao
-    fecharModalGenerica()
-
+    recuperarSessao.prepend(criandoDiv); // jogando a div que criamos dentro da sessao, para isso associamos a div como filho da sessao
+    fecharModalGenerica();
+    fecharModalCasa();
+    fecharModalDoacoes();
     salvarFeeds(tipoModal.dataset.tipo, criandoDiv.innerHTML)
 }
 
@@ -610,6 +662,7 @@ function reloadPage() {
 }
 
 /*Perfil*/
+
 /*liberando os campos para editar*/
 function editarPerfil(element) {
     element.style.display = 'none';
@@ -641,7 +694,7 @@ function editarPerfil(element) {
 }
 
 /*voltado para o estado inicial depois que salvar*/
-function salvandoDadosPerfil(element){
+function salvandoDadosPerfil(element) {
     element.style.display = 'none';
 
     let editarPerfil = document.getElementById('edit-profile');
