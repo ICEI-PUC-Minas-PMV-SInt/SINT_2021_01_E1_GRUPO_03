@@ -186,18 +186,31 @@ function fecharModalGenerica() {
 }
 
 /*add imagem na modal generica*/
-function addImgModalGenerica(element) {
-    const sessaoCarregamento = document.getElementById("arquivos-modal-post")
-    const arquivos = Array.from(element.files)
+function addImgModal(element) {
 
+    let sessaoCarregamento
+
+    switch (element.dataset.name) {
+
+        case 'imoveis':
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-generica")
+            break;
+        case 'generica':
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-imoveis")
+            break;
+        case'doacoes':
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-doacoes")
+            break;
+    }
+
+    const arquivos = Array.from(element.files)
 
     arquivos.forEach(arquivo => { //selecionando cada arquivo e criando elementos e dando estilos
 
         const div = document.createElement("div");
         div.classList.add("imagens-carregadas-container-itens");//add classe css a div
         const img = document.createElement("img");
-        const imgUrl = URL.createObjectURL(arquivo); // criando a url
-        img.src = imgUrl // passando a url para o src
+        img.src = URL.createObjectURL(arquivo) // passando a url para o src
         img.classList.add("imagem-post-modal");
         div.appendChild(img);
         sessaoCarregamento.appendChild(div);
@@ -206,8 +219,22 @@ function addImgModalGenerica(element) {
 }
 
 /*add video na modal generica*/
-function addVideoModalGenerica(element) {
-    const sessaoCarregamento = document.getElementById("arquivos-modal-post")
+function addVideoModal(element) {
+    let sessaoCarregamento
+
+    switch (element.dataset.name) {
+
+        case 'imoveis':
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-generica")
+            break;
+        case 'generica':
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-imoveis")
+            break;
+        case'doacoes':
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-doacoes")
+            break;
+    }
+
     const arquivos = Array.from(element.files)
 
 
@@ -216,8 +243,7 @@ function addVideoModalGenerica(element) {
         const div = document.createElement("div");
         div.classList.add("imagens-carregadas-container-itens");//add classe css a div
         const video = document.createElement("video");
-        const videoUrl = URL.createObjectURL(arquivo); // criando a url
-        video.src = videoUrl // passando a url para o src
+        video.src = URL.createObjectURL(arquivo) // passando a url para o src
         video.classList.add("imagem-post-modal");
         video.setAttribute("controls", "")//add play,volume...
         div.appendChild(video);
@@ -380,20 +406,25 @@ function modeloFeedLight(tipoFeed, html) {
 function publicarPost(tipoModal) {
 
     let elementoPost  //colocando a div "entrada-de-dados" do html dentro da const elemento Post
+    let imgPostModal
+
     switch (tipoModal.dataset.name) {
 
         case 'generica':
             elementoPost = document.getElementById("modal-generica-entrada-de-dados")
+            imgPostModal = document.getElementById("arquivos-modal-post-generica");
             break;
         case 'doacoes':
             elementoPost = document.getElementById("modal-doacoes-entrada-de-dados")
+            imgPostModal = document.getElementById("arquivos-modal-post-doacoes");
             break;
         case 'imovel':
             elementoPost = document.getElementById("modal-imovel-entrada-de-dados")
+            imgPostModal = document.getElementById("arquivos-modal-post-imoveis");
             break;
     }
+
     const conteudoPost = elementoPost.innerText // acessando o texto da div do modal post
-    let imgPostModal = document.getElementById("arquivos-modal-post");
     const recuperarSessao = document.getElementById("sessao-de-post"); // colocando a sessao de post do html dentro da const recuperarSessao
 
     // criando a div principal(container)

@@ -121,7 +121,7 @@
     ></div>
 
     <!--  Espaco onde fica as imagens apos carregadas -->
-    <section id="arquivos-modal-post" class="imagens-carregadas-container">
+    <section id="arquivos-modal-post-generica" class="imagens-carregadas-container">
     </section>
   </div>
     <hr class="aparador aparador-modal-down"/>
@@ -131,9 +131,9 @@
     <img src="public/modal/icon-camera.svg"/>
   </label>
 
-  <input id="input-img-modal-generica" type="file"
+  <input id="input-img-modal-generica" type="file" data-name="generica"
       multiple
-      onchange="addImgModalGenerica(this)"
+      onchange="addImgModal(this)"
    />  
 </div>
 
@@ -142,9 +142,9 @@
     <img src="public/modal/icon-video.svg"/>
   </label>
 
-  <input id="input-video-modal-generica" type="file"
+  <input id="input-video-modal-generica" type="file" data-name="generica"
       multiple
-      onchange="addVideoModalGenerica(this)"
+      onchange="addVideoModal(this)"
    />  
 </div>
 
@@ -186,7 +186,7 @@
       ></div>
 
       <!--  Espaco onde fica as imagens apos carregadas -->
-      <section id="img-modal-casa-post" class="imagens-carregadas-container">
+      <section id="arquivos-modal-post-imoveis" class="imagens-carregadas-container">
       </section>
     </div>
 
@@ -200,9 +200,9 @@
             <img src="public/modal/icon-camera.svg"/>
           </label>
 
-          <input id="modal-casa-icon-camera" type="file"
+          <input id="modal-casa-icon-camera" type="file" data-name="imoveis"
                  multiple
-                 onchange="addImgModalGenerica(this)"
+                 onchange="addImgModal(this)"
           />
         </div>
 
@@ -211,9 +211,9 @@
             <img src="public/modal/icon-video.svg"/>
           </label>
 
-          <input id="modal-casa-icon-video" type="file"
+          <input id="modal-casa-icon-video" type="file" data-name="imoveis"
                  multiple
-                 onchange="addVideoModalGenerica(this)"/>
+                 onchange="addVideoModal(this)"/>
         </div>
       </div>
 
@@ -272,7 +272,7 @@
     ></div>
 
     <!--  Espaco onde fica as imagens apos carregadas -->
-    <section id="img-modal-doacoes-post" class="imagens-carregadas-container">
+    <section id="arquivos-modal-post-doacoes" class="imagens-carregadas-container">
     </section>
   </div>
     <hr class="aparador aparador-modal-down"/>
@@ -282,9 +282,9 @@
     <img src="public/modal/icon-camera.svg"/>
   </label>
 
-  <input id="share-box-entry-toolbar-secondary" type="file"
+  <input id="share-box-entry-toolbar-secondary" type="file" data-name="doacoes"
       multiple
-      onchange="addImgModalGenerica(this)"
+      onchange="addImgModal(this)"
    />  
 </div>
 
@@ -293,9 +293,9 @@
     <img src="public/modal/icon-video.svg"/>
   </label>
 
-  <input id="share-box-entry-toolbar-secondary" type="file"
+  <input id="share-box-entry-toolbar-secondary" type="file" data-name="doacoes"
       multiple
-      onchange="addVideoModalGenerica(this)"
+      onchange="addVideoModal(this)"
    />  
 </div>
 
