@@ -193,10 +193,10 @@ function addImgModal(element) {
     switch (element.dataset.name) {
 
         case 'imoveis':
-            sessaoCarregamento = document.getElementById("arquivos-modal-post-generica")
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-imoveis")
             break;
         case 'generica':
-            sessaoCarregamento = document.getElementById("arquivos-modal-post-imoveis")
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-generica")
             break;
         case'doacoes':
             sessaoCarregamento = document.getElementById("arquivos-modal-post-doacoes")
@@ -225,10 +225,10 @@ function addVideoModal(element) {
     switch (element.dataset.name) {
 
         case 'imoveis':
-            sessaoCarregamento = document.getElementById("arquivos-modal-post-generica")
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-imoveis")
             break;
         case 'generica':
-            sessaoCarregamento = document.getElementById("arquivos-modal-post-imoveis")
+            sessaoCarregamento = document.getElementById("arquivos-modal-post-generica")
             break;
         case'doacoes':
             sessaoCarregamento = document.getElementById("arquivos-modal-post-doacoes")
@@ -446,32 +446,38 @@ function publicarPost(tipoModal) {
     nomeUsuario.innerText = "Erika Marques"
 
     //recuperando a opcao da modal doacoes e criando as tags do post
-    let opcaoModalDoacoes
     let divTagConstruida
     if (tipoModal.dataset.name !== 'generica') {
 
-
-        if (tipoModal.dataset.name === "doacoes") {
-            document.querySelectorAll("p").forEach(opcao => {
-                if (opcao.classList.value === "modal-doacoes-tipo modal-doacoes-opcao-ativo") {
-                    opcaoModalDoacoes = opcao
-                }
-            })
-
-        }
-
+        // Construindo divs para as tags
         const divTag = document.createElement('div');
         divTag.classList.add('tags');
         const tipoTag = document.createElement('div');
-        if (opcaoModalDoacoes.dataset.tipo === 'doando') { //p
-            tipoTag.classList.add('donation-tag')
 
-        } else if (opcaoModalDoacoes.dataset.tipo === 'help') {
-            tipoTag.classList.add('help-tag')
-        }
         const conteudoTag = document.createElement('p');
         conteudoTag.classList.add('tag-child');
-        conteudoTag.textContent = opcaoModalDoacoes.textContent;
+
+        // Verifica se estamos na modal doacoes
+        if (tipoModal.dataset.name === "doacoes") {
+
+            let opcaoModalDoacoes
+
+            // Buscamos todos os p e verificamos se possui a classe ativa e depois removemos a classe
+            document.querySelectorAll("p").forEach(opcao => {
+                if (opcao.classList.contains('modal-doacoes-opcao-ativo')){
+                    opcaoModalDoacoes = opcao
+                    opcao.classList.remove('modal-doacoes-opcao-ativo')
+                }
+            })
+
+            if (opcaoModalDoacoes.dataset.tipo === 'doando') { //p
+                tipoTag.classList.add('donation-tag')
+
+            } else if (opcaoModalDoacoes.dataset.tipo === 'help') {
+                tipoTag.classList.add('help-tag')
+            }
+            conteudoTag.textContent = opcaoModalDoacoes.textContent;
+        }
 
         tipoTag.appendChild(conteudoTag);
         divTag.append(tipoTag);
@@ -535,6 +541,8 @@ function publicarPost(tipoModal) {
     //associando pais e filhos
     divInformacaoDoUsuario.appendChild(fotoDoUsuario);
     divInformacaoDoUsuario.appendChild(nomeUsuario);
+
+    // Se a div tag tiver valor adicionamos ela no feed
     if (divTagConstruida !== undefined) {
         divInformacaoDoUsuario.appendChild(divTagConstruida);
     }
@@ -549,9 +557,18 @@ function publicarPost(tipoModal) {
     criandoDiv.append(divComentarios);
 
     recuperarSessao.prepend(criandoDiv); // jogando a div que criamos dentro da sessao, para isso associamos a div como filho da sessao
-    fecharModalGenerica();
-    fecharModalCasa();
-    fecharModalDoacoes();
+
+    switch (tipoModal.dataset.name) {
+        case 'generica':
+            fecharModalGenerica();
+            break;
+        case 'doacoes':
+            fecharModalDoacoes();
+            break;
+        case 'imovel':
+            fecharModalCasa();
+            break;
+    }
     salvarFeeds(tipoModal.dataset.tipo, criandoDiv.innerHTML)
 }
 
