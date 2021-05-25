@@ -246,6 +246,26 @@ function fecharModalCasa() {
     document.body.style.overflow = "auto" // exibir a barra de scroll quando fechamos a modal
 }
 
+/*seleciona a opcao de tag*/
+function selecionandoTagImoveis(element){
+    element.classList.toggle("modal-casa-opcao-ativo")
+
+    switch (element.dataset.tipo) {
+        case 'vendendo':
+            document.getElementById("opcao-alugando").classList.remove("modal-casa-opcao-ativo");
+            document.getElementById("opcao-procurando").classList.remove("modal-casa-opcao-ativo");
+            break;
+
+        case 'alugando':
+            document.getElementById("opcao-procurando").classList.remove("modal-casa-opcao-ativo");
+            document.getElementById("opcao-vendendo").classList.remove("modal-casa-opcao-ativo");
+            break;
+        case 'procurando':
+            document.getElementById("opcao-vendendo").classList.remove("modal-casa-opcao-ativo");
+            document.getElementById("opcao-alugando").classList.remove("modal-casa-opcao-ativo");
+            break;
+    }
+}
 /* Modal doacoes*/
 
 function modalDoacoes() {
@@ -271,8 +291,22 @@ function identificaTipoDeModal(elemento) {
     elemento.setAttribute('data-tipo', menuAtivo)
 }
 
+/*selecionando a opcao de tag*/
+function selecionandoTagDoacoes(element){
+    element.classList.toggle("modal-doacoes-opcao-ativo")
+
+    switch (element.dataset.tipo) {
+        case 'doando':
+            document.getElementById("opcao-help").classList.remove("modal-doacoes-opcao-ativo");
+            break;
+        case 'help':
+            document.getElementById("opcao-doando").classList.remove("modal-doacoes-opcao-ativo");
+            break;
+    }
+
+}
 /**
- * Exibi modal de cada menu
+ * Exibe modal de cada menu
  */
 function exibirModal() {
 
@@ -343,10 +377,10 @@ function modeloFeedLight(tipoFeed, html) {
 /*Feed*/
 function publicarPost(tipoModal) {
 
-    const elementoPost = document.getElementById("modal-generica-entrada-de-dados") //estou colocando a div "entrada-de-dados" do html dentro da const elemento Post
+    const elementoPost = document.getElementById("modal-generica-entrada-de-dados") //colocando a div "entrada-de-dados" do html dentro da const elemento Post
     const conteudoPost = elementoPost.innerText // acessando o texto da div do modal post
     let imgPostModal = document.getElementById("arquivos-modal-post")
-    const recuperarSessao = document.getElementById("sessao-de-post") // estou colocando a sessao de post do html dentro da const recuperarSessao
+    const recuperarSessao = document.getElementById("sessao-de-post") // colocando a sessao de post do html dentro da const recuperarSessao
 
     // criando a div principal(container)
     const criandoDiv = document.createElement("div") // div principar, div container
@@ -490,15 +524,20 @@ function adicionaPermaHoverClass(elemento) {
         case 'notifications':
             elemento.classList.toggle("permahover-notifications");
             document.getElementById("profile-icon").classList.remove("permahover-profile");
-            hideOnClickOutside(elemento)
-            document.getElementById("profile-icon").children[0].classList.remove("perfil-focus-ativo");
+            elemento.children[0].classList.toggle("icone-notificacao-ativo");
+            hideOnClickOutside(elemento);
+            document.getElementById("profile-icon").children[0].classList.remove("icone-perfil-ativo");
+            document.getElementById("home-icon").children[0].classList.remove("icone-home-ativo");
             break;
         case 'profile':
             elemento.classList.toggle("permahover-profile");
-            document.getElementById("notifications-icon").classList.remove("permahover-notifications")
-            hideOnClickOutside(elemento)
-            elemento.children[0].classList.toggle("perfil-focus-ativo")
+            document.getElementById("notifications-icon").classList.remove("permahover-notifications");
+            document.getElementById("notifications-icon").children[0].classList.remove("icone-notificacao-ativo");
+            document.getElementById("home-icon").children[0].classList.remove("icone-home-ativo");
+            hideOnClickOutside(elemento);
+            elemento.children[0].classList.toggle("icone-perfil-ativo");
             break;
+
     }
 }
 
@@ -512,9 +551,10 @@ function hideOnClickOutside(elemento) {
 
             if (elemento.dataset.tipo === 'profile') {
                 elemento.classList.remove("permahover-profile");
-                elemento.children[0].classList.remove("perfil-focus-ativo");
+                elemento.children[0].classList.remove("icone-perfil-ativo");
             } else if (elemento.dataset.tipo === 'notifications') {
                 elemento.classList.remove("permahover-notifications");
+                elemento.children[0].classList.remove("icone-notificacao-ativo");
             }
             removeClickListener()
         }
@@ -570,16 +610,16 @@ function reloadPage() {
 }
 
 /*Perfil*/
-
+/*liberando os campos para editar*/
 function editarPerfil(element) {
-    element.classList.add("btn-edit-ativo")
+    element.style.display = 'none';
 
     let editarTrabalho = document.getElementById("perfil-trabalho");
     editarTrabalho.setAttribute("contenteditable", "true");
     editarTrabalho.focus();
 
     let editarCidade = document.getElementById("perfil-local");
-    editarCidade.setAttribute("contenteditable", "");
+    editarCidade.setAttribute("contenteditable", "true");
 
     let editarRelacionamento = document.getElementById("perfil-relacionamento");
     editarRelacionamento.setAttribute("contenteditable", "true");
@@ -593,4 +633,39 @@ function editarPerfil(element) {
     let editarTelefone = document.getElementById("perfil-mobile");
     editarTelefone.setAttribute("contenteditable", "true");
 
+    let editarAbout = document.getElementById("perfil-about");
+    editarAbout.setAttribute("contenteditable", "true");
+
+    let salvarDados = document.getElementById("perfil-btn-salvar");
+    salvarDados.style.display = 'block';
+}
+
+/*voltado para o estado inicial depois que salvar*/
+function salvandoDadosPerfil(element){
+    element.style.display = 'none';
+
+    let editarPerfil = document.getElementById('edit-profile');
+    editarPerfil.style.display = 'block'
+
+    let editarTrabalho = document.getElementById("perfil-trabalho");
+    editarTrabalho.setAttribute("contenteditable", "false");
+    editarTrabalho.focus();
+
+    let editarCidade = document.getElementById("perfil-local");
+    editarCidade.setAttribute("contenteditable", "false");
+
+    let editarRelacionamento = document.getElementById("perfil-relacionamento");
+    editarRelacionamento.setAttribute("contenteditable", "false");
+
+    let editarDataNasc = document.getElementById("perfil-dataNasc");
+    editarDataNasc.setAttribute("contenteditable", "false");
+
+    let editarHobbies = document.getElementById("perfil-hobbies");
+    editarHobbies.setAttribute("contenteditable", "false");
+
+    let editarTelefone = document.getElementById("perfil-mobile");
+    editarTelefone.setAttribute("contenteditable", "false");
+
+    let editarAbout = document.getElementById("perfil-about");
+    editarAbout.setAttribute("contenteditable", "false");
 }

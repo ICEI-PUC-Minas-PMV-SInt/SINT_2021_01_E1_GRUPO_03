@@ -1,7 +1,8 @@
 <section id="profile" class="container border profile">
     <div class="profile-section">
         <div class="header-profile">
-            <img class="img-user" src="public/usuarios/aposentada.png"/>
+            <img class="img-user" src="public/usuarios/aposentada.png" type="file" id="mudar-foto-perfil"
+            />
         </div>
         <div class="header-profile">
             <h3 class="profile-name">Maria Francisca Da Silva Soares</h3>
@@ -9,6 +10,7 @@
         <div class="header-profile">
             <button class="btn-edit" id="edit-profile" onclick="editarPerfil(this)">Editar Perfil</button>
         </div>
+        <button class="btn-salvar" id="perfil-btn-salvar" onclick="salvandoDadosPerfil(this)">Salvar</button>
     </div>
     <hr class="dropdown-divider aparador"/>
     <div class="profile-section-bottom">
@@ -51,15 +53,15 @@
         <hr class="dropdown-divider aparador"/>
         <div class="profile-section-bottom">
             <div class="header-profile-about-title">
-                <span class="about-title">Nós conte um pouco mais sobre você...</span>
+                <span  class="about-title">Nós conte um pouco mais sobre você...</span>
             </div>
             <div class="header-profile-about-conteudo">
-      <span editable="false">
+      <blockquote contenteditable="false" id="perfil-about">
         It has survived not only five centuries, but also the leap into
         electronic typesetting, remaining essentially unchanged. It was
         popularised in the 1960s with the release of Letraset sheets containing
         Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.</span>
+        like Aldus PageMaker including versions of Lorem Ipsum.</blockquote>
             </div>
         </div>
     </div>

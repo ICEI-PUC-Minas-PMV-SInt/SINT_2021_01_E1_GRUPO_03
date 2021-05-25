@@ -7,7 +7,7 @@
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    background: #fff;
+    background: white;
 }
 
 .header_nav_items {
@@ -92,6 +92,12 @@
     transition: 200ms ease;
 }
 
+.icone-home-ativo path {
+    fill: #4285f4;
+    stroke: #4285f4;
+    stroke-width: 0.1;
+}
+
 /* icone-notificao*/
 .icone-notificacao {
     height: 28px;
@@ -109,6 +115,12 @@
 .icone-notificacao:hover path {
     stroke: #4285f4;
     transition: 200ms ease;
+}
+
+.icone-notificacao-ativo path {
+    fill: #4285f4;
+    stroke: #4285f4;
+    stroke-width: 0.1;
 }
 
 /*Icone Perfil */
@@ -129,9 +141,10 @@
     transition: 200ms ease;
 }
 
-.perfil-focus-ativo path {
+.icone-perfil-ativo path {
     fill: #4285f4;
     stroke: #4285f4;
+    stroke-width: 0.1;
 }
 
 /* aparador modal icones*/
@@ -236,7 +249,7 @@ ul.primary li.permahover-notifications ul {
 /*conteiner*/
 ul.primary li.permahover-profile ul {
     display: block;
-    background: #ffffff;
+    background: white;
     margin-inline-start: -3rem;
     margin-top: 10px;
 }

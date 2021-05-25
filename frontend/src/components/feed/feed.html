@@ -21,9 +21,11 @@
         class="img_post"
       />
       <h3>Maria Francisca Da Silva Soares</h3>
+      <!--<div class="tags">
+        <div class="donation-tag"> <p class="tag-child">Doando</p></div>
+        <div class="help-tag"> <p class="tag-child">Help</p></div>
+      </div>-->
     </div>
-
-
       <p class="texto_publicacao">
         É simplesmente um texto fictício da indústria de impressão e composição.
         Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos
@@ -166,11 +168,11 @@
               class="img_post"
       />
       <h3 class="nome-usuario-modal">Ana Carolina Yamamoto</h3>
-      <p class="modal-casa-opcao">Vendendo</p>
+      <p class="modal-casa-opcao" id="opcao-vendendo" onclick="selecionandoTagImoveis(this)" data-tipo="vendendo">Vendendo</p>
       <hr class ="separador-de-texto"/>
-      <p class="modal-casa-opcao">Alugando</p>
+      <p class="modal-casa-opcao" id="opcao-alugando" onclick="selecionandoTagImoveis(this)" data-tipo="alugando">Alugando</p>
       <hr class ="separador-de-texto"/>
-      <p class="modal-casa-opcao">Procurando</p>
+      <p class="modal-casa-opcao" id="opcao-procurando" onclick="selecionandoTagImoveis(this)" data-tipo="procurando">Procurando</p>
     </div>
     <div class="scroll-modal">
       <div
@@ -252,9 +254,9 @@
         class="img_post"        
       />
       <h3 class="nome-usuario-modal">Ana Carolina Yamamoto</h3>
-      <p class="modal-doacoes-tipo">Doando Algo</p>
+      <p class="modal-doacoes-tipo" id="opcao-doando" data-tipo="doando" onclick="selecionandoTagDoacoes(this)">Doando Algo</p>
       <hr class ="separador-de-texto"/>
-      <p class="modal-doacoes-tipo">Precisando de ajuda</p>
+      <p class="modal-doacoes-tipo" id="opcao-help" data-tipo="help" onclick="selecionandoTagDoacoes(this)">Precisando de ajuda</p>
     </div>
     <div class="scroll-modal">
 

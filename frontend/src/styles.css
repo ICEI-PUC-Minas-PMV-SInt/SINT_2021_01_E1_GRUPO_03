@@ -27,9 +27,9 @@ p {
 }
 
 .btn {
-    margin-top: 2rem;
     width: 126px;
     height: 40px;
+    margin-top: 2rem;
     margin-bottom: 40px;
     background: var(--blue);
     color: #fefefe;
