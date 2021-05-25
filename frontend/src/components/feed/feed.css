@@ -88,8 +88,6 @@ p {
 .usuario_post {
     max-width: 100%;
     display: flex;
-    justify-content: space-between;
-
 }
 
 .usuario_post h3 {
@@ -113,7 +111,7 @@ p {
     font-size: 10px;
     font-weight: bold;
     color: #fefefe;
-    margin-left: 180px;
+    margin-left: 24%;
 }
 
 .donation-tag {
@@ -133,8 +131,8 @@ p {
 .help-tag {
     background-color: #FABB05;
     border-radius: 10px;
-    text-align: center;
-    margin-right: 0px;
+    margin-right: 10px;
+    height: 24px;
 }
 
 
