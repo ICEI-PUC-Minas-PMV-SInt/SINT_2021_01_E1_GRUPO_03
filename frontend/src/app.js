@@ -464,11 +464,16 @@ function publicarPost(tipoModal) {
 
             // Buscamos todos os p e verificamos se possui a classe ativa e depois removemos a classe
             document.querySelectorAll("p").forEach(opcao => {
-                if (opcao.classList.contains('modal-doacoes-opcao-ativo')){
+                if (opcao.classList.contains('modal-doacoes-opcao-ativo')) {
                     opcaoModalDoacoes = opcao
                     opcao.classList.remove('modal-doacoes-opcao-ativo')
                 }
             })
+
+            if (opcaoModalDoacoes === undefined) {
+                alert('Por favor selecione a opção (Doando) ou (Pedido de doação)')
+                return;
+            }
 
             if (opcaoModalDoacoes.dataset.tipo === 'doando') { //p
                 tipoTag.classList.add('donation-tag')
