@@ -26,6 +26,8 @@ function addUser(id, name, email, password, birthday, postalCode, neighborhood) 
 const novoUsuario = 1;
 const usuarioCadastrado = 2;
 
+const usuarioLogado = recuperaUsuarioLogado();
+
 /**
  * Valida login
  * @param form formulario de login
@@ -168,6 +170,14 @@ function fecharModalCadastro() {
 /* Modal generica */
 function modalGenerica() {
     let modal = document.getElementById("modal-generica")
+
+    //Adicionando nome do usuario logado
+    document.getElementById('nome-usuario-modal-generica').textContent = usuarioLogado.name
+
+    //Adicionando foto do usuario logado
+    let fotoUsuario = document.getElementById('foto-usuario-modal-generica');
+    fotoUsuario.alt = usuarioLogado.name;
+
     modal.style.display = "block"
     document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
     const entradaDeDados = document.getElementById("modal-generica-entrada-de-dados")
@@ -256,6 +266,14 @@ function addVideoModal(element) {
 
 function modalCasa() {
     let modal = document.getElementById("modal-casa")
+
+    // Adicionando nome de usuario logado
+    document.getElementById('nome-usuario-modal-imoveis').textContent = usuarioLogado.name
+
+    //Adicionando foto do usuario logado
+    let fotoUsuario = document.getElementById('foto-usuario-modal-imoveis');
+    fotoUsuario.alt = usuarioLogado.name;
+
     modal.style.display = "block"
     document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
     const entradaDeDados = document.getElementById("modal-casa-entrada-de-dados")
@@ -297,6 +315,14 @@ function selecionandoTagImoveis(element) {
 
 function modalDoacoes() {
     let modal = document.getElementById("modal-doacoes")
+
+    // Adicionando nome de usuario logado
+    document.getElementById('nome-usuario-modal-doacoes').textContent = usuarioLogado.name
+
+    //Adicionando foto do usuario logado
+    let fotoUsuario = document.getElementById('foto-usuario-modal-doacoes');
+    fotoUsuario.alt = usuarioLogado.name;
+
     modal.style.display = "block"
     document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
     const entradaDeDados = document.getElementById("modal-doacoes-entrada-de-dados")
@@ -356,15 +382,6 @@ function exibirModal() {
         }
     }
 }
-
-const feedNoticias = 'noticias';
-const feedEstabelecimentos = 'estabelecimentos'
-const feedSeguranca = 'seguranca';
-const feedImoveis = 'imoveis';
-const feedEventos = 'eventos';
-const feedDoacoes = 'doacoes';
-const feedDesaparecidos = 'desaparecidos';
-
 
 function modeloFeed(bairro, tipoFeed, html) {
     return {
@@ -439,11 +456,11 @@ function publicarPost(tipoModal) {
     const fotoDoUsuario = document.createElement("img") // criando img
     fotoDoUsuario.className = "img_post" // estilo da img
     fotoDoUsuario.src = "https://avatars.githubusercontent.com/u/63205222?v=4"
-    fotoDoUsuario.alt = "Erika Marques"
+    fotoDoUsuario.alt = usuarioLogado.name;
 
     // criando nome do usuario
     const nomeUsuario = document.createElement("h3")
-    nomeUsuario.innerText = "Erika Marques"
+    nomeUsuario.innerText = usuarioLogado.name;
 
     //recuperando a opcao da modal doacoes e criando as tags do post
     let divTagConstruida
