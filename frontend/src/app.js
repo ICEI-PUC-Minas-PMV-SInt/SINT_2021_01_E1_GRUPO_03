@@ -411,9 +411,10 @@ function modeloFeedCriacaoBairro(bairro, tipoFeed, html) {
     };
 }
 
-function modeloFeedLight(tipoFeed, html) {
+function modeloFeedLight(tipoFeed,postId,html) {
     return {
         "tipoFeed": tipoFeed,
+        'postId': postId,
         "html": html
     }
 }
@@ -532,7 +533,15 @@ function publicarPost(tipoModal) {
     // Removendo elementos img da modal
     imgPostModal.textContent = null;
 
+    //Criando contador de comentarios
+    const contadorDeComentarios = document.createElement('p')
+    contadorDeComentarios.classList.add('call-comentarios')
+    contadorDeComentarios.innerText = '0 Comentários'
+    contadorDeComentarios.setAttribute('name','contadorDeComentarios')
+
     // criando area de comentarios
+    const divSessaoComentarios = document.createElement('section')
+    divSessaoComentarios.setAttribute('name','comments-section');
 
     //aparador
     const aparador = document.createElement("hr");
@@ -559,6 +568,7 @@ function publicarPost(tipoModal) {
     const comentarioUsuario = document.createElement("input");
     comentarioUsuario.type = "text";
     comentarioUsuario.placeholder = "Escreva um comentário";
+    comentarioUsuario.setAttribute('onkeyup', 'addComentario(event)');
 
     //associando pais e filhos
     divInformacaoDoUsuario.appendChild(fotoDoUsuario);
@@ -568,6 +578,7 @@ function publicarPost(tipoModal) {
     if (divTagConstruida !== undefined) {
         divInformacaoDoUsuario.appendChild(divTagConstruida);
     }
+
     divComentariosFlex.appendChild(usuarioComentarioImg);
     divComentarios.appendChild(divComentariosFlex);
     divComentariosFlexInput.appendChild(comentarioUsuario)
@@ -575,8 +586,13 @@ function publicarPost(tipoModal) {
     criandoDiv.prepend(divInformacaoDoUsuario); // prepend para ele ser sempre o que veem em primeiro no post
     criandoDiv.append(paragrafo);
     fotosDoPost.forEach(imgTags => criandoDiv.append(imgTags));
+    criandoDiv.append(contadorDeComentarios)
+    criandoDiv.append(divSessaoComentarios)
     criandoDiv.append(aparador);
     criandoDiv.append(divComentarios);
+
+    //Adicionando id unico ao post
+    criandoDiv.id = uuid();
 
     recuperarSessao.prepend(criandoDiv); // jogando a div que criamos dentro da sessao, para isso associamos a div como filho da sessao
 
@@ -591,7 +607,58 @@ function publicarPost(tipoModal) {
             fecharModalCasa();
             break;
     }
-    salvarFeeds(tipoModal.dataset.tipo, criandoDiv.innerHTML)
+    salvarFeeds(tipoModal.dataset.tipo,criandoDiv.id,criandoDiv.innerHTML)
+}
+
+/**
+ * Adiciona comentario ao post
+ * @param event A acao que o usuario esta fazendo
+ */
+function addComentario(event) {
+
+    if (event.key === 'Enter' || event.keyCode === 13) {
+
+        const comment = event.target.value;
+
+        const divPost = event.target.parentNode.parentNode.parentNode;
+
+        const section = divPost.children.namedItem('comments-section')
+        const contadorDeComentarios = divPost.children.namedItem('contadorDeComentarios');
+
+
+        const divComentarios = document.createElement("div");
+        divComentarios.className = "area_comentarios";
+
+        //div da img
+        const divComentariosFlex = document.createElement("div");
+        divComentariosFlex.classList.add("area_comentarios_flex")
+
+        //img
+        const usuarioComentarioImg = document.createElement("img");
+        usuarioComentarioImg.className = "img_comentario";
+        usuarioComentarioImg.src = "assets/images/usuarios/jovem-estudante.png";
+
+        //div do input
+        const divComentariosFlexInput = document.createElement("div");
+        divComentariosFlexInput.classList.add("area_comentarios_flex");
+
+        const inputComentario = document.createElement('input')
+        inputComentario.value = comment;
+        inputComentario.setAttribute('disabled','');
+
+
+        divComentariosFlexInput.appendChild(inputComentario)
+        divComentariosFlex.appendChild(usuarioComentarioImg)
+        divComentarios.appendChild(divComentariosFlex)
+        divComentariosFlex.appendChild(divComentariosFlexInput)
+        section.prepend(divComentarios)
+
+        const quantidadeDeComentarios = section.children.length;
+
+        contadorDeComentarios.innerText = quantidadeDeComentarios + ' Comentários';
+
+        event.target.value = null;
+    }
 }
 
 /**
@@ -599,7 +666,7 @@ function publicarPost(tipoModal) {
  * @param tipoFeed exemplo 'feedNoticias'...
  * @param {InnerHTML} post Post que deve ser salvo
  */
-function salvarFeeds(tipoFeed, post) {
+function salvarFeeds(tipoFeed,postId, post) {
 
     // Recupera os feeds salvos
     let feeds = JSON.parse(localStorage.getItem('feeds'));
@@ -628,7 +695,7 @@ function salvarFeeds(tipoFeed, post) {
         // Comparamos o bairro do usuario logado com o do localstorage
         if (bairro === feedBairro.bairro) {
             // Adicionamos o novo post ao array de feeds e salvamos na localstorage
-            feedBairro.feeds.push(modeloFeedLight(tipoFeed, post))
+            feedBairro.feeds.push(modeloFeedLight(tipoFeed,postId, post))
             localStorage.setItem('feeds', JSON.stringify(feeds))
             break;
         }
