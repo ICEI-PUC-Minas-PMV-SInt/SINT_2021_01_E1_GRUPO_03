@@ -52,6 +52,7 @@ async function loadSettings() {
     contentDiv.innerHTML = await fetchHtmlAsText(settings);
     document.getElementById('nome-usuario-settings').textContent = usuarioLogado.name
 }
+
 /**
  * Esconde ou exibi menu nav
  * @param hide se true troca para display block , se false troca para none
@@ -172,13 +173,14 @@ async function loadMainComponents() {
     });
 }
 
-function verificaBairro(){
+function verificaBairro() {
     const usuario = recuperaUsuarioLogado();
     const bairro = document.getElementById('bairro');
-    bairro.textContent = usuario.neighborhood;;
+    bairro.textContent = usuario.neighborhood;
+    ;
 }
 
-function recuperaUsuarioLogado(){
+function recuperaUsuarioLogado() {
     return JSON.parse(sessionStorage.getItem('loggedUser'));
 }
 
