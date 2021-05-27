@@ -17,7 +17,7 @@
   margin-right: 60px;
   width: 89%;
   height: 85%;
-  padding: 0px 0px 0px 0px; 
+  padding: 0 0 0 0;
 }
 
 /*Container login*/
@@ -40,12 +40,12 @@
 /*campos email/senha*/
 .form-login input {
   height: 36px;
-  width: 280px;
-  left: 845px;
-  top: 384px;
+  width: 250px;
   border-radius: 6px;
   margin-top: 1.3rem;
-  background-color: #fafafa;
+  margin-bottom: 10px;
+  background-color: #fefefe;
+  padding: 0 5px;
 }
 
 .form-login input:focus {
@@ -53,6 +53,8 @@
   outline: none;
   border: 1px solid var(--blue);
   box-shadow: 0 0 0 4px rgb(66 133 244 / 10%);
+  padding-right:  10px;
+  transition: 300ms ease;
 }
 
 .form-login input:hover {
@@ -60,11 +62,24 @@
   outline: none;
   box-shadow: 0 0 0 4px rgb(66 133 244 / 10%);
 }
-
-::placeholder {
-  padding: 10px;
-  color: #c4c4c4;
+.form-login label {
+  display:flex;
+  width:auto;
+  margin-left: 33px;
+  margin-top: 14px;
+  padding: 0 6px;
+  position: absolute;
+  font-size:12px;
+  letter-spacing: 0.03em;
+  font-weight:normal;
+  color: #393939;
+  background-color:#fefefe;
 }
+
+/*::placeholder {
+  padding: 10px;
+  color: #c4c4c4!important;
+}*/
 
 .aparador-login {
   width: 282px;

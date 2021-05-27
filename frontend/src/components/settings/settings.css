@@ -1,0 +1,144 @@
+.settings {
+    display: flex;
+    background-color: #fff;
+    margin-top: 120px !important;
+    box-shadow: 0px 10px 70px rgb(0 0 0 / 15%);
+}
+
+/*conteiner-menu*/
+.menu-settings {
+    display: block;
+    width: 34%;
+    height: 685px;
+    background-color: rgb(66 133 244 / 6%);
+}
+
+/*img usuario*/
+.menu-settings img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 60px;
+    margin-left: 31%;
+    margin-top: 50px;
+    border: 1px solid transparent;
+
+}
+
+/*nome usuario*/
+.menu-settings-nome-usuario {
+    color: #53525d;
+    font-size:14px;
+    text-align: center;
+    margin-bottom: 20%;
+    margin-top:14px;
+}
+
+/*topicos do menu*/
+.menu-settings h5 {
+    color: #393939;
+    font-size:14px;
+    text-align: center;
+    margin-bottom: 20%;
+    letter-spacing: 0.03em;
+}
+
+.menu-settings-geral{
+    padding:10px;
+}
+
+.header-settings{
+    display: block;
+    height:132px;
+    width:493px;
+    margin-left: 168px;
+    position: absolute;
+}
+/*backgraund ilustracao*/
+.ilustracao-settings {
+    display: flex;
+    background: rgb(66 133 244 / 6%);
+    width:100%;
+    height:115px;
+}
+
+.ilustracao-settings img {
+    width: 100%;
+    height:94%;
+    margin-top: 30px;
+}
+
+/*conteiner*/
+.editar-settings{
+    display:block;
+    background-color: #fff;
+    width: 100%;
+    align-self: center;
+    height: auto;
+}
+/*campos editar*/
+.titulo-campos-settings{
+    padding-left:20px;
+}
+.titulo-campos-settings h4{
+    color: #393939;
+    font-size:16px;
+    margin-left: 22px;
+    margin-bottom: 40px;
+}
+.campos-settings{
+    display:flex;
+    flex-direction:column;
+}
+.campos-settings label {
+    display:flex;
+    width:auto;
+    margin-left: 22px;
+    margin-top: -4px;
+    padding: 0 6px;
+    position: absolute;
+    font-size:12px;
+    letter-spacing: 0.03em;
+    font-weight:normal;
+    color: #393939;
+    background-color:white;
+}
+.campos-settings input {
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    height: 24px;
+    width: 215px;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    padding:5px;
+    background:white;
+}
+.campos-settings input:hover {
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(66 133 244 / 10%);
+}
+
+.campos-settings input:focus {
+    background-color: white;
+    outline: none;
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 0 2px rgb(66 133 244 / 10%);
+    padding-right: 50px;
+    transition:400ms ease;
+}
+::placeholder{
+    font-size:12px;
+    color: #393939;
+}
+.campos-settings span {
+    font-size:12px;
+    font-weight: bold;
+    color: var(--blue);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.campos-settings span:hover {
+    color:var(--light-blue);
+}

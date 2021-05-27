@@ -445,7 +445,7 @@ function publicarPost(tipoModal) {
     const recuperarSessao = document.getElementById("sessao-de-post"); // colocando a sessao de post do html dentro da const recuperarSessao
 
     // criando a div principal(container)
-    const criandoDiv = document.createElement("div") // div principar, div container
+    const criandoDiv = document.createElement("div") // div principal, div container
     criandoDiv.classList.add('post', 'container', 'border')// div que criamos no js herdar o estilo css que criamos na div do html
 
     // criando a div que amarra nome do usuario e foto

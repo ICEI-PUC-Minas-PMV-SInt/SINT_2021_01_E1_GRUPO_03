@@ -4,6 +4,7 @@ const profile = './components/profile/profile.html';
 const header = './components/header/header.html';
 const menuNav = './components/menu-nav/menu-nav.html';
 const feed = './components/feed/feed.html';
+const settings = './components/settings/settings.html';
 
 /**
  * Carrega pagina do Header.
@@ -39,6 +40,14 @@ async function loadProfile() {
     contentDiv.innerHTML = await fetchHtmlAsText(profile);
 }
 
+/**
+ * Carrega pagina de conf.
+ */
+async function loadSettings() {
+    await hideMenuNav(true);
+    const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = await fetchHtmlAsText(settings);
+}
 /**
  * Esconde ou exibi menu nav
  * @param hide se true troca para display block , se false troca para none
