@@ -38,6 +38,9 @@ async function loadProfile() {
     await hideMenuNav(true);
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = await fetchHtmlAsText(profile);
+
+    // Carrega informacoes do usuario logado
+    document.getElementById('profile-name').textContent = usuarioLogado.name
 }
 
 /**
@@ -47,6 +50,7 @@ async function loadSettings() {
     await hideMenuNav(true);
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = await fetchHtmlAsText(settings);
+    document.getElementById('nome-usuario-settings').textContent = usuarioLogado.name
 }
 /**
  * Esconde ou exibi menu nav
