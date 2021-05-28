@@ -1,6 +1,7 @@
 .profile {
     background-color: #fff;
     margin-top: 120px !important;
+    margin-bottom: 30px !important;
 }
 
 .profile-section {
@@ -17,7 +18,7 @@
 }
 
 .header-profile .profile-name {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .btn-edit {
@@ -42,7 +43,6 @@
 
 .btn-edit-ativo {
     border: 1px solid rgb(66 133 244 / 82%);
-    transition: color 100ms ease;
     background: #fefefe;
     color: #4285f4;
 }
@@ -51,8 +51,6 @@
     display: table;
     border-spacing: 10px;
     border-collapse: separate;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 .btn-salvar {
@@ -61,10 +59,9 @@
     background: var(--blue);
     color: #fefefe;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
     border-radius: 4px;
     border: none;
-    transition: all 0.4s ease;
     cursor: pointer;
     letter-spacing: 0.03rem;
     display: none;
@@ -85,8 +82,9 @@
     margin-top: 22px;
     font-size: 16px;
     color: #3a3a3a;
-    padding: 0;
+    padding: 5px 5px 5px 7px;
     border: 1px solid transparent;
+    transition: 200ms ease;
 }
 
 .header-profile-bottom span:focus {
@@ -95,16 +93,21 @@
     border: 1px solid var(--blue);
     box-shadow: 0 0 0 3px rgb(66 133 244 / 8%);
     border-radius: 4px;
-    transition: 200ms ease;
+    padding-right: 80px;
+    transition: 400ms ease;
 }
 
 .header-profile-bottom ul li img {
     margin-inline-end: 1.5rem;
-    width: 5%;
+    width: 20px;
 }
 
 .perfil-mobile-img {
     padding: 0;
+}
+
+.dropdown-divider {
+    width: 89%;
 }
 
 /* Terceira section do profile */
@@ -138,6 +141,7 @@
     border: 1px solid transparent;
     padding: 10px 10px;
     margin-top: -20px;
+    transition: 200ms ease;
 }
 
 .header-profile-about-conteudo blockquote:focus {
@@ -168,14 +172,14 @@
     .btn-edit {
         width: 92%;
         height: 35px;
-        font-size: 10px;
+        font-size: 12px;
         margin-inline-start: 2rem;
     }
 
     .btn-salvar {
         width: 65px;
         height: 28px;
-        font-size: 10px;
+        font-size: 12px !important;
         margin-right: 35px;
     }
 

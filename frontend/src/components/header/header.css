@@ -7,7 +7,7 @@
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    background: white;
+    background: #fff;
 }
 
 .header_nav_items {
@@ -30,7 +30,7 @@
 /*campo pesquisar*/
 .search {
     font-family: -apple-system, Roboto, "Helvetica Neue", sans-serif;
-    background: #f7f7f8;
+    background: #fafafa;
     border: 1px solid #e9e9e9;
     border-radius: 4px;
     height: 2rem;

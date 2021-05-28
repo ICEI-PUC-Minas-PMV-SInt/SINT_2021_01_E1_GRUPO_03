@@ -1,7 +1,3 @@
-.post {
-    width: 9000px;
-}
-
 /* Publicação do Post */
 .share-box-entry {
     height: 110px;
@@ -56,10 +52,12 @@ p {
 
 .post {
     height: auto;
+    width: 9000px;
     background-color: #fff;
     align-items: center;
     margin-top: 20px !important;
-    margin-bottom: 5% !important;
+    margin-bottom: 3% !important;
+    padding-bottom: 30px;
 }
 
 .img_post {
@@ -169,10 +167,11 @@ p {
 
 .area_comentarios {
     display: flex;
+    margin-bottom: 10px;
 }
 
 .area_comentarios_flex {
-    flex-direction: row;
+    display: flex;
 }
 
 .area_comentarios input {
@@ -188,25 +187,27 @@ p {
 }
 
 .area_comentarios p {
-    width: 565px;
-    height: 60%;
+    width: 545px;
+    height: auto;
     border-radius: 12px;
     margin-top: 18px;
-    margin-left: 20px;
+    margin-left: 10px;
+    padding: 10px 7px;
     background-color: #f7f7f8;
     border: 1px solid #f7f7f8;
     color: #62616d;
     font-size: 15px;
 }
 
+
 .area_comentarios input:focus {
     outline: none;
-    cursor: none;
+    cursor: text;
 }
 
 .aparador-post {
-    width: 100%;
-    border-top: 1px solid #e9e9e9;
+    width: 92%;
+    border: 1px solid #e9e9e9;
     margin-top: 25px;
     height: auto;
 }
@@ -220,21 +221,19 @@ p {
     color: #666666;
 }
 
-.comentario-perfil {
-    margin-bottom: 10px;
-    margin-top: 0px;
-}
-
 .comentario-perfil input {
     background-color: #fefefe;
     border: none;
-    height: 50%;
+    height: auto;
+    margin-top: 16px;
+    width: 547px;
+    margin-left: 10px;
 }
 
 .comentario-perfil input::placeholder {
     color: #b5b5b5;
     text-align: left;
-    padding: 0px;
+    padding: 0;
 }
 
 /* Modal generica */
@@ -249,7 +248,7 @@ p {
     /*display block*/
     background-color: #fefefe;
     padding: 10px;
-    width: 29%;
+    width: 24%;
     margin: 6rem auto auto;
     height: auto;
     box-shadow: 0px 10px 70px rgb(0 0 0 / 35%);
@@ -259,8 +258,9 @@ p {
 /*titulo criar publicacao*/
 .modal-generica-header h4 {
     margin-left: 25px;
-    color: #aaa;
     margin-top: 15px;
+    color: #aaa;
+    font-size: 12px;
 }
 
 /* The Close Button */
@@ -268,7 +268,7 @@ p {
     float: right;
     margin-right: 11px;
     margin-top: -10px;
-    font-size: 25px;
+    font-size: 21px;
     font-weight: bold;
     cursor: pointer;
     color: #b5b5b5;
@@ -284,6 +284,10 @@ p {
     transition: color 200ms ease;
 }
 
+.aparador-modal-up {
+    width: 93%;
+}
+
 /*conteiner usuario e foto*/
 .modal-generica-user-info {
     display: flex;
@@ -292,14 +296,14 @@ p {
 
 /*imagem de perfil do usuario da modal*/
 .modal-generica-user-info img {
-    margin-top: 30px;
     cursor: pointer;
 }
 
 /*nome do usuario na modal generica*/
 .nome-usuario-modal {
-    margin: 30px 26px 0px 10px;
+    margin: 24px 26px 0px 10px;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .nome-usuario-modal:hover {
@@ -332,6 +336,7 @@ p {
 
 .aparador-modal-down {
     margin-top: 20px;
+    width: 93%;
 }
 
 /*botoes da modal generica*/
@@ -344,9 +349,12 @@ p {
 
 /*botao publicar*/
 .btn-modal button {
+    height: 36px;
+    width: 126px;
     margin-bottom: 20px;
     margin-top: 5px;
-    margin-inline-start: -28px;
+    margin-inline-start: -40px;
+    font-size: 13px;
 }
 
 .btn-modal {
@@ -378,7 +386,6 @@ p {
 .icone-video-modal {
     margin-inline-end: 50%;
     margin-top: -7px;
-    margin-left: -10px;
     padding: 12px 15px;
 }
 
@@ -428,35 +435,48 @@ hr.solid {
     margin-left: 20px;
     margin-bottom: 5px;
     padding: 1px 8px;
-    width: 135px;
+    width: 128px;
     height: 28px;
-    border: 1px solid #404040;
+    border: 1px solid #e9e9e9;
     box-sizing: border-box;
     border-radius: 4px;
-    background-color: #fff;
-    color: #404040;
+    letter-spacing: 0.05em;
+    background-color: #fafafa;
+    color: #aaa;
+    cursor: pointer;
+    transition: 200ms ease;
+
 }
 
 .botoes-modal-casa-input::placeholder {
-    color: #404040;
-    font-size: 15px;
+    color: #aaa;
+    font-size: 14px;
     text-align: center;
     padding: 1px 15px;
-    background-color: white;
+    background-color: #fafafa;
+    transition: 200ms ease;
+}
+
+.botoes-modal-casa-input:hover {
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 0 2px rgb(66 133 244 / 5%);
+    background-color: #fff;
+    transition: 200ms ease;
 }
 
 .botoes-modal-casa-input:focus-visible {
     outline: none;
-    border: 1px solid #404040;
+    border: 1px solid var(--blue);
     box-shadow: 0 0 0 2px rgb(66 133 244 / 5%);
-    color: #404040;
+    color: #aaa;
     background-color: white;
+    transition: 200ms ease;
 }
 
 .botoes-modal-casa-input option {
-    color: #8d8d94;
+    color: #393939;
     outline: none;
-    background-color: white;
+    background-color: rgb(66 133 244 / 2%);
 }
 
 /*btn publicar*/

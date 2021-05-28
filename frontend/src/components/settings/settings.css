@@ -10,7 +10,7 @@
     display: block;
     width: 34%;
     height: 685px;
-    background-color: rgb(66 133 244 / 6%);
+    background-color: rgb(66 133 244 / 3%);
 }
 
 /*img usuario*/
@@ -57,7 +57,7 @@
 /*backgraund ilustracao*/
 .ilustracao-settings {
     display: flex;
-    background: rgb(66 133 244 / 6%);
+    background: rgb(66 133 244 / 3%);
     width: 100%;
     height: 115px;
 }
@@ -78,34 +78,33 @@
     margin-top: 125px;
 }
 
-/*campos editar*/
-.titulo-campos-settings {
-    padding-left: 20px;
-}
-
-.titulo-campos-settings h4 {
-    color: #393939;
+.campos-settings h4 {
+    color: #53525d;
     font-size: 16px;
     margin-left: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+
 }
 
+/*campos editar*/
 .campos-settings {
     display: flex;
     flex-direction: column;
+    margin-left: 40px;
+    margin-top: 67px;
 }
 
 .campos-settings label {
     display: flex;
     width: auto;
-    margin-left: 22px;
+    margin-left: 18px;
     margin-top: -4px;
     padding: 0 6px;
     position: absolute;
     font-size: 12px;
     letter-spacing: 0.03em;
     font-weight: normal;
-    color: #393939;
+    color: #7e7e7e;
     background-color: white;
 }
 
@@ -119,8 +118,7 @@
     margin-bottom: 25px;
     padding: 5px;
     background: white;
-    border: 1px solid #53525d;
-    transition: 600ms ease;
+    transition: 400ms ease;
 
 }
 
@@ -145,6 +143,7 @@
     color: #393939;
 }
 
+/*btn editar*/
 .campos-settings span {
     font-size: 12px;
     font-weight: bold;
