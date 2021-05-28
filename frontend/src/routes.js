@@ -136,6 +136,8 @@ async function loadFeed(menuSelecionado) {
                     if (nomeMenu === feed.tipoFeed && feed.html !== undefined) {
                         let criandoDiv = document.createElement('div');
                         criandoDiv.classList.add('post', 'container', 'border')
+                        criandoDiv.setAttribute('id', feed.postId);
+                        criandoDiv.setAttribute('data-tipo', feed.tipoFeed)
                         criandoDiv.insertAdjacentHTML('beforeend', feed.html);
                         recuperarSessao.prepend(criandoDiv)
                     }

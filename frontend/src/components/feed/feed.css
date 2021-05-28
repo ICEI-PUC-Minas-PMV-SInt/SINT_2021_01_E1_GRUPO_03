@@ -187,6 +187,18 @@ p {
     font-size: 15px;
 }
 
+.area_comentarios p {
+    width: 565px;
+    height: 60%;
+    border-radius: 12px;
+    margin-top: 18px;
+    margin-left: 20px;
+    background-color: #f7f7f8;
+    border: 1px solid #f7f7f8;
+    color: #62616d;
+    font-size: 15px;
+}
+
 .area_comentarios input:focus {
     outline: none;
     cursor: none;

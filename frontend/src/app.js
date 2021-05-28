@@ -397,21 +397,22 @@ function modeloFeed(bairro, tipoFeed, html) {
     };
 }
 
-function modeloFeedCriacaoBairro(bairro, tipoFeed, html) {
+function modeloFeedCriacaoBairro(bairro, tipoFeed, html, postId) {
     return {
         "bairros": {
             "bairro": bairro,
             "feeds": [{
                 "tipoFeed": [{
                     "tipo": tipoFeed,
-                    "html": html
+                    "html": html,
+                    'postId': postId
                 }]
             }]
         }
     };
 }
 
-function modeloFeedLight(tipoFeed,postId,html) {
+function modeloFeedLight(tipoFeed, postId, html) {
     return {
         "tipoFeed": tipoFeed,
         'postId': postId,
@@ -448,10 +449,13 @@ function publicarPost(tipoModal) {
     // criando a div principal(container)
     const criandoDiv = document.createElement("div") // div principal, div container
     criandoDiv.classList.add('post', 'container', 'border')// div que criamos no js herdar o estilo css que criamos na div do html
-
+    criandoDiv.setAttribute('id', uuid());
+    criandoDiv.setAttribute('data-tipo', tipoModal.dataset.tipo)
     // criando a div que amarra nome do usuario e foto
     const divInformacaoDoUsuario = document.createElement("div")// criando div que amarra foto de perfil e nome do post
     divInformacaoDoUsuario.className = "usuario_post" //estilo da div
+    criandoDiv.setAttribute('id', uuid());
+    criandoDiv.setAttribute('data-tipo', tipoModal.dataset.tipo)
 
     // criando a foto do usuario no post
     const fotoDoUsuario = document.createElement("img") // criando img
@@ -537,11 +541,11 @@ function publicarPost(tipoModal) {
     const contadorDeComentarios = document.createElement('p')
     contadorDeComentarios.classList.add('call-comentarios')
     contadorDeComentarios.innerText = '0 Comentários'
-    contadorDeComentarios.setAttribute('name','contadorDeComentarios')
+    contadorDeComentarios.setAttribute('name', 'contadorDeComentarios')
 
     // criando area de comentarios
     const divSessaoComentarios = document.createElement('section')
-    divSessaoComentarios.setAttribute('name','comments-section');
+    divSessaoComentarios.setAttribute('name', 'comments-section');
 
     //aparador
     const aparador = document.createElement("hr");
@@ -591,9 +595,6 @@ function publicarPost(tipoModal) {
     criandoDiv.append(aparador);
     criandoDiv.append(divComentarios);
 
-    //Adicionando id unico ao post
-    criandoDiv.id = uuid();
-
     recuperarSessao.prepend(criandoDiv); // jogando a div que criamos dentro da sessao, para isso associamos a div como filho da sessao
 
     switch (tipoModal.dataset.name) {
@@ -607,7 +608,7 @@ function publicarPost(tipoModal) {
             fecharModalCasa();
             break;
     }
-    salvarFeeds(tipoModal.dataset.tipo,criandoDiv.id,criandoDiv.innerHTML)
+    salvarFeeds(tipoModal.dataset.tipo, criandoDiv.id, criandoDiv.innerHTML, true)
 }
 
 /**
@@ -622,9 +623,12 @@ function addComentario(event) {
 
         const divPost = event.target.parentNode.parentNode.parentNode;
 
+        const postId = divPost.id;
+
+        const tipoFeed = divPost.dataset.tipo;
+
         const section = divPost.children.namedItem('comments-section')
         const contadorDeComentarios = divPost.children.namedItem('contadorDeComentarios');
-
 
         const divComentarios = document.createElement("div");
         divComentarios.className = "area_comentarios";
@@ -642,9 +646,8 @@ function addComentario(event) {
         const divComentariosFlexInput = document.createElement("div");
         divComentariosFlexInput.classList.add("area_comentarios_flex");
 
-        const inputComentario = document.createElement('input')
-        inputComentario.value = comment;
-        inputComentario.setAttribute('disabled','');
+        const inputComentario = document.createElement('p')
+        inputComentario.innerText = comment;
 
 
         divComentariosFlexInput.appendChild(inputComentario)
@@ -658,15 +661,19 @@ function addComentario(event) {
         contadorDeComentarios.innerText = quantidadeDeComentarios + ' Comentários';
 
         event.target.value = null;
+
+        salvarFeeds(tipoFeed, postId, divPost.innerHTML, false)
     }
 }
 
 /**
  * Salva feed na localstorage
  * @param tipoFeed exemplo 'feedNoticias'...
+ * @param postId
  * @param {InnerHTML} post Post que deve ser salvo
+ * @param novoFeed
  */
-function salvarFeeds(tipoFeed,postId, post) {
+function salvarFeeds(tipoFeed, postId, post, novoFeed) {
 
     // Recupera os feeds salvos
     let feeds = JSON.parse(localStorage.getItem('feeds'));
@@ -693,9 +700,24 @@ function salvarFeeds(tipoFeed,postId, post) {
     for (let i = 0; i < feeds.bairros.length; i++) {
         const feedBairro = feeds.bairros[i];
         // Comparamos o bairro do usuario logado com o do localstorage
-        if (bairro === feedBairro.bairro) {
+        if (bairro === feedBairro.bairro && novoFeed) {
             // Adicionamos o novo post ao array de feeds e salvamos na localstorage
-            feedBairro.feeds.push(modeloFeedLight(tipoFeed,postId, post))
+            feedBairro.feeds.push(modeloFeedLight(tipoFeed, postId, post))
+            localStorage.setItem('feeds', JSON.stringify(feeds))
+            break;
+        }
+        else if (bairro === feedBairro.bairro && !novoFeed) {
+
+            for (let j = 0; j < feedBairro.feeds.length; j++) {
+                const actualFeed = feedBairro.feeds[j];
+                if (actualFeed.tipoFeed === tipoFeed && actualFeed.postId === postId) {
+                    feedBairro.feeds.splice(j)
+                    break;
+                }
+            }
+
+            feedBairro.feeds.push(modeloFeedLight(tipoFeed, postId, post))
+
             localStorage.setItem('feeds', JSON.stringify(feeds))
             break;
         }
