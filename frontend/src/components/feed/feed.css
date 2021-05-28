@@ -52,12 +52,12 @@ p {
 
 .post {
     height: auto;
-    width: 9000px;
+    /*width: 9000px;*/
     background-color: #fff;
     align-items: center;
     margin-top: 20px !important;
     margin-bottom: 3% !important;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .img_post {
