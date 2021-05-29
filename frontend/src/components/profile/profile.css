@@ -1,7 +1,6 @@
 .profile {
     background-color: #fff;
     margin-top: 120px !important;
-    margin-bottom: 30px !important;
 }
 
 .profile-section {
@@ -24,8 +23,8 @@
 .btn-edit {
     width: 35%;
     height: 30px;
-    margin-inline-start: 12.2rem;
-    font-size: 10px;
+    margin-inline-start: 16.8rem;
+    font-size: 12px;
     font-weight: bold;
     letter-spacing: 0.03rem;
     border-radius: 4px;
@@ -78,11 +77,12 @@
 }
 
 .header-profile-bottom ul li span {
-    margin-bottom: 17px;
-    margin-top: 22px;
+    margin-bottom: 12px;
+    margin-top: 15px;
     font-size: 16px;
+    letter-spacing: 0.03em;
     color: #3a3a3a;
-    padding: 5px 5px 5px 7px;
+    padding: 7px 45px 7px 7px;
     border: 1px solid transparent;
     transition: 200ms ease;
 }
@@ -93,7 +93,7 @@
     border: 1px solid var(--blue);
     box-shadow: 0 0 0 3px rgb(66 133 244 / 8%);
     border-radius: 4px;
-    padding-right: 80px;
+    padding: 7px 95px 7px 7px;
     transition: 400ms ease;
 }
 

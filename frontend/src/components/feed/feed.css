@@ -22,7 +22,6 @@
     color: #9e9ea7;
     border: 1px solid #f7f7f8;
     cursor: pointer;
-
     margin-right: 15px;
 }
 
@@ -73,7 +72,8 @@ p {
     font-weight: bold;
     text-align: end;
     font-size: 14px;
-    margin-right: 22px;
+    letter-spacing: 0.03em;
+    margin-right: 25px;
     color: #62616d;
     cursor: pointer;
 }
@@ -106,8 +106,9 @@ p {
 .tags {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    margin-top: 35px;
+    align-items: center;
+    width: 150%;
+    margin-top: 18px;
     font-size: 12px;
     font-weight: bold;
     color: #fefefe;
@@ -123,7 +124,7 @@ p {
 .tag-child {
     margin-top: 0;
     text-align: center;
-    padding: 6px 12px;
+    padding: 6px 11px;
 
 }
 
@@ -160,7 +161,7 @@ p {
     font-size: 15px;
     color: #62616d;
     width: 95%;
-    margin-left: 21px;
+    margin-left: 31px;
     line-height: 160%;
     letter-spacing: 0.04em;
     word-break: break-word;
@@ -249,6 +250,7 @@ p {
     margin-top: 16px;
     width: 547px;
     margin-left: 10px;
+    letter-spacing: 0.03em;
 }
 
 .comentario-perfil input::placeholder {
@@ -269,7 +271,7 @@ p {
     /*display block*/
     background-color: #fefefe;
     padding: 10px;
-    width: 24%;
+    width: 26%;
     margin: 6rem auto auto;
     height: auto;
     box-shadow: 0px 10px 70px rgb(0 0 0 / 35%);
@@ -282,6 +284,7 @@ p {
     margin-top: 15px;
     color: #aaa;
     font-size: 12px;
+    letter-spacing: 0.03em;
 }
 
 /* The Close Button */
@@ -333,17 +336,20 @@ p {
 
 /*espaco onde sera feita a publicacao*/
 .modal-generica-entrada-de-dados {
-    width: 100%;
+    width: 88%;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     cursor: text;
-    background-color: #fafafa;
+    background-color: #fefefe;
     padding: 10px 0 50px 0;
     margin-top: 30px;
+    margin-left: 25px;
     color: #62616d;
     font-size: 18px;
     text-align: justify;
+    word-break: keep-all;
+    spacing-letter:0.02em;
 }
 
 .modal-generica-entrada-de-dados:focus {
@@ -370,8 +376,6 @@ p {
 
 /*botao publicar*/
 .btn-modal button {
-    height: 36px;
-    width: 126px;
     margin-bottom: 20px;
     margin-top: 5px;
     margin-inline-start: -40px;
@@ -422,7 +426,7 @@ hr.solid {
 /*Modal casas*/
 .botoes-modal-casa-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-top: 19px;
 }
 
@@ -462,11 +466,10 @@ hr.solid {
     box-sizing: border-box;
     border-radius: 4px;
     letter-spacing: 0.05em;
-    background-color: #fafafa;
-    color: #aaa;
+    background-color: #fff;
+    color: #8d8d94;
     cursor: pointer;
     transition: 200ms ease;
-
 }
 
 .botoes-modal-casa-input::placeholder {
@@ -474,7 +477,7 @@ hr.solid {
     font-size: 14px;
     text-align: center;
     padding: 1px 15px;
-    background-color: #fafafa;
+    background-color: #fff;
     transition: 200ms ease;
 }
 
@@ -515,7 +518,8 @@ hr.solid {
     font-size: 12px;
     font-weight: bold;
     text-align: center;
-    margin: 10px 10px 50px;
+    margin: 10px 18px 50px;
+    letter-spacing: 0.03em;
     cursor: pointer;
 }
 
@@ -531,9 +535,9 @@ hr.solid {
 
 .botoes-modal-casa-itens-input {
     display: flex;
-    justify-content: flex-end;
-    margin-inline-start: 4%;
     align-items: center;
+    margin-right: 10px;
+    padding: 0 10px;
 }
 
 /*Modal doacoes*/

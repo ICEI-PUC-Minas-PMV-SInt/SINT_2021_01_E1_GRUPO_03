@@ -19,6 +19,7 @@ body {
 
 p {
     font-family: -apple-system, Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: 0.03em;
 }
 
 .border {

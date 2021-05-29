@@ -10,7 +10,7 @@
 .menu_nav ul {
     display: flex;
     padding-inline-start: 2%;
-    margin-top:19px;
+    margin-top:21px;
     margin-right: 5px;
 }
 
@@ -18,7 +18,8 @@
     margin-right: 1.3rem;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
     color: #6e6d7a;
     height:1.1rem;
 }
