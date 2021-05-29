@@ -276,7 +276,7 @@ function modalCasa() {
 
     modal.style.display = "block"
     document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
-    const entradaDeDados = document.getElementById("modal-casa-entrada-de-dados")
+    const entradaDeDados = document.getElementById("modal-imovel-entrada-de-dados")
     entradaDeDados.focus()
 
     // Identifica qual a modal ativa
@@ -467,18 +467,63 @@ function publicarPost(tipoModal) {
     const nomeUsuario = document.createElement("h3")
     nomeUsuario.innerText = usuarioLogado.name;
 
-    //recuperando a opcao da modal doacoes e criando as tags do post
+    //div que recebe o valor das divTags
     let divTagConstruida
     if (tipoModal.dataset.name !== 'generica') {
 
-        // Construindo divs para as tags
-        const divTag = document.createElement('div');
-        divTag.classList.add('tags');
-        const tipoTag = document.createElement('div');
+        // Verifica se estamos na modal imoveis
+        if (tipoModal.dataset.name === "imovel") {
+            let opcaoModalImoveis
 
-        const conteudoTag = document.createElement('p');
-        conteudoTag.classList.add('tag-child');
+            // Buscamos todos os p e verificamos se possui a classe ativa e depois removemos a classe
+            document.querySelectorAll('p').forEach(opcao => {
+                if (opcao.classList.contains('modal-casa-opcao-ativo')) {
+                    opcaoModalImoveis = opcao;
+                    opcao.classList.remove('modal-casa-opcao-ativo');
+                }
+            })
+            if (opcaoModalImoveis === undefined) {
+                alert('Por favor selecione a opção (Vendendo), (Alugando) ou (Procurando');
+                return;
+            }
+            //recuperando os valores dos inputs da modal imoveis
+            let tipoDeImovel = document.getElementById('tipoImovel-input').value;
+            let inputValor = document.getElementById('valorImovel-input').value;
 
+            //construindo as tags
+            const divTags = document.createElement('div');//div principal
+            divTags.classList.add('tags')
+
+            //tag opcao
+            const divOpcao = document.createElement('div');
+            divOpcao.classList.add('opcao-tag');
+            const conteudoOpcao = document.createElement('p'); //alugando,vendendo,comprando
+            conteudoOpcao.classList.add('tag-child');
+            conteudoOpcao.textContent = opcaoModalImoveis.textContent; //colocando o conteudo dentro do p
+
+            //tag tipo
+            const divTipo = document.createElement('div');
+            divTipo.classList.add('tiposImoveis-tag');
+            const conteudoTipo = document.createElement('p'); //loft,casa,apartamento...opcoes do select
+            conteudoTipo.classList.add('tag-child');
+            conteudoTipo.textContent = tipoDeImovel;
+
+            //tag valor
+            const divValor = document.createElement('div');
+            divValor.classList.add('valor-tag');
+            const conteudoValor = document.createElement('p');
+            conteudoValor.classList.add('tag-child');
+            conteudoValor.textContent = inputValor;
+
+            //associando os elementos
+            divTipo.appendChild(conteudoTipo);
+            divValor.appendChild(conteudoValor);
+            divOpcao.appendChild(conteudoOpcao);
+            divTags.append(divTipo,divValor,divOpcao);
+            divTagConstruida = divTags;
+        }
+
+        //recuperando a opcao da modal doacoes e criando as tags do post
         // Verifica se estamos na modal doacoes
         if (tipoModal.dataset.name === "doacoes") {
 
@@ -503,13 +548,21 @@ function publicarPost(tipoModal) {
             } else if (opcaoModalDoacoes.dataset.tipo === 'help') {
                 tipoTag.classList.add('help-tag')
             }
+
+            // Construindo divs para as tags
+            const divTag = document.createElement('div');
+            divTag.classList.add('tags');
+            const tipoTag = document.createElement('div');
+
+            const conteudoTag = document.createElement('p');
+            conteudoTag.classList.add('tag-child');
             conteudoTag.textContent = opcaoModalDoacoes.textContent;
+
+            //associando as tags
+            tipoTag.appendChild(conteudoTag);
+            divTag.append(tipoTag);
+            divTagConstruida = divTag
         }
-
-        tipoTag.appendChild(conteudoTag);
-        divTag.append(tipoTag);
-        divTagConstruida = divTag
-
     }
 
     // criando paragrafo do post
@@ -705,8 +758,7 @@ function salvarFeeds(tipoFeed, postId, post, novoFeed) {
             feedBairro.feeds.push(modeloFeedLight(tipoFeed, postId, post))
             localStorage.setItem('feeds', JSON.stringify(feeds))
             break;
-        }
-        else if (bairro === feedBairro.bairro && !novoFeed) {
+        } else if (bairro === feedBairro.bairro && !novoFeed) {
 
             for (let j = 0; j < feedBairro.feeds.length; j++) {
                 const actualFeed = feedBairro.feeds[j];

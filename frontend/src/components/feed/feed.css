@@ -89,12 +89,12 @@ p {
 }
 
 .usuario_post h3 {
+    width: 100%;
     font-size: 15px;
     letter-spacing: 0.03em;
     font-weight: bold;
     margin-top: 35px;
     margin-left: 10px;
-    margin-inline-end: 29%;
     color: #53525d;
     cursor: pointer;
 }
@@ -105,11 +105,12 @@ p {
 
 .tags {
     display: flex;
+    justify-content: flex-end;
+    width: 100%;
     margin-top: 35px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     color: #fefefe;
-    margin-left: 24%;
 }
 
 .donation-tag {
@@ -133,6 +134,26 @@ p {
     height: 24px;
 }
 
+.opcao-tag {
+    background-color: #FA81A2;
+    border-radius: 10px;
+    margin-right: 10px;
+    height: 24px;
+}
+
+.valor-tag {
+    background-color: #FABB05;
+    border-radius: 10px;
+    margin-right: 10px;
+    height: 24px;
+}
+
+.tiposImoveis-tag {
+    background-color: #34A853;
+    border-radius: 10px;
+    margin-right: 10px;
+    height: 24px;
+}
 
 /*texto do post*/
 .texto_publicacao {
