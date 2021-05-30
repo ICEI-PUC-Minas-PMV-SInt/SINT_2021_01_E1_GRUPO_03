@@ -34,19 +34,63 @@ async function loadLogin() {
 /**
  * Carrega pagina de perfil.
  */
-async function loadProfile() {
+async function loadProfile(userId) {
     await hideMenuNav(true);
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = await fetchHtmlAsText(profile);
 
-    // Carrega informacoes do usuario logado
-    document.getElementById('profile-name').textContent = usuarioLogado.name;
-    document.getElementById('perfil-trabalho').textContent = usuarioLogado.work;
-    document.getElementById('perfil-local').textContent = usuarioLogado.location;
-    document.getElementById('perfil-relacionamento').textContent = usuarioLogado.relationship;
-    document.getElementById('perfil-dataNasc').textContent = usuarioLogado.birthday;
-    document.getElementById('perfil-mobile').textContent = usuarioLogado.mobile;
-    document.getElementById('perfil-hobbies').textContent = usuarioLogado.hobbies;
+    let profileName = document.getElementById('profile-name');
+    let perfilTrabalho =  document.getElementById('perfil-trabalho');
+    let perfilLocal = document.getElementById('perfil-local');
+    let perfilRelacionamneto = document.getElementById('perfil-relacionamento');
+    let perfilDataNasc = document.getElementById('perfil-dataNasc');
+    let perfilMobile = document.getElementById('perfil-mobile');
+    let perfilHobbies = document.getElementById('perfil-hobbies');
+    let fotoPerfil = document.getElementById('mudar-foto-perfil')
+    let about = document.getElementById('perfil-about')
+
+   // Carrega informacoes do usuario clicado
+    if (userId !== undefined && userId.dataset.userid !== usuarioLogado.id) {
+
+        let inputCarregarFoto = document.getElementById('edit-profile')
+        inputCarregarFoto.removeAttribute('onclick')
+        let botaoEditar = document.getElementById('edit-profile')
+        botaoEditar.style.display = 'none'
+
+        const idUsuarioPostagem = userId.dataset.userid
+        let  usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))
+
+        let usuarioDoPerfil
+        for (let i = 0; i < usuariosLocalStorage.length; i++) {
+            let usuario = usuariosLocalStorage[i];
+            if (idUsuarioPostagem === usuario.id) {
+                usuarioDoPerfil = usuario;
+                break;
+            }
+        }
+
+        fotoPerfil.src = usuarioDoPerfil.photoUrl
+        profileName.textContent = usuarioDoPerfil.name;
+        perfilTrabalho.textContent = usuarioDoPerfil.work;
+        perfilLocal.textContent = usuarioDoPerfil.location;
+        perfilRelacionamneto.textContent = usuarioDoPerfil.relationship;
+        perfilDataNasc.textContent = usuarioDoPerfil.birthday;
+        perfilMobile.textContent = usuarioDoPerfil.mobile;
+        perfilHobbies.textContent = usuarioDoPerfil.hobbies;
+        about.innerText = usuarioDoPerfil.about;
+
+    } else {
+        // Carrega informacoes do usuario logado
+        fotoPerfil.src = usuarioLogado.photoUrl
+        profileName.textContent = usuarioLogado.name;
+        perfilTrabalho.textContent = usuarioLogado.work;
+        perfilLocal.textContent = usuarioLogado.location;
+        perfilRelacionamneto.textContent = usuarioLogado.relationship;
+        perfilDataNasc.textContent = usuarioLogado.birthday;
+        perfilMobile.textContent = usuarioLogado.mobile;
+        perfilHobbies.textContent = usuarioLogado.hobbies;
+        about.innerText = usuarioLogado.about;
+    }
 }
 
 /**

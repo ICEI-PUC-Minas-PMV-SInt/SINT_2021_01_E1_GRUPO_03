@@ -501,6 +501,8 @@ async function publicarPost(tipoModal) {
     // criando nome do usuario
     const nomeUsuario = document.createElement("h3")
     nomeUsuario.innerText = usuarioLogado.name;
+    nomeUsuario.setAttribute('data-userId',usuarioLogado.id)
+    nomeUsuario.setAttribute('onclick','loadProfile(this)');
 
     //div que recebe o valor das divTags
     let divTagConstruida
@@ -728,7 +730,9 @@ function addComentario(event) {
         //img
         const usuarioComentarioImg = document.createElement("img");
         usuarioComentarioImg.className = "img_comentario";
-        usuarioComentarioImg.src = "assets/images/usuarios/jovem-estudante.png";
+        usuarioComentarioImg.src = usuarioLogado.photoUrl
+        usuarioComentarioImg.setAttribute('data-userId',usuarioLogado.id)
+        usuarioComentarioImg.setAttribute('onclick','loadProfile(this)');
 
         //div do input
         const divComentariosFlexInput = document.createElement("div");
