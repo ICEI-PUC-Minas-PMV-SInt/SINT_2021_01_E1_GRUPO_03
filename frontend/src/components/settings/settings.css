@@ -3,16 +3,16 @@
     width:820px!important;
     height:765px;
     margin: 120px auto;
-    background-color: #fff;
+    background-color: #F4F5F7;
     box-shadow: 0px 10px 70px rgb(0 0 0 / 5%)!important;
 }
 
 /*conteiner-menu*/
 .menu-settings {
     display: block;
-    width: 34%;
+    width: 26%;
     height: 765px;
-    background-color: rgb(66 133 244 / 10%);
+    background-color: #fff;
 }
 
 /*img usuario*/
@@ -38,22 +38,32 @@
 
 /*topicos do menu*/
 .menu-settings h5 {
-    color: #393939;
-    font-size: 16px;
+    color: #53525d;
+    font-size: 15px;
     text-align: center;
-    margin-bottom: 20%;
     letter-spacing: 0.03em;
+    cursor: pointer;
+}
+.menu-settings h5:hover{
+    color: var(--light-blue);
+    transition: 200ms ease;
+}
+.menu-settings-ativo {
+    color: var(--blue)!important;
+
 }
 
 .menu-settings-geral {
     padding: 10px;
 }
-
+#settings-dados-pessoais{
+    display: none;
+}
 .header-settings {
     display: block;
     height: 132px;
-    width: 612px;
-    margin-left: 208px;
+    width: 607px;
+    margin-left: 213px;
     position: absolute;
 }
 
@@ -61,7 +71,7 @@
 .ilustracao-settings {
     display: flex;
     justify-content: center;
-    background: rgb(66 133 244 / 10%);
+    background: #fff;
     height: 115px;
 }
 
@@ -72,12 +82,15 @@
 
 /*conteiner*/
 .editar-settings {
-    display: block;
+    display: flex;
     background-color: #fff;
-    width: 100%;
+    width: 50%;
     align-self: center;
-    height: auto;
-    margin-top: 60px;
+    justify-content: center;
+    height: 50%;
+    border-top-left-radius: 40px;
+    margin-top: 130px;
+    margin-left: 89px;
 }
 
 .campos-settings h4 {
@@ -86,15 +99,14 @@
     letter-spacing: 0.05em;
     margin-left: 22px;
     margin-bottom: 30px;
-
 }
 
 /*campos editar*/
 .campos-settings {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    margin-top: 67px;
+    justify-content: center;
+    align-items: center;
 }
 
 .campos-settings label {
@@ -127,15 +139,15 @@
 
 .campos-settings input:hover {
     background-color: white;
-    box-shadow: 0 0 0 2px rgb(66 133 244 / 10%);
     border-color: #4285f4;
+    box-shadow: 0 0 0 4px rgb(66 133 244 / 10%);
 }
 
 .campos-settings input:focus {
     background-color: white;
     outline: none;
     border: 1px solid var(--blue);
-    box-shadow: 0 0 0 2px rgb(66 133 244 / 10%);
+    box-shadow: 0 0 0 4px rgb(66 133 244 / 10%);
     padding-right: 30px;
     margin-top: 12px;
     transition: 400ms ease;
@@ -143,9 +155,18 @@
 
 ::placeholder {
     font-size: 12px;
-    color: #393939;
-}
+    color: #393939;}
 
+/*input desabilitado*/
+#bairro-input-settings{
+    background: #e9e9e9;
+}
+#bairro-input-settings:hover{
+    border: 1px solid #e9e9e9;
+    box-shadow:none;
+
+
+}
 /*btn editar*/
 .campos-settings span {
     font-size: 12px;

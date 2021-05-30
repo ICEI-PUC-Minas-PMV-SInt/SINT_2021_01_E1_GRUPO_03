@@ -990,6 +990,22 @@ function salvandoDadosPerfil(element) {
     } localStorage.setItem('users',JSON.stringify(usuariosLocalStorage));
 }
 
+function changePhotoProfile(element){
+    let imageProfile = document.getElementById('foto-perfil');
+    imageProfile.src = URL.createObjectURL(element.files[0]);
+
+    const idUsuarioLogado = usuarioLogado.id;
+    let usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))
+
+    for (let i = 0; i < usuariosLocalStorage.length; i++) {
+        let usuario = usuariosLocalStorage[i];
+        if (idUsuarioLogado === usuario.id) {
+            usuario.photoUrl = imageProfile.src;
+
+            sessionStorage.setItem('loggedUser',JSON.stringify(usuario));
+        }
+    }   localStorage.setItem('users',JSON.stringify(usuariosLocalStorage));
+}
 //settings
 async function editarSettings(elemento) {
 
@@ -1042,4 +1058,30 @@ async function editarSettings(elemento) {
                 reloadPage()
             }
     }
+}
+
+function menuSettings(element){
+    switch (element.dataset.name){
+        case 'dadosPessoais':
+        let menuDadosPessoaisAtivo = document.getElementById("settings-dados-pessoais");
+            menuDadosPessoaisAtivo.style.display = 'block';
+            element.classList.add('menu-settings-ativo');
+        let menuContaInativo = document.getElementById("settings-conta");
+        menuContaInativo.style.display = 'none';
+          let menuContaInativoH5 = document.getElementById('menu-settings-conta')
+            menuContaInativoH5.classList.remove('menu-settings-ativo');
+            break;
+        case 'conta':
+        let menuContaAtivo = document.getElementById("settings-conta");
+            menuContaAtivo.style.display = 'block';
+            element.classList.add('menu-settings-ativo');
+
+        let menuDadosPessoaisInativo = document.getElementById("settings-dados-pessoais");
+            menuDadosPessoaisInativo.style.display = 'none';
+            let menuDadosPessoaisInativoH5 = document.getElementById('menu-settings-dadosPessoais')
+            menuDadosPessoaisInativoH5.classList.remove('menu-settings-ativo');
+
+            break;
+    }
+
 }
