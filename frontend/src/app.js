@@ -99,8 +99,9 @@ function registro(form) {
 /**
  * Busca cep e preenche campo de bairro no formulario de cadastro.
  * @param valorPreenchido o cep preenchido no formulario de cadastro.
+ * @param inputBairroId id do input do bairro
  */
-function preencherCepFormCadastro(valorPreenchido) {
+function preencheBairro(valorPreenchido, inputBairroId) {
 
     //Nova variável "cep" somente com dígitos.
     let cep = valorPreenchido.replace(/\D/g, '');
@@ -110,17 +111,17 @@ function preencherCepFormCadastro(valorPreenchido) {
 
     //Valida o formato do CEP.
     if (validacep.test(cep)) {
-        document.getElementById('bairroCadastroInput').value = "...";
+        document.getElementById(inputBairroId).value = "...";
 
         fetch(`https://viacep.com.br/ws/${cep}/json`)
             .then(response => response.json())
             .then(res => {
 
                 if (!("erro" in res)) {
-                    document.getElementById('bairroCadastroInput').value = (res.bairro);
+                    document.getElementById(inputBairroId).value = (res.bairro);
                 } else {
                     alert("CEP não encontrado.");
-                    document.getElementById('bairroCadastroInput').value = null;
+                    document.getElementById(inputBairroId).value = null;
                 }
 
             })
@@ -226,6 +227,33 @@ function addImgModal(element) {
         sessaoCarregamento.appendChild(div);
     })
     element.value = null;//limpando o input
+}
+
+async function uploadToFirebaseStorage(fileUrl) {
+
+    await fetch(fileUrl)
+        .then(response => response.blob())
+        .then(file => {
+            let storageRefFile = storageRef.child('/' + uuid())
+            storageRefFile.put(file)
+                .then(snapshot => {
+                    return snapshot.ref.getDownloadURL();   // Will return a promise with the download link
+                })
+
+                .then(downloadURL => {
+                    console.log(`Successfully uploaded file and got download link - ${downloadURL}`);
+                    return downloadURL;
+                })
+
+                .catch(error => {
+                    // Use to signal error if something goes wrong.
+                    console.log(`Failed to upload file and get link - ${error}`);
+                });
+
+        })
+        .catch(onerror => {
+            console.log(`Erro ao baixar arquivo da modal - ${onerror}`)
+        })
 }
 
 /*add video na modal generica*/
@@ -422,7 +450,7 @@ function modeloFeedLight(tipoFeed, postId, html) {
 
 
 /*Feed*/
-function publicarPost(tipoModal) {
+async function publicarPost(tipoModal) {
 
     let elementoPost  //colocando a div "entrada-de-dados" do html dentro da const elemento Post
     let imgPostModal
@@ -519,7 +547,7 @@ function publicarPost(tipoModal) {
             divTipo.appendChild(conteudoTipo);
             divValor.appendChild(conteudoValor);
             divOpcao.appendChild(conteudoOpcao);
-            divTags.append(divTipo,divValor,divOpcao);
+            divTags.append(divTipo, divValor, divOpcao);
             divTagConstruida = divTags;
         }
 
@@ -939,7 +967,7 @@ function editarSettings(elemento) {
 
     const elementoInput = document.getElementById(elemento.dataset.id)
 
-    switch (elemento.textContent){
+    switch (elemento.textContent) {
 
         case 'Editar':
             elementoInput.removeAttribute('disabled')
@@ -947,39 +975,40 @@ function editarSettings(elemento) {
             elementoInput.focus()
             break
         case 'Salvar':
-            elementoInput.setAttribute('disabled','')
+            elementoInput.setAttribute('disabled', '')
             elemento.textContent = 'Editar'
 
             const idUsuarioLogado = usuarioLogado.id
             let usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))//todos os usuarios
 
-            for (let i = 0; i < usuariosLocalStorage.length; i++){
+            for (let i = 0; i < usuariosLocalStorage.length; i++) {
                 let usuario = usuariosLocalStorage[i]
-                if (idUsuarioLogado === usuario.id){
+                if (idUsuarioLogado === usuario.id) {
                     switch (elementoInput.name) {
                         case 'email':
                             usuario.email = elementoInput.value;
                             break;
                         case 'password':
                             usuario.password = elementoInput.value;
-                        break;
+                            break;
                         case 'name':
                             usuario.name = elementoInput.value;
                             break;
                         case 'postalCode':
                             usuario.postalCode = elementoInput.value;
+                            let inputBairro = document.getElementById('bairro-input-settings');
+                            usuario.neighborhood = inputBairro.value
                             break;
                     }
-
                 }
             }
-           localStorage.setItem('users',JSON.stringify(usuariosLocalStorage))//atualizando os dados que foram alterados na localStorage
 
+            localStorage.setItem('users', JSON.stringify(usuariosLocalStorage)) //atualizando os dados que foram alterados na localStorage
+
+            if(elementoInput.name === 'postalCode'){
+                alert('Por favor faça login novamente')
+                sessionStorage.clear();
+                reloadPage()
+            }
     }
-
-
-
-
-
-
 }
