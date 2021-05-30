@@ -1,4 +1,4 @@
-<section id="settings" class="container settings ">
+<section id="settings" class="settings ">
     <div class="menu-settings">
         <img src="https://avatars.githubusercontent.com/u/4424108?v=4">
 
@@ -21,7 +21,8 @@
                         type="email"
                         name="email"
                         id="email-input-settings"
-                /> <span>Editar</span>
+                        disabled
+                /> <span data-id="email-input-settings" onclick="editarSettings(this)">Editar</span>
             </div>
             <div class="campos-settings-child">
                 <label>Senha</label>
@@ -30,7 +31,8 @@
                         type="password"
                         name="password"
                         id="password-input-settings"
-                /><span>Editar</span>
+                        disabled
+                /><span data-id="password-input-settings" onclick="editarSettings(this)">Editar</span>
 
 
                 <h4>Dados Pessoais</h4>
@@ -39,8 +41,10 @@
                     <input
                             class="border-input"
                             type="text"
+                            name="name"
                             id="name-input-settings"
-                    /><span>Editar</span>
+                            disabled
+                    /><span data-id="name-input-settings" onclick="editarSettings(this)">Editar</span>
                 </div>
 
                 <div class="campos-settings-child">
@@ -49,9 +53,10 @@
                             class="border-input"
                             type="text"
                             inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
-                            name="cepInput"
+                            name="postalCode"
                             id="cep-input-settings"
-                    /><span>Editar</span>
+                            disabled
+                    /><span data-id="cep-input-settings" onclick="editarSettings(this)">Editar</span>
                 </div>
                 <div class="campos-settings-child">
                     <label>Bairro</label>

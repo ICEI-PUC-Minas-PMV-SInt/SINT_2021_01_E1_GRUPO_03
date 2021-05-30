@@ -50,7 +50,12 @@ async function loadSettings() {
     await hideMenuNav(true);
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = await fetchHtmlAsText(settings);
-    document.getElementById('nome-usuario-settings').textContent = usuarioLogado.name
+    document.getElementById('nome-usuario-settings').textContent = usuarioLogado.name;
+    document.getElementById('email-input-settings').value = usuarioLogado.email;
+    document.getElementById('password-input-settings').value = usuarioLogado.password;
+    document.getElementById('name-input-settings').value = usuarioLogado.name;
+    document.getElementById('cep-input-settings').value = usuarioLogado.postalCode;
+    document.getElementById('bairro-input-settings').value = usuarioLogado.neighborhood;
 }
 
 /**
@@ -179,7 +184,7 @@ function verificaBairro() {
     const usuario = recuperaUsuarioLogado();
     const bairro = document.getElementById('bairro');
     bairro.textContent = usuario.neighborhood;
-    ;
+
 }
 
 function recuperaUsuarioLogado() {

@@ -933,3 +933,53 @@ function salvandoDadosPerfil(element) {
     let editarAbout = document.getElementById("perfil-about");
     editarAbout.setAttribute("contenteditable", "false");
 }
+
+//settings
+function editarSettings(elemento) {
+
+    const elementoInput = document.getElementById(elemento.dataset.id)
+
+    switch (elemento.textContent){
+
+        case 'Editar':
+            elementoInput.removeAttribute('disabled')
+            elemento.textContent = 'Salvar'
+            elementoInput.focus()
+            break
+        case 'Salvar':
+            elementoInput.setAttribute('disabled','')
+            elemento.textContent = 'Editar'
+
+            const idUsuarioLogado = usuarioLogado.id
+            let usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))//todos os usuarios
+
+            for (let i = 0; i < usuariosLocalStorage.length; i++){
+                let usuario = usuariosLocalStorage[i]
+                if (idUsuarioLogado === usuario.id){
+                    switch (elementoInput.name) {
+                        case 'email':
+                            usuario.email = elementoInput.value;
+                            break;
+                        case 'password':
+                            usuario.password = elementoInput.value;
+                        break;
+                        case 'name':
+                            usuario.name = elementoInput.value;
+                            break;
+                        case 'postalCode':
+                            usuario.postalCode = elementoInput.value;
+                            break;
+                    }
+
+                }
+            }
+           localStorage.setItem('users',JSON.stringify(usuariosLocalStorage))//atualizando os dados que foram alterados na localStorage
+
+    }
+
+
+
+
+
+
+}
