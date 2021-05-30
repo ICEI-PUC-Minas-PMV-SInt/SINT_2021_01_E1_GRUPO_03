@@ -963,7 +963,7 @@ function salvandoDadosPerfil(element) {
 }
 
 //settings
-function editarSettings(elemento) {
+async function editarSettings(elemento) {
 
     const elementoInput = document.getElementById(elemento.dataset.id)
 
@@ -997,6 +997,9 @@ function editarSettings(elemento) {
                         case 'postalCode':
                             usuario.postalCode = elementoInput.value;
                             let inputBairro = document.getElementById('bairro-input-settings');
+                            if (inputBairro.value === '...') {
+                                await new Promise(r => setTimeout(r, 2000));
+                            }
                             usuario.neighborhood = inputBairro.value
                             break;
                     }
@@ -1005,7 +1008,7 @@ function editarSettings(elemento) {
 
             localStorage.setItem('users', JSON.stringify(usuariosLocalStorage)) //atualizando os dados que foram alterados na localStorage
 
-            if(elementoInput.name === 'postalCode'){
+            if (elementoInput.name === 'postalCode') {
                 alert('Por favor faça login novamente')
                 sessionStorage.clear();
                 reloadPage()
