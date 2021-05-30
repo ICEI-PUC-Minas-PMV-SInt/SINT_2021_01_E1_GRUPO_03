@@ -18,7 +18,14 @@ function addUser(id, name, email, password, birthday, postalCode, neighborhood) 
         "password": password,
         "birthday": birthday,
         "postalCode": postalCode,
-        "neighborhood": neighborhood
+        "neighborhood": neighborhood,
+        "hobbies":"",
+        "mobile":"",
+        "relationship":"",
+        "work":"",
+        "location":"",
+        "photoUrl":"",
+        "about":""
     };
 }
 
@@ -960,6 +967,23 @@ function salvandoDadosPerfil(element) {
 
     let editarAbout = document.getElementById("perfil-about");
     editarAbout.setAttribute("contenteditable", "false");
+
+    const idUsuarioLogado = usuarioLogado.id;
+    let  usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))
+
+    for (let i = 0; i < usuariosLocalStorage.length; i++) {
+        let usuario = usuariosLocalStorage[i];
+        if (idUsuarioLogado === usuario.id) {
+            usuario.work = editarTrabalho.textContent;
+            usuario.location = editarCidade.textContent;
+            usuario.relationship = editarRelacionamento.textContent;
+            usuario.hobbies = editarHobbies.textContent;
+            usuario.mobile = editarTelefone.textContent;
+            usuario.about = editarAbout.textContent;
+
+            sessionStorage.setItem('loggedUser',JSON.stringify(usuario));
+        }
+    } localStorage.setItem('users',JSON.stringify(usuariosLocalStorage));
 }
 
 //settings

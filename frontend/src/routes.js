@@ -40,7 +40,13 @@ async function loadProfile() {
     contentDiv.innerHTML = await fetchHtmlAsText(profile);
 
     // Carrega informacoes do usuario logado
-    document.getElementById('profile-name').textContent = usuarioLogado.name
+    document.getElementById('profile-name').textContent = usuarioLogado.name;
+    document.getElementById('perfil-trabalho').textContent = usuarioLogado.work;
+    document.getElementById('perfil-local').textContent = usuarioLogado.location;
+    document.getElementById('perfil-relacionamento').textContent = usuarioLogado.relationship;
+    document.getElementById('perfil-dataNasc').textContent = usuarioLogado.birthday;
+    document.getElementById('perfil-mobile').textContent = usuarioLogado.mobile;
+    document.getElementById('perfil-hobbies').textContent = usuarioLogado.hobbies;
 }
 
 /**
