@@ -731,7 +731,7 @@ function addComentario(event) {
         const usuarioComentarioImg = document.createElement("img");
         usuarioComentarioImg.className = "img_comentario";
         usuarioComentarioImg.src = usuarioLogado.photoUrl
-        usuarioComentarioImg.setAttribute("title",usuarioLogado.name)
+        usuarioComentarioImg.setAttribute("title", usuarioLogado.name)
         usuarioComentarioImg.setAttribute('data-userId', usuarioLogado.id)
         usuarioComentarioImg.setAttribute('onclick', 'loadProfile(this)');
 
@@ -1008,6 +1008,10 @@ function changePhotoProfile(element) {
         }
     }
     localStorage.setItem('users', JSON.stringify(usuariosLocalStorage));
+}
+
+function focusAbout() {
+    document.getElementById('perfil-about').focus();
 }
 
 //settings

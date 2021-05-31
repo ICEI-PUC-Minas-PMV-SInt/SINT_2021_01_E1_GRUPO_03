@@ -11,7 +11,8 @@
 }
 
 .img-user {
-    max-height: 3rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 30px;
     margin-left: 35px;
     cursor: pointer;

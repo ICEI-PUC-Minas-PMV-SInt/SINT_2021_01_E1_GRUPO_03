@@ -47,6 +47,7 @@ async function loadProfile(userId) {
     let perfilMobile = document.getElementById('perfil-mobile');
     let perfilHobbies = document.getElementById('perfil-hobbies');
     let fotoPerfil = document.getElementById('foto-perfil')
+    let fotoPerfilInput = document.getElementById('change-photo-profile')
     let about = document.getElementById('perfil-about')
 
    // Carrega informacoes do usuario clicado
@@ -80,6 +81,7 @@ async function loadProfile(userId) {
         perfilMobile.textContent = usuarioDoPerfil.mobile;
         perfilHobbies.textContent = usuarioDoPerfil.hobbies;
         about.innerText = usuarioDoPerfil.about;
+        fotoPerfilInput.setAttribute('disabled', 'disabled');
 
     } else {
         // Carrega informacoes do usuario logado

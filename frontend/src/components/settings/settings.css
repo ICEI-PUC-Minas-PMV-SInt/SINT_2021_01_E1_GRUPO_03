@@ -45,6 +45,7 @@
     border-radius: 4px;
     align-items: center;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .menu-settings-titulo:hover{
