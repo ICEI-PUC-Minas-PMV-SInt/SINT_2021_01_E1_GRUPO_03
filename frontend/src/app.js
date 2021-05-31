@@ -19,13 +19,13 @@ function addUser(id, name, email, password, birthday, postalCode, neighborhood) 
         "birthday": birthday,
         "postalCode": postalCode,
         "neighborhood": neighborhood,
-        "hobbies":"",
-        "mobile":"",
-        "relationship":"",
-        "work":"",
-        "location":"",
-        "photoUrl":"",
-        "about":""
+        "hobbies": "",
+        "mobile": "",
+        "relationship": "",
+        "work": "",
+        "location": "",
+        "photoUrl": "",
+        "about": ""
     };
 }
 
@@ -501,8 +501,8 @@ async function publicarPost(tipoModal) {
     // criando nome do usuario
     const nomeUsuario = document.createElement("h3")
     nomeUsuario.innerText = usuarioLogado.name;
-    nomeUsuario.setAttribute('data-userId',usuarioLogado.id)
-    nomeUsuario.setAttribute('onclick','loadProfile(this)');
+    nomeUsuario.setAttribute('data-userId', usuarioLogado.id)
+    nomeUsuario.setAttribute('onclick', 'loadProfile(this)');
 
     //div que recebe o valor das divTags
     let divTagConstruida
@@ -731,8 +731,8 @@ function addComentario(event) {
         const usuarioComentarioImg = document.createElement("img");
         usuarioComentarioImg.className = "img_comentario";
         usuarioComentarioImg.src = usuarioLogado.photoUrl
-        usuarioComentarioImg.setAttribute('data-userId',usuarioLogado.id)
-        usuarioComentarioImg.setAttribute('onclick','loadProfile(this)');
+        usuarioComentarioImg.setAttribute('data-userId', usuarioLogado.id)
+        usuarioComentarioImg.setAttribute('onclick', 'loadProfile(this)');
 
         //div do input
         const divComentariosFlexInput = document.createElement("div");
@@ -973,7 +973,7 @@ function salvandoDadosPerfil(element) {
     editarAbout.setAttribute("contenteditable", "false");
 
     const idUsuarioLogado = usuarioLogado.id;
-    let  usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))
+    let usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))
 
     for (let i = 0; i < usuariosLocalStorage.length; i++) {
         let usuario = usuariosLocalStorage[i];
@@ -985,12 +985,13 @@ function salvandoDadosPerfil(element) {
             usuario.mobile = editarTelefone.textContent;
             usuario.about = editarAbout.textContent;
 
-            sessionStorage.setItem('loggedUser',JSON.stringify(usuario));
+            sessionStorage.setItem('loggedUser', JSON.stringify(usuario));
         }
-    } localStorage.setItem('users',JSON.stringify(usuariosLocalStorage));
+    }
+    localStorage.setItem('users', JSON.stringify(usuariosLocalStorage));
 }
 
-function changePhotoProfile(element){
+function changePhotoProfile(element) {
     let imageProfile = document.getElementById('foto-perfil');
     imageProfile.src = URL.createObjectURL(element.files[0]);
 
@@ -1002,10 +1003,12 @@ function changePhotoProfile(element){
         if (idUsuarioLogado === usuario.id) {
             usuario.photoUrl = imageProfile.src;
 
-            sessionStorage.setItem('loggedUser',JSON.stringify(usuario));
+            sessionStorage.setItem('loggedUser', JSON.stringify(usuario));
         }
-    }   localStorage.setItem('users',JSON.stringify(usuariosLocalStorage));
+    }
+    localStorage.setItem('users', JSON.stringify(usuariosLocalStorage));
 }
+
 //settings
 async function editarSettings(elemento) {
 
@@ -1060,27 +1063,40 @@ async function editarSettings(elemento) {
     }
 }
 
-function menuSettings(element){
-    switch (element.dataset.name){
-        case 'dadosPessoais':
-        let menuDadosPessoaisAtivo = document.getElementById("settings-dados-pessoais");
-            menuDadosPessoaisAtivo.style.display = 'block';
-            element.classList.add('menu-settings-ativo');
-        let menuContaInativo = document.getElementById("settings-conta");
-        menuContaInativo.style.display = 'none';
-          let menuContaInativoH5 = document.getElementById('menu-settings-conta')
-            menuContaInativoH5.classList.remove('menu-settings-ativo');
-            break;
+function menuSettings(element) {
+
+    const classAtivo = 'menu-settings-titulo-ativo'
+
+    switch (element.dataset.name) {
         case 'conta':
-        let menuContaAtivo = document.getElementById("settings-conta");
+            // Exibi conteudo do menu conta
+            let menuContaAtivo = document.getElementById("settings-conta");
             menuContaAtivo.style.display = 'block';
-            element.classList.add('menu-settings-ativo');
 
-        let menuDadosPessoaisInativo = document.getElementById("settings-dados-pessoais");
-            menuDadosPessoaisInativo.style.display = 'none';
-            let menuDadosPessoaisInativoH5 = document.getElementById('menu-settings-dadosPessoais')
-            menuDadosPessoaisInativoH5.classList.remove('menu-settings-ativo');
+            // Adiciona class ativa na div
+            let divConta = document.getElementById('div-menu-settings-conta');
+            divConta.classList.add(classAtivo);
 
+            let menuSegurancaInativo = document.getElementById("settings-seguranca");
+            menuSegurancaInativo.style.display = 'none';
+
+            let menuSegurancaInativoH5 = document.getElementById('div-menu-settings-seguranca');
+            menuSegurancaInativoH5.classList.remove(classAtivo);
+            break;
+
+        case 'seguranca':
+
+            let menuSegurancaAtivo = document.getElementById("settings-seguranca");
+            menuSegurancaAtivo.style.display = 'block';
+
+            let divSeguranca = document.getElementById('div-menu-settings-seguranca');
+            divSeguranca.classList.add(classAtivo);
+
+            let menuContaInativo = document.getElementById("settings-conta");
+            menuContaInativo.style.display = 'none';
+
+            let menuContaInativoH5 = document.getElementById('div-menu-settings-conta');
+            menuContaInativoH5.classList.remove(classAtivo);
             break;
     }
 

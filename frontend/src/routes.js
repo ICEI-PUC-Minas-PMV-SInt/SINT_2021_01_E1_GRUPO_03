@@ -46,7 +46,7 @@ async function loadProfile(userId) {
     let perfilDataNasc = document.getElementById('perfil-dataNasc');
     let perfilMobile = document.getElementById('perfil-mobile');
     let perfilHobbies = document.getElementById('perfil-hobbies');
-    let fotoPerfil = document.getElementById('mudar-foto-perfil')
+    let fotoPerfil = document.getElementById('foto-perfil')
     let about = document.getElementById('perfil-about')
 
    // Carrega informacoes do usuario clicado
@@ -69,7 +69,9 @@ async function loadProfile(userId) {
             }
         }
 
-        fotoPerfil.src = usuarioDoPerfil.photoUrl
+        if(usuarioDoPerfil.photoUrl !== '') {
+            fotoPerfil.src = usuarioDoPerfil.photoUrl
+        }
         profileName.textContent = usuarioDoPerfil.name;
         perfilTrabalho.textContent = usuarioDoPerfil.work;
         perfilLocal.textContent = usuarioDoPerfil.location;
@@ -81,7 +83,9 @@ async function loadProfile(userId) {
 
     } else {
         // Carrega informacoes do usuario logado
-        fotoPerfil.src = usuarioLogado.photoUrl
+        if(usuarioLogado.photoUrl !== '') {
+            fotoPerfil.src = usuarioLogado.photoUrl
+        }
         profileName.textContent = usuarioLogado.name;
         perfilTrabalho.textContent = usuarioLogado.work;
         perfilLocal.textContent = usuarioLogado.location;
@@ -137,7 +141,7 @@ async function loadFeed(menuSelecionado) {
         const activeClassName = 'active_menu_nav';
         const aparadorMenuNav = 'aparador_menu_nav';
 
-        menuSelecionado.classList.toggle(activeClassName);
+        menuSelecionado.classList.add(activeClassName);
 
         const menuNavUl = document.getElementById('menu-nav-ul');
 
@@ -153,7 +157,6 @@ async function loadFeed(menuSelecionado) {
 
                 for (let i = 0; i < menuNavLiChild.children.length; i++) {
                     const menuNavAChild = menuNavLiChild.children[i];
-
 
                     if (menuSelecionado.children[0] !== menuNavAChild && menuNavAChild.classList.contains(aparadorMenuNav)) {
                         menuNavAChild.classList.remove(aparadorMenuNav)

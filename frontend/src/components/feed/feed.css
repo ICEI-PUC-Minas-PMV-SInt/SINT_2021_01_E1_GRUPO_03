@@ -290,7 +290,7 @@ p {
 /* The Close Button */
 .close-modal-generica {
     float: right;
-    margin-right: 11px;
+    margin-right: 17px;
     margin-top: -10px;
     font-size: 21px;
     font-weight: bold;
@@ -327,7 +327,7 @@ p {
 .nome-usuario-modal {
     margin: 24px 26px 0px 10px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .nome-usuario-modal:hover {
@@ -409,9 +409,9 @@ p {
 }
 
 .icone-video-modal {
-    margin-inline-end: 50%;
+    margin-inline-end: 55%;
     margin-top: -7px;
-    padding: 12px 15px;
+    padding: 13px 15px;
 }
 
 /* Solid border */
@@ -453,9 +453,12 @@ hr.solid {
 
 .image-upload-casa img {
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 15px;
 }
 
+.modal-casa-icon-video label img{
+    padding: 13px 15px;
+}
 .botoes-modal-casa-input {
     margin-left: 20px;
     margin-bottom: 5px;
