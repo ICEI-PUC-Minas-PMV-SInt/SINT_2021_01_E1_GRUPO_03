@@ -406,6 +406,7 @@ p {
 
 .image-upload img {
     cursor: pointer;
+    width: 28px;
 }
 
 .icone-video-modal {
