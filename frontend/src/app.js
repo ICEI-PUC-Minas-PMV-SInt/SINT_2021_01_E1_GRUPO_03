@@ -731,6 +731,7 @@ function addComentario(event) {
         const usuarioComentarioImg = document.createElement("img");
         usuarioComentarioImg.className = "img_comentario";
         usuarioComentarioImg.src = usuarioLogado.photoUrl
+        usuarioComentarioImg.setAttribute("title",usuarioLogado.name)
         usuarioComentarioImg.setAttribute('data-userId', usuarioLogado.id)
         usuarioComentarioImg.setAttribute('onclick', 'loadProfile(this)');
 
