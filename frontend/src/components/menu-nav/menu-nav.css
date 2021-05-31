@@ -9,17 +9,19 @@
 
 .menu_nav ul {
     display: flex;
-    padding-inline-start: 2.8%;
-    margin-top:19px;
+    padding-inline-start: 2%;
+    margin-top:28px;
+    margin-right: 5px;
 }
 
 .menu_nav ul li {
     margin-right: 1.3rem;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
     color: #6e6d7a;
-    height:1.1rem;
+    height:1.6rem;
 }
 
 .active_menu_nav {
@@ -35,7 +37,6 @@
 .menu_nav ul :hover{
     color: #4285f4;
     transition: color 400ms ease;
-    background-color: rgb(66 133 244 / 1%);
 }
 
 .aparador_menu_nav{
@@ -43,8 +44,7 @@
     height:3px;
     right:2px;
     left:2px;
-    margin-top: 1rem;
-    cursor: none;
+    margin-top: 1.6rem;
 }
 
 .menu_nav{

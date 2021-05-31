@@ -1,14 +1,18 @@
 <section id="profile" class="container border profile">
     <div class="profile-section">
         <div class="header-profile">
-            <img class="img-user" src="public/usuarios/aposentada.png"/>
+            <label for="change-photo-profile">
+            <img class="img-user" src="public/profile/foto-usuario-perfil.svg" title="Alterar foto do perfil"  id="foto-perfil"/>
+            </label>
+            <input id="change-photo-profile" type="file" onchange="changePhotoProfile(this)">
         </div>
         <div class="header-profile">
-            <h3 class="profile-name">Maria Francisca Da Silva Soares</h3>
+            <h3 class="profile-name" id="profile-name"></h3>
         </div>
         <div class="header-profile">
-            <button class="btn-edit" id="edit-profile">Editar Perfil</button>
+            <button class="btn-edit" id="edit-profile" onclick="editarPerfil(this)">Editar Perfil</button>
         </div>
+        <button class="btn-salvar" id="perfil-btn-salvar" onclick="salvandoDadosPerfil(this)">Salvar</button>
     </div>
     <hr class="dropdown-divider aparador"/>
     <div class="profile-section-bottom">
@@ -16,34 +20,30 @@
             <ul>
                 <li>
                     <img src="public/profile/perfil-trabalho.svg"/>
-                    <span contenteditable="false" id="perfil-trabalho">Enfermeira</span>
+                    <span contenteditable="false" id="perfil-trabalho"></span>
                 </li>
                 <li>
                     <img src="public/profile/perfil-local.svg"/>
-                    <span contenteditable="false" value="Paraná" id="perfil-local"
-                    >Paraná</span
+                    <span contenteditable="false" value="Paraná" id="perfil-local"></span
                     >
                 </li>
                 <li>
                     <img src="public/profile/perfil-relacionamento.svg"/>
-                    <span contenteditable="false" id="perfil-relacionamento">Casada</span>
+                    <span contenteditable="false" id="perfil-relacionamento"></span>
                 </li>
                 <li>
                     <img src="public/profile/perfil-birthday.svg"/>
-                    <span contenteditable="false" id="perfil-dataNasc"
-                    >20/04/1960 (61 Anos)</span
+                    <span contenteditable="false" id="perfil-dataNasc"></span
+                    >
+                </li>
+                <li>
+                    <img src="public/profile/perfil-mobile.svg" class="perfil-mobile-img"/>
+                    <span contenteditable="false" value="99365-2332" id="perfil-mobile"></span
                     >
                 </li>
                 <li>
                     <img src="public/profile/perfil-hobbies.svg"/>
-                    <span contenteditable="false" id="perfil-hobbies"
-                    > andar de bicicleta, ler livros, assistir series</span
-                    >
-                </li>
-                <li>
-                    <img src="public/profile/perfil-mobile.svg"/>
-                    <span contenteditable="false" value="99365-2332" id="perfil-mobile"
-                    >99365-2332</span
+                    <span contenteditable="false" id="perfil-hobbies"></span
                     >
                 </li>
             </ul>
@@ -51,15 +51,11 @@
         <hr class="dropdown-divider aparador"/>
         <div class="profile-section-bottom">
             <div class="header-profile-about-title">
-                <span class="about-title">Nós conte um pouco mais sobre você...</span>
+                <span class="about-title" onclick="focusAbout()">Nós conte um pouco mais sobre você...</span>
             </div>
             <div class="header-profile-about-conteudo">
-      <span editable="false">
-        It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was
-        popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.</span>
+                <blockquote contenteditable="false" id="perfil-about">
+                </blockquote>
             </div>
         </div>
     </div>
