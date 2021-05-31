@@ -164,12 +164,28 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
+  font-family: Arial, Helvetica, sans-serif; /* 1 */
+  font-size: 14px; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
 
+/*preenchimento automatico chrome*/
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+{
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill
+{
+  -webkit-text-fill-color: #393939 !important;
+
+}
 /**
 * Show the overflow in IE.
 * 1. Show the overflow in Edge.
