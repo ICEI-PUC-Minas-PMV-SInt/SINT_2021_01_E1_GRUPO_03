@@ -564,6 +564,11 @@ async function publicarPost(tipoModal) {
         // Verifica se estamos na modal doacoes
         if (tipoModal.dataset.name === "doacoes") {
 
+            // Construindo divs para as tags
+            const divTag = document.createElement('div');
+            divTag.classList.add('tags');
+            const tipoTag = document.createElement('div');
+
             let opcaoModalDoacoes
 
             // Buscamos todos os p e verificamos se possui a classe ativa e depois removemos a classe
@@ -585,11 +590,6 @@ async function publicarPost(tipoModal) {
             } else if (opcaoModalDoacoes.dataset.tipo === 'help') {
                 tipoTag.classList.add('help-tag')
             }
-
-            // Construindo divs para as tags
-            const divTag = document.createElement('div');
-            divTag.classList.add('tags');
-            const tipoTag = document.createElement('div');
 
             const conteudoTag = document.createElement('p');
             conteudoTag.classList.add('tag-child');
