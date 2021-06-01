@@ -5,14 +5,14 @@
     z-index: 1;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background: #fff;
 }
 
 .header_nav_items {
-    flex-direction: row;
     margin-top: 10px;
+    margin-inline-end: 8%;
 }
 
 /*Logo*/
