@@ -939,6 +939,7 @@ function editarPerfil(element) {
 
     let editarAbout = document.getElementById("perfil-about");
     editarAbout.setAttribute("contenteditable", "true");
+    editarAbout.classList.add('header-profile-about-conteudo-ativo');
 
     let salvarDados = document.getElementById("perfil-btn-salvar");
     salvarDados.style.display = 'block';
@@ -972,6 +973,7 @@ function salvandoDadosPerfil(element) {
 
     let editarAbout = document.getElementById("perfil-about");
     editarAbout.setAttribute("contenteditable", "false");
+    editarAbout.classList.remove('header-profile-about-conteudo-ativo');
 
     const idUsuarioLogado = usuarioLogado.id;
     let usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))
