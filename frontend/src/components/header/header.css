@@ -90,13 +90,13 @@
 }
 
 .icone-home:hover path {
-    stroke: #4285f4;
+    stroke: var(--blue);
     transition: 200ms ease;
 }
 
 .icone-home-ativo path {
-    fill: #4285f4;
-    stroke: #4285f4;
+    fill: var(--blue);
+    stroke: var(--blue);
     stroke-width: 0.1;
 }
 
@@ -115,13 +115,13 @@
 }
 
 .icone-notificacao:hover path {
-    stroke: #4285f4;
+    stroke: var(--blue);
     transition: 200ms ease;
 }
 
 .icone-notificacao-ativo path {
-    fill: #4285f4;
-    stroke: #4285f4;
+    fill: var(--blue);
+    stroke: var(--blue);
     stroke-width: 0.1;
 }
 
@@ -139,20 +139,20 @@
 }
 
 .icone-profile:hover path {
-    stroke: #4285f4;
+    stroke: var(--blue);
     transition: 200ms ease;
 }
 
 .icone-perfil-ativo path {
-    fill: #4285f4;
-    stroke: #4285f4;
+    fill: var(--blue);
+    stroke: var(--blue);
     stroke-width: 0.1;
 }
 
 /* aparador modal icones*/
 hr.header-solid {
     margin-inline-start: -40px;
-    border: 1px solid #e9e9e9;
+    border: 1px solid #f4f5f7;
 }
 
 /* dropdown */
@@ -165,7 +165,7 @@ hr.header-solid {
     margin-left: 6px;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 12px solid #ffffff;
+    border-bottom: 12px solid #fff;
     position: absolute;
 }
 
@@ -189,7 +189,7 @@ ul.sub {
     border: 1px solid #e9e9e9;
     box-sizing: border-box;
     border-radius: 5px;
-    box-shadow: 0px 10px 70px rgb(0 0 0 / 5%);
+    box-shadow: 0 10px 70px rgb(0 0 0 / 5%);
 }
 
 ul.primary li a {
@@ -244,7 +244,7 @@ ul.primary li:hover > p {
 /* sub display*/
 ul.primary li.permahover-notifications ul {
     display: block;
-    background: #ffffff;
+    background: #fff;
     margin-inline-start: -3rem;
     margin-top: 10px;
 }
@@ -252,7 +252,7 @@ ul.primary li.permahover-notifications ul {
 /*conteiner*/
 ul.primary li.permahover-profile ul {
     display: block;
-    background: white;
+    background: #fff;
     margin-inline-start: -3rem;
     margin-top: 10px;
 }
@@ -318,7 +318,7 @@ ul.primary li:hover a {
     .search {
         width: 65%;
         margin-inline-start: 25%;
-        margin-inline-end: 0%;
+        margin-inline-end: 0;
         height: 1.6rem;
     }
 
@@ -349,8 +349,8 @@ ul.primary li:hover a {
 
     .search {
         width: 85%;
-        margin-inline-start: 0%;
-        margin-inline-end: 0%;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
         height: 1.6rem;
     }
 

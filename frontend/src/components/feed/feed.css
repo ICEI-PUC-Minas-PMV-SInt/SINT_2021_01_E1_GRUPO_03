@@ -542,11 +542,10 @@ hr.solid {
 /*Modal doacoes*/
 .modal-doacoes-tipo {
     color: #8d8d94;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    margin-left: 30px;
 }
 
 .doando {
