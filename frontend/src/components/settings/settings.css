@@ -162,13 +162,6 @@
     padding: 5px;
     background: white;
     transition: 400ms ease;
-
-}
-
-.campos-settings input:hover {
-    background-color: white;
-    border-color: #4285f4;
-    box-shadow: 0 0 0 4px rgb(66 133 244 / 10%);
 }
 
 .campos-settings input:focus {

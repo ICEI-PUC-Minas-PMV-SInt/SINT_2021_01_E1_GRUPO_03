@@ -730,24 +730,30 @@ function addComentario(event) {
         //img
         const usuarioComentarioImg = document.createElement("img");
         usuarioComentarioImg.className = "img_comentario";
-        usuarioComentarioImg.src = usuarioLogado.photoUrl
-        usuarioComentarioImg.setAttribute("title", usuarioLogado.name)
-        usuarioComentarioImg.setAttribute('data-userId', usuarioLogado.id)
+        usuarioComentarioImg.src = usuarioLogado.photoUrl;
+        usuarioComentarioImg.setAttribute("title", usuarioLogado.name);
+        usuarioComentarioImg.setAttribute('data-userId', usuarioLogado.id);
         usuarioComentarioImg.setAttribute('onclick', 'loadProfile(this)');
 
         //div do input
         const divComentariosFlexInput = document.createElement("div");
-        divComentariosFlexInput.classList.add("area_comentarios_flex");
+        divComentariosFlexInput.classList.add("area_comentarios_body");
 
-        const inputComentario = document.createElement('p')
+        const inputComentario = document.createElement('p');
         inputComentario.innerText = comment;
 
+        //Nome do usuario
+        const usuarioComentario = document.createElement('span');
+        usuarioComentario.innerText = usuarioLogado.name;
+        usuarioComentario.classList.add("area_comentarios");
+        usuarioComentario.setAttribute('data-userId', usuarioLogado.id);
+        usuarioComentario.setAttribute('onclick','loadProfile(this)');
 
-        divComentariosFlexInput.appendChild(inputComentario)
-        divComentariosFlex.appendChild(usuarioComentarioImg)
-        divComentarios.appendChild(divComentariosFlex)
-        divComentariosFlex.appendChild(divComentariosFlexInput)
-        section.prepend(divComentarios)
+        divComentariosFlexInput.append(usuarioComentario,inputComentario);
+        divComentariosFlex.appendChild(usuarioComentarioImg);
+        divComentarios.appendChild(divComentariosFlex);
+        divComentariosFlex.appendChild(divComentariosFlexInput);
+        section.prepend(divComentarios);
 
         const quantidadeDeComentarios = section.children.length;
 
@@ -755,7 +761,7 @@ function addComentario(event) {
 
         event.target.value = null;
 
-        salvarFeeds(tipoFeed, postId, divPost.innerHTML, false)
+        salvarFeeds(tipoFeed, postId, divPost.innerHTML, false);
     }
 }
 
