@@ -82,7 +82,8 @@ function logout() {
  */
 function registro(form) {
 
-    if (form.email.value === '' || form.password.value === '') {
+    if (form.neighborhood.value === '') {
+        alert('Por favor insira um cep válido')
         return;
     }
 
@@ -108,7 +109,7 @@ function registro(form) {
  * @param valorPreenchido o cep preenchido no formulario de cadastro.
  * @param inputBairroId id do input do bairro
  */
-function preencheBairro(valorPreenchido, inputBairroId) {
+async function preencheBairro(valorPreenchido, inputBairroId) {
 
     //Nova variável "cep" somente com dígitos.
     let cep = valorPreenchido.replace(/\D/g, '');
@@ -120,7 +121,7 @@ function preencheBairro(valorPreenchido, inputBairroId) {
     if (validacep.test(cep)) {
         document.getElementById(inputBairroId).value = "...";
 
-        fetch(`https://viacep.com.br/ws/${cep}/json`)
+        await fetch(`https://viacep.com.br/ws/${cep}/json`)
             .then(response => response.json())
             .then(res => {
 
@@ -747,9 +748,9 @@ function addComentario(event) {
         usuarioComentario.innerText = usuarioLogado.name;
         usuarioComentario.classList.add("area_comentarios");
         usuarioComentario.setAttribute('data-userId', usuarioLogado.id);
-        usuarioComentario.setAttribute('onclick','loadProfile(this)');
+        usuarioComentario.setAttribute('onclick', 'loadProfile(this)');
 
-        divComentariosFlexInput.append(usuarioComentario,inputComentario);
+        divComentariosFlexInput.append(usuarioComentario, inputComentario);
         divComentariosFlex.appendChild(usuarioComentarioImg);
         divComentarios.appendChild(divComentariosFlex);
         divComentariosFlex.appendChild(divComentariosFlexInput);
