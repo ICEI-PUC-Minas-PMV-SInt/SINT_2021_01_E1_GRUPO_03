@@ -45,7 +45,7 @@ p {
     border: none;
     transition: all 0.4s ease;
     cursor: pointer;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.05rem;
 }
 
 .btn:hover {

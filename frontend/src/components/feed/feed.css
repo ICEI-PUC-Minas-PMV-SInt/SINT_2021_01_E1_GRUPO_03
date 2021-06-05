@@ -331,20 +331,10 @@ p {
     align-items: center;
 }
 
-/*imagem de perfil do usuario da modal*/
-.modal-generica-user-info img {
-    cursor: pointer;
-}
-
 /*nome do usuario na modal generica*/
 .nome-usuario-modal {
-    margin: 24px 26px 0px 10px;
-    cursor: pointer;
+    margin: 24px 26px 0 10px;
     font-size: 14px;
-}
-
-.nome-usuario-modal:hover {
-    text-decoration-line: underline;
 }
 
 /*espaco onde sera feita a publicacao*/
@@ -362,7 +352,8 @@ p {
     font-size: 18px;
     text-align: justify;
     word-break: keep-all;
-    spacing-letter:0.02em;
+    letter-spacing:0.03em;
+    line-height:150%;
 }
 
 .modal-generica-entrada-de-dados:focus {
