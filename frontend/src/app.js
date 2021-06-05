@@ -934,9 +934,6 @@ function editarPerfil(element) {
     let editarRelacionamento = document.getElementById("perfil-relacionamento");
     editarRelacionamento.setAttribute("contenteditable", "true");
 
-    let editarDataNasc = document.getElementById("perfil-dataNasc");
-    editarDataNasc.setAttribute("contenteditable", "true");
-
     let editarHobbies = document.getElementById("perfil-hobbies");
     editarHobbies.setAttribute("contenteditable", "true");
 
@@ -967,9 +964,6 @@ function salvandoDadosPerfil(element) {
 
     let editarRelacionamento = document.getElementById("perfil-relacionamento");
     editarRelacionamento.setAttribute("contenteditable", "false");
-
-    let editarDataNasc = document.getElementById("perfil-dataNasc");
-    editarDataNasc.setAttribute("contenteditable", "false");
 
     let editarHobbies = document.getElementById("perfil-hobbies");
     editarHobbies.setAttribute("contenteditable", "false");

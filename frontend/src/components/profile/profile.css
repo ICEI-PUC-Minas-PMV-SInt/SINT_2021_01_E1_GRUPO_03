@@ -18,8 +18,8 @@
     cursor: pointer;
 }
 
-#change-photo-profile{
-    display:none;
+#change-photo-profile {
+    display: none;
 }
 
 .header-profile .profile-name {
@@ -104,6 +104,51 @@
     transition: 600ms ease;
 }
 
+#perfil-trabalho[contenteditable]:empty::before {
+    content: 'Qual a sua profissão e onde você trabalha?';
+    display: inline-block;
+    color: #c8c8c8;
+    cursor: text;
+}
+
+#perfil-local[contenteditable]:empty::before {
+    content: 'Qual a sua cidade natal?';
+    display: inline-block;
+    color: #c8c8c8;
+    cursor: text;
+}
+
+#perfil-relacionamento[contenteditable]:empty::before {
+    content: 'Qual o seu status de relacionamento?';
+    display: inline-block;
+    color: #c8c8c8;
+    cursor: text;
+}
+
+#perfil-dataNasc[contenteditable] {
+    border-radius: 4px;
+}
+
+#perfil-dataNasc[contenteditable]:hover {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+}
+
+#perfil-mobile[contenteditable]:empty::before {
+    content: 'Qual é o seu número de telefone?';
+    display: inline-block;
+    color: #c8c8c8;
+    cursor: text;
+}
+
+#perfil-hobbies[contenteditable]:empty::before {
+    content: 'Quais os seus hobbies?';
+    display: inline-block;
+    color: #c8c8c8;
+    cursor: text;
+}
+
+
 .header-profile-bottom ul li img {
     margin-inline-end: 1.5rem;
     width: 20px;
@@ -148,13 +193,13 @@
     border: 1px solid transparent;
     padding: 10px 10px;
     margin-top: -20px;
-    height:150px
+    height: 150px
 }
 
-.header-profile-about-conteudo-ativo{
-    height:150px!important;
-    border: 1px solid #f4f5f7!important;
-    border-radius: 10px!important;
+.header-profile-about-conteudo-ativo {
+    height: 150px !important;
+    border: 1px solid #f4f5f7 !important;
+    border-radius: 10px !important;
 }
 
 .header-profile-about-conteudo blockquote:focus {
@@ -163,7 +208,7 @@
     box-shadow: 0 0 0 3px rgb(66 133 244 / 8%);
     padding: 10px 10px 50px 10px;
     transition: 600ms ease;
-    border-radius: 4px!important;
+    border-radius: 4px !important;
 }
 
 /*Mobile*/
