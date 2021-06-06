@@ -87,7 +87,8 @@ function registro(form) {
         return;
     }
 
-    const newUser = addUser(uuid(), form.name.value, form.email.value, form.password.value, form.birthday.value,
+    const newUser = addUser(uuid(), form.name.value, form.email.value, form.password.value,
+        moment(form.birthday.value).format('DD/MM/YYYY',true),
         form.postalCode.value, form.neighborhood.value);
 
     if (localStorage.getItem('users')) {
