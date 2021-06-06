@@ -50,12 +50,15 @@ async function loadProfile(userId) {
     let fotoPerfilInput = document.getElementById('change-photo-profile')
     let about = document.getElementById('perfil-about')
 
+    document.getElementById("home-icon").children[0].classList.remove("icone-home-ativo");
+
    // Carrega informacoes do usuario clicado
     if (userId !== undefined && userId.dataset.userid !== usuarioLogado.id) {
 
         let inputCarregarFoto = document.getElementById('edit-profile')
         inputCarregarFoto.removeAttribute('onclick')
         let botaoEditar = document.getElementById('edit-profile')
+        inputCarregarFoto.removeAttribute('title')
         botaoEditar.style.display = 'none'
 
         const idUsuarioPostagem = userId.dataset.userid
