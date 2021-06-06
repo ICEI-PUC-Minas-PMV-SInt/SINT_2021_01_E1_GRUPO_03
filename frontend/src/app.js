@@ -548,6 +548,7 @@ async function publicarPost(tipoModal) {
             let tipoDeImovel = document.getElementById('tipoImovel-input').value;
             let inputValor = document.getElementById('valorImovel-input').value;
 
+
             //construindo as tags
             const divTags = document.createElement('div');//div principal
             divTags.classList.add('tags')
@@ -565,6 +566,8 @@ async function publicarPost(tipoModal) {
             const conteudoTipo = document.createElement('p'); //loft,casa,apartamento...opcoes do select
             conteudoTipo.classList.add('tag-child');
             conteudoTipo.textContent = tipoDeImovel;
+            document.getElementById('valorImovel-input').value = null;
+
 
             //tag valor
             const divValor = document.createElement('div');
@@ -572,10 +575,17 @@ async function publicarPost(tipoModal) {
             const conteudoValor = document.createElement('p');
             conteudoValor.classList.add('tag-child');
             conteudoValor.textContent = inputValor;
+            document.getElementById('tipoImovel-input').value = null;
 
             //associando os elementos
-            divTipo.appendChild(conteudoTipo);
-            divValor.appendChild(conteudoValor);
+            if (conteudoTipo.textContent) {
+                divTipo.appendChild(conteudoTipo);
+            }
+
+            if (conteudoValor.textContent) {
+                divValor.appendChild(conteudoValor);
+            }
+
             divOpcao.appendChild(conteudoOpcao);
             divTags.append(divTipo, divValor, divOpcao);
             divTagConstruida = divTags;
@@ -1222,6 +1232,22 @@ function menuSettings(element) {
             break;
     }
 
+}
+
+
+function formataMoeda(elemento) {
+    const value = elemento.value.replace(/,/g, '');
+    const valorFormatado = parseFloat(value).toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 0
+    });
+    if (valorFormatado === 'R$ NaN') {
+        elemento.value = null;
+    } else {
+        elemento.value = valorFormatado;
+    }
 }
 
 // Verifica se a pagina foi recarregada
