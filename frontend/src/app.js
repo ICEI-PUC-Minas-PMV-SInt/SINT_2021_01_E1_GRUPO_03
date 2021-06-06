@@ -828,21 +828,20 @@ function salvarFeeds(tipoFeed, postId, post, novoFeed) {
 
 /*modal bairro*/
 async function abrirModalBairro() {
-
-    const modalBairros = document.getElementById('modal-bairros');
-    modalBairros.style.display = 'block';
-    document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
     const nomeBairro = document.getElementById('bairro'); //nome do bairro que esta no header
     const bairroSelecionado = document.getElementById('header_search'); //bairro que seleciona no pesquisar
     nomeBairro.textContent = bairroSelecionado.value;
+    await loadFeed();
+    const modalBairros = document.getElementById('modal-bairros');
+    modalBairros.style.display = 'block';
+    document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
 }
 
-function fecharModalBairros(){
-   const modalBairros = document.getElementById('modal-bairros');
-   modalBairros.style.display = 'none';
+function fecharModalBairros() {
+    espiadinha()
 }
 
- function espiadinha() {
+function espiadinha() {
     const comecarPublicacao = document.getElementById('btn-comecar-publicacao');
     comecarPublicacao.removeAttribute('onclick');
     comecarPublicacao.style.cursor = 'not-allowed';
@@ -851,10 +850,21 @@ function fecharModalBairros(){
     for (let input of listaInputComentario) {
         input.style.cursor = 'not-allowed';
         input.setAttribute('disabled', '');
-
     }
+    const inputSearch = document.getElementById('header_search');
+    inputSearch.value = null
+    const modalBairros = document.getElementById('modal-bairros');
+    modalBairros.style.display = 'none';
 }
 
+async function mudarBairro() {
+    const nomeBairro = document.getElementById('bairro');
+    nomeBairro.textContent = usuarioLogado.neighborhood;
+    const inputSearch = document.getElementById('header_search');
+    inputSearch.value = null
+
+    await loadSettings()
+}
 
 /**
  * Adiciona class permahover para exibir a modal e so desaparecer quando clicar novamente.
