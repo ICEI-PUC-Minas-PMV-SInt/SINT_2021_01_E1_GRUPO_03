@@ -581,7 +581,36 @@ hr.solid {
     margin-bottom: 50px;
     background-color: #e9e9e9;
 }
+/*modal bairros*/
+#modal-bairro-conteudo{
+    height:342px;
+}
+#modal-bairros-header{
+    padding: 10px;
+}
+.aparador-modal-bairro{
+    margin: 15px 15px;
+}
+.texto-modal-bairro{
+    font-size: 18px;
+    line-height: 180%;
+    letter-spacing: 0.03em;
+    word-break:break-word;
+    text-align:justify;
+    color: #6e6d7a;
+    padding:20px;
+    margin-top:0;
 
+}
+.texto-modal-bairro a {
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: bold;
+}
+.texto-modal-bairro a:hover{
+    color: var(--light-blue);
+    text-decoration: underline;
+}
 /*Responsivo Mobile*/
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {

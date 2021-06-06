@@ -664,6 +664,7 @@ async function publicarPost(tipoModal) {
     comentarioUsuario.type = "text";
     comentarioUsuario.placeholder = "Escreva um comentário";
     comentarioUsuario.setAttribute('onkeyup', 'addComentario(event)');
+    comentarioUsuario.name = 'input-comentarios'
 
     //associando pais e filhos
     divInformacaoDoUsuario.appendChild(fotoDoUsuario);
@@ -824,6 +825,37 @@ function salvarFeeds(tipoFeed, postId, post, novoFeed) {
 }
 
 /*Header*/
+
+/*modal bairro*/
+async function abrirModalBairro() {
+
+    const modalBairros = document.getElementById('modal-bairros');
+    modalBairros.style.display = 'block';
+    document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
+    const nomeBairro = document.getElementById('bairro'); //nome do bairro que esta no header
+    const bairroSelecionado = document.getElementById('header_search'); //bairro que seleciona no pesquisar
+    nomeBairro.textContent = bairroSelecionado.value;
+}
+
+function fecharModalBairros(){
+   const modalBairros = document.getElementById('modal-bairros');
+   modalBairros.style.display = 'none';
+}
+
+ function espiadinha() {
+    const comecarPublicacao = document.getElementById('btn-comecar-publicacao');
+    comecarPublicacao.removeAttribute('onclick');
+    comecarPublicacao.style.cursor = 'not-allowed';
+
+    const listaInputComentario = document.getElementsByName('input-comentarios');
+    for (let input of listaInputComentario) {
+        input.style.cursor = 'not-allowed';
+        input.setAttribute('disabled', '');
+
+    }
+}
+
+
 /**
  * Adiciona class permahover para exibir a modal e so desaparecer quando clicar novamente.
  * @param elemento li dos icons do header
@@ -1109,3 +1141,4 @@ function menuSettings(element) {
     }
 
 }
+

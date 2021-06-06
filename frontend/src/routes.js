@@ -13,6 +13,19 @@ async function loadHeader() {
     const headerDiv = document.getElementById('header');
     headerDiv.innerHTML = await fetchHtmlAsText(header);
     verificaBairro();
+
+    let listaBairros = document.getElementById('header_search_bairros');
+    const users = JSON.parse(localStorage.getItem('users'));
+    users.forEach(user => {
+
+        if (!listaBairros.children.namedItem(user.neighborhood) && user.id!== usuarioLogado.id){
+            const option = document.createElement('option');
+            option.setAttribute('value',user.neighborhood);
+            option.setAttribute('name',user.neighborhood);
+            listaBairros.appendChild(option);
+        }
+    })
+
 }
 
 /**
@@ -46,23 +59,23 @@ async function loadProfile(userId) {
     let perfilDataNasc = document.getElementById('perfil-dataNasc');
     let perfilMobile = document.getElementById('perfil-mobile');
     let perfilHobbies = document.getElementById('perfil-hobbies');
-    let fotoPerfil = document.getElementById('foto-perfil')
-    let fotoPerfilInput = document.getElementById('change-photo-profile')
-    let about = document.getElementById('perfil-about')
+    let fotoPerfil = document.getElementById('foto-perfil');
+    let fotoPerfilInput = document.getElementById('change-photo-profile');
+    let about = document.getElementById('perfil-about');
 
     document.getElementById("home-icon").children[0].classList.remove("icone-home-ativo");
 
    // Carrega informacoes do usuario clicado
     if (userId !== undefined && userId.dataset.userid !== usuarioLogado.id) {
 
-        let inputCarregarFoto = document.getElementById('edit-profile')
-        inputCarregarFoto.removeAttribute('onclick')
-        let botaoEditar = document.getElementById('edit-profile')
+        let inputCarregarFoto = document.getElementById('edit-profile');
+        inputCarregarFoto.removeAttribute('onclick');
+        let botaoEditar = document.getElementById('edit-profile');
         inputCarregarFoto.removeAttribute('title')
         botaoEditar.style.display = 'none'
 
         const idUsuarioPostagem = userId.dataset.userid
-        let  usuariosLocalStorage = JSON.parse(localStorage.getItem('users'))
+        let  usuariosLocalStorage = JSON.parse(localStorage.getItem('users'));
 
         let usuarioDoPerfil
         for (let i = 0; i < usuariosLocalStorage.length; i++) {
