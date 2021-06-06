@@ -62,6 +62,10 @@
 .search[type="text" i] {
     padding: 0 8%;
 }
+#header_search_bairros {
+    color:red;
+    background:orange;
+}
 
 /*icones header*/
 .header_nav_items ul {

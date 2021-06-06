@@ -9,7 +9,9 @@
 
 /*conteiner-menu*/
 .menu-settings {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 26%;
     height: 920px;
     background-color: #fff;
@@ -20,10 +22,8 @@
     height: 4rem;
     width: 4rem;
     border-radius: 60px;
-    margin-left: 31%;
     margin-top: 50px;
     border: 1px solid transparent;
-
 }
 
 /*nome usuario*/
@@ -58,7 +58,7 @@
     margin: 0;
     border-radius:0;
     width: 22px;
-    margin-inline-start:46px;
+    margin-inline-start:62px;
 }
 .menu-settings-titulo svg {
     width:8px;

@@ -107,6 +107,7 @@
     content: 'Qual a sua profissão e onde você trabalha?';
     display: inline-block;
     color: #c8c8c8;
+    font-weight: bold;
     cursor: text;
 }
 
@@ -114,6 +115,7 @@
     content: 'Qual a sua cidade natal?';
     display: inline-block;
     color: #c8c8c8;
+    font-weight: bold;
     cursor: text;
 }
 
@@ -121,6 +123,7 @@
     content: 'Qual o seu status de relacionamento?';
     display: inline-block;
     color: #c8c8c8;
+    font-weight: bold;
     cursor: text;
 }
 
@@ -136,6 +139,7 @@
     content: 'Qual é o seu número de telefone?';
     display: inline-block;
     color: #c8c8c8;
+    font-weight: bold;
     cursor: text;
 }
 
@@ -143,6 +147,7 @@
     content: 'Quais os seus hobbies?';
     display: inline-block;
     color: #c8c8c8;
+    font-weight: bold;
     cursor: text;
 }
 
