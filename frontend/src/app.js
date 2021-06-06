@@ -126,7 +126,7 @@ async function preencheBairro(valorPreenchido, inputBairroId) {
             .then(res => {
 
                 if (!("erro" in res)) {
-                    document.getElementById(inputBairroId).value = (res.bairro);
+                    document.getElementById(inputBairroId).value = `${res.bairro} - ${res.uf}`;
                 } else {
                     alert("CEP não encontrado.");
                     document.getElementById(inputBairroId).value = null;
