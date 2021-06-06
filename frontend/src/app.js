@@ -496,7 +496,7 @@ async function publicarPost(tipoModal) {
     // criando a foto do usuario no post
     const fotoDoUsuario = document.createElement("img") // criando img
     fotoDoUsuario.className = "img_post" // estilo da img
-    fotoDoUsuario.src = "https://avatars.githubusercontent.com/u/63205222?v=4"
+    fotoDoUsuario.src = "public/profile/foto-usuario-perfil.svg"
     fotoDoUsuario.alt = usuarioLogado.name;
 
     // criando nome do usuario
@@ -504,6 +504,7 @@ async function publicarPost(tipoModal) {
     nomeUsuario.innerText = usuarioLogado.name;
     nomeUsuario.setAttribute('data-userId', usuarioLogado.id)
     nomeUsuario.setAttribute('onclick', 'loadProfile(this)');
+    nomeUsuario.setAttribute('name','user-name')
 
     //div que recebe o valor das divTags
     let divTagConstruida
@@ -643,7 +644,7 @@ async function publicarPost(tipoModal) {
     //Criando contador de comentarios
     const contadorDeComentarios = document.createElement('p')
     contadorDeComentarios.classList.add('call-comentarios')
-    contadorDeComentarios.innerText = '0 Comentários'
+    contadorDeComentarios.innerText = '0 Comentário(s)'
     contadorDeComentarios.setAttribute('name', 'contadorDeComentarios')
 
     // criando area de comentarios
@@ -665,7 +666,7 @@ async function publicarPost(tipoModal) {
     //img
     const usuarioComentarioImg = document.createElement("img");
     usuarioComentarioImg.className = "img_comentario";
-    usuarioComentarioImg.src = "assets/images/usuarios/jovem-estudante.png";
+    usuarioComentarioImg.src = "public/profile/foto-usuario-perfil.svg"
 
     //div do input
     const divComentariosFlexInput = document.createElement("div");
@@ -745,10 +746,11 @@ function addComentario(event) {
         //img
         const usuarioComentarioImg = document.createElement("img");
         usuarioComentarioImg.className = "img_comentario";
-        usuarioComentarioImg.src = usuarioLogado.photoUrl;
+        usuarioComentarioImg.src = 'public/profile/foto-usuario-perfil.svg'
         usuarioComentarioImg.setAttribute("title", usuarioLogado.name);
         usuarioComentarioImg.setAttribute('data-userId', usuarioLogado.id);
         usuarioComentarioImg.setAttribute('onclick', 'loadProfile(this)');
+        usuarioComentarioImg.setAttribute('name','user-name')
 
         //div do input
         const divComentariosFlexInput = document.createElement("div");
@@ -763,6 +765,7 @@ function addComentario(event) {
         usuarioComentario.classList.add("area_comentarios");
         usuarioComentario.setAttribute('data-userId', usuarioLogado.id);
         usuarioComentario.setAttribute('onclick', 'loadProfile(this)');
+        usuarioComentario.setAttribute('name','user-name')
 
         divComentariosFlexInput.append(usuarioComentario, inputComentario);
         divComentariosFlex.appendChild(usuarioComentarioImg);
@@ -772,7 +775,7 @@ function addComentario(event) {
 
         const quantidadeDeComentarios = section.children.length;
 
-        contadorDeComentarios.innerText = quantidadeDeComentarios + ' Comentários';
+        contadorDeComentarios.innerText = quantidadeDeComentarios + ' Comentário(s)';
 
         event.target.value = null;
 
@@ -851,7 +854,7 @@ async function abrirModalBairro() {
 }
 
 function fecharModalBairros() {
-    espiadinha()
+    espiadinha();
 }
 
 function espiadinha() {
@@ -860,10 +863,24 @@ function espiadinha() {
     comecarPublicacao.style.cursor = 'not-allowed';
 
     const listaInputComentario = document.getElementsByName('input-comentarios');
+
+    const nomeUsuarioPost = document.getElementsByName('user-name');
+
+    for (let nameUser of nomeUsuarioPost) {
+        nameUser.style.cursor = 'not-allowed';
+        nameUser.removeAttribute('onclick');
+    }
+
     for (let input of listaInputComentario) {
         input.style.cursor = 'not-allowed';
         input.setAttribute('disabled', '');
     }
+
+
+    sessionStorage.setItem('espiadinha','true')
+
+    document.getElementById("home-icon").children[0].classList.remove("icone-home-ativo");
+
     const inputSearch = document.getElementById('header_search');
     inputSearch.value = null
     const modalBairros = document.getElementById('modal-bairros');
@@ -971,6 +988,11 @@ function uuid() {
 }
 
 function reloadPage() {
+
+    if(sessionStorage.getItem('espiadinha')){
+        sessionStorage.removeItem('espiadinha')
+    }
+
     location.reload();
 }
 
@@ -1165,3 +1187,7 @@ function menuSettings(element) {
 
 }
 
+// Verifica se a pagina foi recarregada
+if (PerformanceNavigationTiming.type === PerformanceNavigationTiming.TYPE_RELOAD) {
+    sessionStorage.removeItem('espiadinha')
+}

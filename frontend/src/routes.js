@@ -18,14 +18,13 @@ async function loadHeader() {
     const users = JSON.parse(localStorage.getItem('users'));
     users.forEach(user => {
 
-        if (!listaBairros.children.namedItem(user.neighborhood) && user.id!== usuarioLogado.id){
+        if (!listaBairros.children.namedItem(user.neighborhood) && user.id !== usuarioLogado.id) {
             const option = document.createElement('option');
-            option.setAttribute('value',user.neighborhood);
-            option.setAttribute('name',user.neighborhood);
+            option.setAttribute('value', user.neighborhood);
+            option.setAttribute('name', user.neighborhood);
             listaBairros.appendChild(option);
         }
     })
-
 }
 
 /**
@@ -53,7 +52,7 @@ async function loadProfile(userId) {
     contentDiv.innerHTML = await fetchHtmlAsText(profile);
 
     let profileName = document.getElementById('profile-name');
-    let perfilTrabalho =  document.getElementById('perfil-trabalho');
+    let perfilTrabalho = document.getElementById('perfil-trabalho');
     let perfilLocal = document.getElementById('perfil-local');
     let perfilRelacionamneto = document.getElementById('perfil-relacionamento');
     let perfilDataNasc = document.getElementById('perfil-dataNasc');
@@ -65,7 +64,7 @@ async function loadProfile(userId) {
 
     document.getElementById("home-icon").children[0].classList.remove("icone-home-ativo");
 
-   // Carrega informacoes do usuario clicado
+    // Carrega informacoes do usuario clicado
     if (userId !== undefined && userId.dataset.userid !== usuarioLogado.id) {
 
         let inputCarregarFoto = document.getElementById('edit-profile');
@@ -75,7 +74,7 @@ async function loadProfile(userId) {
         botaoEditar.style.display = 'none'
 
         const idUsuarioPostagem = userId.dataset.userid
-        let  usuariosLocalStorage = JSON.parse(localStorage.getItem('users'));
+        let usuariosLocalStorage = JSON.parse(localStorage.getItem('users'));
 
         let usuarioDoPerfil
         for (let i = 0; i < usuariosLocalStorage.length; i++) {
@@ -86,7 +85,7 @@ async function loadProfile(userId) {
             }
         }
 
-        if(usuarioDoPerfil.photoUrl !== '') {
+        if (usuarioDoPerfil.photoUrl !== '') {
             fotoPerfil.src = usuarioDoPerfil.photoUrl
         }
         profileName.textContent = usuarioDoPerfil.name;
@@ -101,7 +100,7 @@ async function loadProfile(userId) {
 
     } else {
         // Carrega informacoes do usuario logado
-        if(usuarioLogado.photoUrl !== '') {
+        if (usuarioLogado.photoUrl !== '') {
             fotoPerfil.src = usuarioLogado.photoUrl
         }
         profileName.textContent = usuarioLogado.name;
@@ -217,12 +216,17 @@ async function loadFeed(menuSelecionado) {
                         criandoDiv.insertAdjacentHTML('beforeend', feed.html);
                         recuperarSessao.prepend(criandoDiv)
 
-                        new Splide( '.splide' ).mount();//carrosel img
-
+                        let contemImg = criandoDiv.querySelector('.splide')
+                        if (contemImg) {
+                            new Splide('.splide').mount();//carrosel img
+                        }
                     }
                 }
             }
         }
+    }
+    if (sessionStorage.getItem('espiadinha')) {
+        espiadinha()
     }
 }
 
