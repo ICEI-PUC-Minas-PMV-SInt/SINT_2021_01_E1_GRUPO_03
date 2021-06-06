@@ -80,19 +80,37 @@ function logout() {
  * Cadastra usuario e ativa sessao.
  * @param form formulario de cadastro
  */
-function registro(form) {
+async function registro(form) {
 
     if (form.neighborhood.value === '') {
         alert('Por favor insira um cep válido')
         return;
+    } else if (form.neighborhood.value === '...') {
+        await new Promise(r => setTimeout(r, 1000));
     }
 
     const newUser = addUser(uuid(), form.name.value, form.email.value, form.password.value,
-        moment(form.birthday.value).format('DD/MM/YYYY',true),
+        moment(form.birthday.value).format('DD/MM/YYYY', true),
         form.postalCode.value, form.neighborhood.value);
 
     if (localStorage.getItem('users')) {
         let storedUsers = JSON.parse(localStorage.getItem('users'));
+
+        let emailAlreadyExists = false;
+        storedUsers.forEach(user => {
+            if (emailAlreadyExists) {
+                return;
+            }
+            if (form.email.value === user.email) {
+                emailAlreadyExists = true;
+            }
+        })
+
+        if (emailAlreadyExists) {
+            alert('Este endereço de email já está sendo usado por usuário.')
+            return;
+        }
+
         storedUsers.push(newUser)
         localStorage.setItem('users', JSON.stringify(storedUsers));
     } else {
@@ -505,7 +523,7 @@ async function publicarPost(tipoModal) {
     nomeUsuario.innerText = usuarioLogado.name;
     nomeUsuario.setAttribute('data-userId', usuarioLogado.id)
     nomeUsuario.setAttribute('onclick', 'loadProfile(this)');
-    nomeUsuario.setAttribute('name','user-name')
+    nomeUsuario.setAttribute('name', 'user-name')
 
     //div que recebe o valor das divTags
     let divTagConstruida
@@ -636,8 +654,8 @@ async function publicarPost(tipoModal) {
         liCarrosel.appendChild(arquivoDoPost);
         ulCarrosel.appendChild(liCarrosel);
     }
-        divCarrosel.appendChild(ulCarrosel);
-        divPrincipalCarrosel.appendChild(divCarrosel);
+    divCarrosel.appendChild(ulCarrosel);
+    divPrincipalCarrosel.appendChild(divCarrosel);
 
     // Removendo elementos img da modal
     imgPostModal.textContent = null;
@@ -715,7 +733,7 @@ async function publicarPost(tipoModal) {
             break;
     }
     salvarFeeds(tipoModal.dataset.tipo, criandoDiv.id, criandoDiv.innerHTML, true)
-    new Splide( '.splide' ).mount();//carrosel img
+    new Splide('.splide').mount();//carrosel img
 }
 
 /**
@@ -751,7 +769,7 @@ function addComentario(event) {
         usuarioComentarioImg.setAttribute("title", usuarioLogado.name);
         usuarioComentarioImg.setAttribute('data-userId', usuarioLogado.id);
         usuarioComentarioImg.setAttribute('onclick', 'loadProfile(this)');
-        usuarioComentarioImg.setAttribute('name','user-name')
+        usuarioComentarioImg.setAttribute('name', 'user-name')
 
         //div do input
         const divComentariosFlexInput = document.createElement("div");
@@ -766,7 +784,7 @@ function addComentario(event) {
         usuarioComentario.classList.add("area_comentarios");
         usuarioComentario.setAttribute('data-userId', usuarioLogado.id);
         usuarioComentario.setAttribute('onclick', 'loadProfile(this)');
-        usuarioComentario.setAttribute('name','user-name')
+        usuarioComentario.setAttribute('name', 'user-name')
 
         divComentariosFlexInput.append(usuarioComentario, inputComentario);
         divComentariosFlex.appendChild(usuarioComentarioImg);
@@ -844,14 +862,32 @@ function salvarFeeds(tipoFeed, postId, post, novoFeed) {
 /*Header*/
 
 /*modal bairro*/
-async function abrirModalBairro() {
-    const nomeBairro = document.getElementById('bairro'); //nome do bairro que esta no header
-    const bairroSelecionado = document.getElementById('header_search'); //bairro que seleciona no pesquisar
-    nomeBairro.textContent = bairroSelecionado.value;
-    await loadFeed();
-    const modalBairros = document.getElementById('modal-bairros');
-    modalBairros.style.display = 'block';
-    document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
+
+async function abrirModalBairro(event) {
+
+    if (event.type === 'change') {
+
+        const nomeBairro = document.getElementById('bairro'); //nome do bairro que esta no header
+        const bairroSelecionado = document.getElementById('header_search'); //bairro que seleciona no pesquisar
+
+        let bairrosDisponiveis = [];
+
+        const users = JSON.parse(localStorage.getItem('users'));
+        users.forEach(user => {
+            bairrosDisponiveis.push(user.neighborhood)
+        });
+
+        if (!bairrosDisponiveis.includes(bairroSelecionado.value)) {
+            alert('Infelizmente ainda não existem moradores nesse bairro que você pesquisou, selecione um bairro disponível na lista.')
+            return;
+        }
+
+        nomeBairro.textContent = bairroSelecionado.value;
+        await loadFeed();
+        const modalBairros = document.getElementById('modal-bairros');
+        modalBairros.style.display = 'block';
+        document.body.style.overflow = "hidden" // removendo o scroll da pag quando abre a modal
+    }
 }
 
 function fecharModalBairros() {
@@ -878,7 +914,7 @@ function espiadinha() {
     }
 
 
-    sessionStorage.setItem('espiadinha','true')
+    sessionStorage.setItem('espiadinha', 'true')
 
     document.getElementById("home-icon").children[0].classList.remove("icone-home-ativo");
 
@@ -990,7 +1026,7 @@ function uuid() {
 
 function reloadPage() {
 
-    if(sessionStorage.getItem('espiadinha')){
+    if (sessionStorage.getItem('espiadinha')) {
         sessionStorage.removeItem('espiadinha')
     }
 
