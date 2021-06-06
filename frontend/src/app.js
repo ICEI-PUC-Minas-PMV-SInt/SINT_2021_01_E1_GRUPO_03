@@ -609,8 +609,15 @@ async function publicarPost(tipoModal) {
     paragrafo.innerText = conteudoPost // colocando o conteudo que conseguimos acessar da modal
     elementoPost.textContent = null // limpando o texto da modal apos a publicaçao,para as futuras publicaçoes a modal estar sem nenhum texto
 
+    //criando o carrosel das imgs do post
+    const divPrincipalCarrosel = document.createElement("div");
+    divPrincipalCarrosel.classList.add('splide');
+    const divCarrosel = document.createElement("div");
+    divCarrosel.classList.add('splide__track');
+    const ulCarrosel = document.createElement("ul");
+    ulCarrosel.classList.add('splide__list');
+
     //criando a img do post
-    let fotosDoPost = [];
     for (let i = 0; i < imgPostModal.children.length; i++) {
         let arquivoDaModal = imgPostModal.children[i].children[0]
         let arquivoDoPost
@@ -622,8 +629,13 @@ async function publicarPost(tipoModal) {
         }
         arquivoDoPost.className = "publicacao" // estilo da img
         arquivoDoPost.src = arquivoDaModal.src
-        fotosDoPost.push(arquivoDoPost)
+        const liCarrosel = document.createElement("li");
+        liCarrosel.classList.add('splide__slide');
+        liCarrosel.appendChild(arquivoDoPost);
+        ulCarrosel.appendChild(liCarrosel);
     }
+        divCarrosel.appendChild(ulCarrosel);
+        divPrincipalCarrosel.appendChild(divCarrosel);
 
     // Removendo elementos img da modal
     imgPostModal.textContent = null;
@@ -677,13 +689,13 @@ async function publicarPost(tipoModal) {
 
     divComentariosFlex.appendChild(usuarioComentarioImg);
     divComentarios.appendChild(divComentariosFlex);
-    divComentariosFlexInput.appendChild(comentarioUsuario)
+    divComentariosFlexInput.appendChild(comentarioUsuario);
     divComentarios.appendChild(divComentariosFlexInput);
     criandoDiv.prepend(divInformacaoDoUsuario); // prepend para ele ser sempre o que veem em primeiro no post
     criandoDiv.append(paragrafo);
-    fotosDoPost.forEach(imgTags => criandoDiv.append(imgTags));
-    criandoDiv.append(contadorDeComentarios)
-    criandoDiv.append(divSessaoComentarios)
+    criandoDiv.append(divPrincipalCarrosel);
+    criandoDiv.append(contadorDeComentarios);
+    criandoDiv.append(divSessaoComentarios);
     criandoDiv.append(aparador);
     criandoDiv.append(divComentarios);
 
@@ -701,6 +713,7 @@ async function publicarPost(tipoModal) {
             break;
     }
     salvarFeeds(tipoModal.dataset.tipo, criandoDiv.id, criandoDiv.innerHTML, true)
+    new Splide( '.splide' ).mount();//carrosel img
 }
 
 /**

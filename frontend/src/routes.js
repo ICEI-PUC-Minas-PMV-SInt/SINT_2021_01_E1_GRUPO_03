@@ -216,12 +216,14 @@ async function loadFeed(menuSelecionado) {
                         criandoDiv.setAttribute('data-tipo', feed.tipoFeed)
                         criandoDiv.insertAdjacentHTML('beforeend', feed.html);
                         recuperarSessao.prepend(criandoDiv)
+
+                        new Splide( '.splide' ).mount();//carrosel img
+
                     }
                 }
             }
         }
     }
-
 }
 
 /**
