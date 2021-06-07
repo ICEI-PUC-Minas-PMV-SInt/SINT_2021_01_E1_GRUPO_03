@@ -294,7 +294,7 @@ ul.primary li:hover a {
     .search {
         width: 58%;
         margin-inline-start: 30%;
-        margin-inline-end: 0%;
+        margin-inline-end: 0;
     }
 
     .search::placeholder {
@@ -303,7 +303,6 @@ ul.primary li:hover a {
 
     .header_nav_items ul {
         margin-top: 10%;
-        width: 65%;
         margin-right: 30px;
     }
 }
