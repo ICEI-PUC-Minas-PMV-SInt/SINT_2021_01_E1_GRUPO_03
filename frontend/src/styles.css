@@ -23,7 +23,7 @@ p {
 }
 
 .border {
-    border: 1px solid #e9e9e9;
+    border: 1px solid #F4F5F7;
     border-radius: 4px;
 }
 
@@ -45,7 +45,7 @@ p {
     border: none;
     transition: all 0.4s ease;
     cursor: pointer;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.05rem;
 }
 
 .btn:hover {
@@ -61,7 +61,7 @@ h3 {
 }
 
 .aparador {
-    border: 1px solid #e9e9e9 !important;
+    border: 1px solid #F4F5F7 !important;
 }
 
 /* Scroll */

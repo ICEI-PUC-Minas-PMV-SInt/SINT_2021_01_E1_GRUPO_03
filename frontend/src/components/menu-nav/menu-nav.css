@@ -14,19 +14,22 @@
     margin-right: 5px;
 }
 
+.menu_nav ul a{
+    padding: 15px 0;
+}
+
 .menu_nav ul li {
     margin-right: 1.3rem;
     cursor: pointer;
     font-weight: bold;
-    font-size: 13px;
-    letter-spacing: 0.04em;
+    font-size: 14px;
     color: #6e6d7a;
     height:1.6rem;
 }
 
 .active_menu_nav {
     text-decoration: none;
-    color: #4285f4;
+    color: var(--blue);
     font-weight: bold;
 }
 
@@ -35,16 +38,14 @@
 }
 
 .menu_nav ul :hover{
-    color: #4285f4;
-    transition: color 400ms ease;
+    color: var(--blue);
+    transition: color 200ms ease;
 }
 
 .aparador_menu_nav{
-    background-color: #4285f4;
+    background-color: var(--blue);
     height:3px;
-    right:2px;
-    left:2px;
-    margin-top: 1.6rem;
+    margin-top: 1.5rem;
 }
 
 .menu_nav{
@@ -82,7 +83,6 @@
         justify-content: center;
         align-items: center;
         margin-inline-start: 0.3rem;
-
     }
 
     .menu_nav ul li {

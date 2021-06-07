@@ -88,8 +88,8 @@
               class="border-input"
               type="date"
               id="dataDeNascimentoInput"
-              placeholder="dd/mm/yyyy"
               name="birthday"
+              required
             />
           </div>
           <div>
@@ -101,12 +101,13 @@
               name="postalCode" required  size="10" maxlength="9" onblur="preencheBairro(this.value,'bairroCadastroInput')"   />
           </div>
           <div>
-            <label>Bairro</label>
+            <label></label>
             <input
               class="border-input"
               type="text"
               id="bairroCadastroInput"
               name="neighborhood" disabled
+              placeholder="Bairro"
             />
           </div>
           <button type="submit" class="btn-cadastro">Cadastre-se</button>
