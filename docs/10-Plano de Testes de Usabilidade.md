@@ -14,7 +14,7 @@
 8. No menu localizado na área superior clique no ícone perfil, clique na opção perfil.
 9. Clique em editar perfil,  preencha os campos com suas informações pessoais,clique em salvar .
 10. No menu localizado na área superior clique no ícone perfil, clique na opção configurações.
-11. Clique em editar e altere seus dados, após clique em salvar, ao editar seu CEP você terá que fazer login novamente e não seria possível visualizar os posts do bairro anterior.
+11. Clique em editar e altere seus dados, após clique em salvar, ao editar seu CEP você terá que fazer login novamente e não será possível visualizar os posts do bairro anterior.
 12. No menu que está localizado na lateral clique em segurança, clique em editar, altere seus dados, clique em salvar.
 13. Para voltar à página principal clique no ícone home que está no menu superior.
 14. No menu localizado na parte superior clique em pesquisar e escreva o nome do bairro desejado, pressione o enter do seu teclado. Clique na opção espiadinha, você não poderá fazer publicações ou escrever comentários.
