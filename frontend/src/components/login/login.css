@@ -39,7 +39,7 @@
 .form-login label {
     display: flex;
     width: auto;
-    margin-left: 3.9rem;
+    margin-left: 60px;
     margin-top: 16px;
     padding: 0 11px;
     position: absolute;
@@ -263,21 +263,22 @@ input[type="date" i]:focus {
 
     .form-login {
         margin-right: 0;
+        width: 70%;
 
     }
 
     .form-login label {
-        margin-left: 3.9rem;
+        margin-left: 47px;
     }
 }
     /*notebook*/
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
         .form-login {
-            width: 80%;
+            width: 70%;
             margin-right: 40px;
         }
         .form-login label {
-            margin-left: 3.9rem;
+
         }
         .call-login {
             display: flex;
