@@ -1239,7 +1239,6 @@ function menuSettings(element) {
 
 }
 
-
 function formataMoeda(elemento) {
     const value = elemento.value.replace(/,/g, '');
     const valorFormatado = parseFloat(value).toLocaleString('pt-BR', {

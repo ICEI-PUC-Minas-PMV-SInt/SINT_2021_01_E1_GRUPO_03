@@ -200,3 +200,50 @@
 .campos-settings span:hover {
     color: var(--light-blue);
 }
+
+/*Mobile*/
+@media only screen and (max-width: 480px) {
+
+}
+
+/*Tablet*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .settings{
+        width: 95%!important;
+    }
+    .header-settings {
+        margin-left: 118px;
+        width: 88% ;
+    }
+    .ilustracao-settings{
+        width: 80%;
+    }
+    .ilustracao-settings img {
+        height: 110%;
+    }
+    .menu-settings-titulo img {
+        margin-inline-start: 6px;
+    }
+    .menu-settings h5 {
+        font-size: 12px;
+    }
+    .editar-settings{
+        margin-left: 24px;
+        width: 66%;
+        height: 42%;
+    }
+    .campos-settings h4 {
+        font-size: 14px;
+    }
+    .campos-settings input {
+        font-size: 14px;
+        width: 191px;
+    }
+    .campos-settings span {
+        font-size: 12px;
+    }
+}
+/*notebook*/
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+}

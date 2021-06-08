@@ -14,15 +14,16 @@
 .share-box-entry-div button {
     font-size: 14px;
     text-align: left;
-    width: 565px;
+    width: 100%;
     height: 40px;
-    padding: 1px 15px;
+    padding: 1px 20px;
     border-radius: 15px;
     background-color: #f4f5f7;
     color: #9e9ea7;
     border: 1px solid #f7f7f8;
     cursor: pointer;
-    margin-right: 15px;
+    margin-right: 26rem;
+    margin-left: -16px;
 }
 
 p {
@@ -665,12 +666,11 @@ hr.solid {
 
 /* Responsivo tablet*/
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+
     .share-box-entry-div button {
-        width: 470px;
+        width: 70%;
         font-size: 12px;
-        height: 35px;
-        margin-inline-end: 0px;
-        margin-right: 10px;
+        margin-left: 10px;
     }
 
     .share-box-entry img {
@@ -683,6 +683,9 @@ hr.solid {
         width: 2.5rem;
     }
 
+    .usuario_post h3 {
+        font-size: 14px;
+    }
     .texto_publicacao {
         font-size: 12px;
         line-height: 170%;
@@ -691,7 +694,7 @@ hr.solid {
     .area_comentarios input {
         width: 340px;
         margin-left: 15px;
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .img_comentario {
@@ -709,20 +712,32 @@ hr.solid {
         margin: 11rem auto auto;
         height: auto;
     }
-
+    .modal-generica-header h4{
+        font-size: 12px;
+    }
+    .nome-usuario-modal{
+        font-size: 13px;
+    }
     .btn-modal button {
-        width: 90px;
+        width: 115px;
         margin-inline-start: -92px;
+        font-size: 13px;
+        height: 36px;
     }
 
     .image-upload img {
-        width: 1.5rem;
+        width: 100%;
     }
 
     .icone-video-modal {
-        margin-inline-end: 60%;
         margin-top: -7px;
-        margin-left: -10px;
+        margin-left: 0;
+    }
+
+    .btn{
+        width: 115px!important;
+        font-size: 13px!important;
+        height: 36px!important;
     }
 }
 
