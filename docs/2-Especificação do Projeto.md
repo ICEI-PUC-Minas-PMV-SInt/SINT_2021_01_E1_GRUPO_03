@@ -310,6 +310,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RF-023 |O sistema deve conter uma seção de configurações | MÉDIA |
 |RF-024 |O sistema deve permitir que o usuário altere suas informações de cadastro | MÉDIA |
 |RF-025 | O sistema deve conter a funcionalidade de recuperar senha | MÉDIA |
+|RF-026 | Permitir que o usuario possa alterar suas informações pessoais na tela de perfil | MÉDIA |
+
+
 
 ## Requisitos não Funcionais
 
