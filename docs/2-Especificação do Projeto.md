@@ -309,6 +309,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RF-022 |O sistema deve conter um subsistema de lista telefônica dos residentes | BAIXA |
 |RF-023 |O sistema deve conter uma seção de configurações | MÉDIA |
 |RF-024 |O sistema deve permitir que o usuário altere suas informações de cadastro | MÉDIA |
+|RF-025 | O sistema deve conter a funcionalidade de recuperar senha | MÉDIA |
 
 ## Requisitos não Funcionais
 
